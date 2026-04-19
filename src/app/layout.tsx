@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { fraunces, geist } from "./fonts";
+import { geist } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,10 +12,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${geist.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${geist.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

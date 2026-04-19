@@ -17,11 +17,11 @@ export default function ScaffoldSmokeTest() {
 
       <section className="space-y-4">
         <h2>Typography</h2>
-        <h1>Display H1 — Fraunces, fluid clamp</h1>
+        <h1>Display H1 — Geist, tight tracking</h1>
         <h2>Display H2 — section heading</h2>
         <h3>Display H3 — card heading</h3>
         <p className="text-lg">Body — Geist 400, 1.6 line-height.</p>
-        <p className="tabular-nums font-display text-5xl text-gray-12">
+        <p className="tabular-nums font-semibold text-5xl tracking-tight text-gray-12">
           $3,000 – $6,000
         </p>
       </section>
