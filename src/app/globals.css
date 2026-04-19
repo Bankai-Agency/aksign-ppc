@@ -144,6 +144,17 @@ h4 { font-size: clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem); line-height: 1.2; }
   }
 }
 
+/* Radix accordion animations */
+@keyframes accordion-down {
+  from { height: 0; }
+  to   { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to   { height: 0; }
+}
+
 /* Skip-link visibility toggle */
 .skip-link:not(:focus) {
   position: absolute;
