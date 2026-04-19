@@ -32,6 +32,13 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# qa evidence (screenshots, lighthouse reports)
+/.qa-evidence/
+
+# claude code local config (absolute paths, machine-specific)
+/.claude/
 
 # vercel
 .vercel

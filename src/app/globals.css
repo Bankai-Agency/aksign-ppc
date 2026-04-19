@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ─────────────────────────────────────────────
+     Brand — Red seed #BB0000, 12-step scale
+     ───────────────────────────────────────────── */
+  --color-brand-1:  #fff5f5;
+  --color-brand-2:  #ffe6e6;
+  --color-brand-3:  #ffcccc;
+  --color-brand-4:  #ffa8a8;
+  --color-brand-5:  #fa7878;
+  --color-brand-6:  #e34545;
+  --color-brand-7:  #cc2222;
+  --color-brand-8:  #bb0000;
+  --color-brand-9:  #bb0000; /* primary CTA bg */
+  --color-brand-10: #a30000; /* hover */
+  --color-brand-11: #870000; /* text on white (AAA <18px) */
+  --color-brand-12: #5c0000;
+
+  /* ─────────────────────────────────────────────
+     Gray — cooler industrial slate 12-step
+     ───────────────────────────────────────────── */
+  --color-gray-1:  #fafafa;
+  --color-gray-2:  #f2f2f2;
+  --color-gray-3:  #e6e6e6;
+  --color-gray-4:  #d5d5d5;
+  --color-gray-5:  #bfbfbf;
+  --color-gray-6:  #a3a3a3;
+  --color-gray-7:  #878787;
+  --color-gray-8:  #6e6e6e;
+  --color-gray-9:  #565656;
+  --color-gray-10: #424242;
+  --color-gray-11: #2e2e2e;
+  --color-gray-12: #0a0a0a;
+
+  /* ─────────────────────────────────────────────
+     Destructive — Radix tomato (distinct from brand red)
+     ───────────────────────────────────────────── */
+  --color-destructive-1:  #fffcfc;
+  --color-destructive-2:  #fff8f7;
+  --color-destructive-3:  #fff0ee;
+  --color-destructive-9:  #e54d2e;
+  --color-destructive-10: #dc3e1c;
+  --color-destructive-11: #ca3214;
+  --color-destructive-12: #5c271f;
+
+  /* ─────────────────────────────────────────────
+     Success — Radix grass
+     ───────────────────────────────────────────── */
+  --color-success-1:  #fbfefc;
+  --color-success-2:  #f2fcf5;
+  --color-success-3:  #e9f9ee;
+  --color-success-9:  #46a758;
+  --color-success-10: #3e9b4f;
+  --color-success-11: #2a7e3b;
+  --color-success-12: #203c25;
+
+  /* ─────────────────────────────────────────────
+     Warning — Radix amber (used for Placeholder dev border)
+     ───────────────────────────────────────────── */
+  --color-warning-1:  #fefdfb;
+  --color-warning-2:  #fff9ed;
+  --color-warning-3:  #fff4d5;
+  --color-warning-9:  #ffb224;
+  --color-warning-10: #ffa01c;
+  --color-warning-11: #ad5700;
+  --color-warning-12: #4e2009;
+
+  /* ─────────────────────────────────────────────
+     Typography — Fraunces display + Geist body
+     ───────────────────────────────────────────── */
+  --font-display: var(--font-fraunces), "Fraunces Fallback", Georgia, serif;
+  --font-body:    var(--font-geist),    "Geist Fallback",    system-ui, sans-serif;
+  --font-sans:    var(--font-geist),    "Geist Fallback",    system-ui, sans-serif;
+
+  /* ─────────────────────────────────────────────
+     Radii / breakpoints
+     ───────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  --breakpoint-xs: 480px;
+
+  /* Shine (LP-03) gradient stops — referenced inline */
+  --shine-a: #c8c8cc;
+  --shine-b: #e4e4e7;
+  --shine-c: #f5f5f5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─────────────────────────────────────────────
+   Base reset + fluid type scale (utopia.fyi clamp)
+   ───────────────────────────────────────────── */
+html {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 0.95rem + 0.225vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--color-gray-12);
+  background: var(--color-gray-1);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.25rem, 1.5rem + 3.5vw, 4.5rem); }
+h2 { font-size: clamp(1.75rem, 1.25rem + 2.25vw, 3rem); }
+h3 { font-size: clamp(1.375rem, 1.125rem + 1.125vw, 2rem); }
+h4 { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); line-height: 1.2; }
+
+/* Small / eyebrow text */
+.text-fluid-small { font-size: clamp(0.875rem, 0.85rem + 0.125vw, 0.9375rem); }
+
+/* Tabular numerals helper */
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* Visible focus ring on every interactive (AA) */
+*:focus-visible {
+  outline: 2px solid var(--color-brand-9);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Reduced motion — strip all non-essential transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip-link visibility toggle */
+.skip-link:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

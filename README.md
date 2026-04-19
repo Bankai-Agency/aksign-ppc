@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AK Sign PPC
 
-## Getting Started
+3 PPC landing pages for AK Sign — commercial signage, Arlington Heights IL.
 
-First, run the development server:
+- `/lp/channel-letter-signs` (LP-01 · red accent)
+- `/lp/illuminated-signs` (LP-02 · white monochrome)
+- `/lp/vehicle-wraps` (LP-03 · shine accent, B2B fleet)
+- `/thank-you` (noindex post-submit)
+
+During design exploration:
+
+- `/v-photo/channel-letter-signs` — photo-first editorial variant
+- `/v-numeric/channel-letter-signs` — numeric-first Ramp-inspired variant
+
+## Stack
+
+Next.js 16 · React 19 · Tailwind v4 · Radix primitives · Fraunces + Geist · Framer Motion · Lucide · Zod · Resend
+
+## Dev
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm typecheck
+pnpm lint
+pnpm test
+pnpm build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Env
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy `.env.example` → `.env.local` and fill values. Required before production:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `RESEND_API_KEY` — email lead delivery
+- `TG_BOT_TOKEN`, `TG_CHAT_ID` — Telegram delivery (optional)
+- `NEXT_PUBLIC_ADS_CONV_LABEL` — Google Ads conversion label (blocker, supplied by client)
 
-## Learn More
+## Content
 
-To learn more about Next.js, take a look at the following resources:
+All copy lives in `src/data/*.json` (`shared.json` + `lp-0{1,2,3}.json`), Zod-validated at build time via `src/lib/content.ts`. No hardcoded strings in JSX.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Handoff reference
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Full brief pack: `/Users/dmitriy/aksign/` (18 section specs + design brief + page spec + client source).
