@@ -1,6 +1,7 @@
 export { Contact } from "./Contact";
 export { Footer } from "./Footer";
 export { Header } from "./Header";
+export { HeroQuoteForm } from "./HeroQuoteForm";
 export { HowItWorks } from "./HowItWorks";
 export { Portfolio } from "./Portfolio";
 export { ServiceArea } from "./ServiceArea";
