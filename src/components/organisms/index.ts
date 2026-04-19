@@ -1,0 +1,8 @@
+export { Contact } from "./Contact";
+export { Footer } from "./Footer";
+export { Header } from "./Header";
+export { HowItWorks } from "./HowItWorks";
+export { Portfolio } from "./Portfolio";
+export { ServiceArea } from "./ServiceArea";
+export { StickyMobileCTA } from "./StickyMobileCTA";
+export { TrustBar } from "./TrustBar";

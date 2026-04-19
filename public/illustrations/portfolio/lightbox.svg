@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-label="Lightbox cabinet sign illustration">
+  <rect width="500" height="400" fill="#f2f2f2"/>
+  <rect x="80" y="80" width="340" height="200" fill="#0a0a0a" stroke="#424242" stroke-width="4"/>
+  <rect x="90" y="90" width="320" height="180" fill="#bb0000" opacity="0.9"/>
+  <text x="250" y="200" font-family="Manrope, sans-serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">CAFE</text>
+  <line x1="250" y1="280" x2="250" y2="340" stroke="#424242" stroke-width="6"/>
+  <rect x="220" y="340" width="60" height="14" fill="#424242"/>
+  <text x="250" y="380" font-family="Manrope, sans-serif" font-size="14" fill="#878787" text-anchor="middle">LIGHTBOX — PLACEHOLDER</text>
+</svg>

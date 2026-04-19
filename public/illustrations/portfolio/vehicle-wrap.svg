@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-label="Wrapped commercial vehicle illustration">
+  <rect width="500" height="400" fill="#f2f2f2"/>
+  <path d="M60 260 L120 180 L340 180 L440 220 L440 300 L60 300 Z" fill="#bb0000" stroke="#0a0a0a" stroke-width="3"/>
+  <rect x="140" y="195" width="80" height="60" fill="#ffffff" stroke="#0a0a0a" stroke-width="2"/>
+  <rect x="235" y="195" width="80" height="60" fill="#ffffff" stroke="#0a0a0a" stroke-width="2"/>
+  <text x="250" y="238" font-family="Manrope, sans-serif" font-size="22" font-weight="700" fill="#0a0a0a" text-anchor="middle">AK SIGN</text>
+  <text x="250" y="286" font-family="Manrope, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">(312) 898-4581</text>
+  <circle cx="135" cy="310" r="28" fill="#0a0a0a"/>
+  <circle cx="135" cy="310" r="12" fill="#424242"/>
+  <circle cx="370" cy="310" r="28" fill="#0a0a0a"/>
+  <circle cx="370" cy="310" r="12" fill="#424242"/>
+  <text x="250" y="380" font-family="Manrope, sans-serif" font-size="14" fill="#878787" text-anchor="middle">VEHICLE WRAP — PLACEHOLDER</text>
+</svg>
