@@ -1,11 +1,12 @@
-import { Geist } from "next/font/google";
+import { Manrope } from "next/font/google";
 
 /**
- * Geist — variable neo-grotesk sans (Vercel OFL).
- * Single typeface for both display and body (Helvetica-family vibe).
+ * Manrope — variable grotesk sans with subtle roundness.
+ * Single typeface for both display and body per user preference
+ * (studio-size.com reference).
  */
-export const geist = Geist({
+export const manrope = Manrope({
   subsets: ["latin", "latin-ext"],
   display: "swap",
-  variable: "--font-geist",
+  variable: "--font-manrope",
 });

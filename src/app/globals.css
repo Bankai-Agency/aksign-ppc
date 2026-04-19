@@ -67,12 +67,12 @@
   --color-warning-12: #4e2009;
 
   /* ─────────────────────────────────────────────
-     Typography — Geist-only (neo-grotesk, Helvetica-family)
-     Single typeface for display + body per user preference.
+     Typography — Manrope (grotesk, studio-size.com reference)
+     Single typeface for display + body.
      ───────────────────────────────────────────── */
-  --font-display: var(--font-geist), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
-  --font-body:    var(--font-geist), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
-  --font-sans:    var(--font-geist), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-display: var(--font-manrope), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-body:    var(--font-manrope), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-sans:    var(--font-manrope), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
 
   /* ─────────────────────────────────────────────
      Radii / breakpoints
@@ -109,15 +109,15 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
-h1 { font-size: clamp(2.5rem, 1.75rem + 3.75vw, 5rem);      letter-spacing: -0.035em; }
-h2 { font-size: clamp(2rem,   1.5rem + 2.5vw,  3.5rem);     letter-spacing: -0.03em;  }
-h3 { font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);   letter-spacing: -0.025em; }
-h4 { font-size: clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem); line-height: 1.15; letter-spacing: -0.02em; }
+h1 { font-size: clamp(2.5rem, 1.75rem + 3.75vw, 5rem);    }
+h2 { font-size: clamp(2rem,   1.5rem + 2.5vw,  3.5rem);   }
+h3 { font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem); }
+h4 { font-size: clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem); line-height: 1.2; }
 
 /* Small / eyebrow text */
 .text-fluid-small { font-size: clamp(0.875rem, 0.85rem + 0.125vw, 0.9375rem); }
