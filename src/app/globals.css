@@ -18,20 +18,20 @@
   --color-brand-12: #5c0000;
 
   /* ─────────────────────────────────────────────
-     Gray — cooler industrial slate 12-step
+     Gray — off-white (slight warm) → warm black
      ───────────────────────────────────────────── */
-  --color-gray-1:  #fafafa;
-  --color-gray-2:  #f2f2f2;
-  --color-gray-3:  #e6e6e6;
-  --color-gray-4:  #d5d5d5;
-  --color-gray-5:  #bfbfbf;
-  --color-gray-6:  #a3a3a3;
-  --color-gray-7:  #878787;
-  --color-gray-8:  #6e6e6e;
-  --color-gray-9:  #565656;
-  --color-gray-10: #424242;
-  --color-gray-11: #2e2e2e;
-  --color-gray-12: #0a0a0a;
+  --color-gray-1:  #f8f7f4;  /* canvas — almost white, slight warm */
+  --color-gray-2:  #f1efea;
+  --color-gray-3:  #e6e3dc;
+  --color-gray-4:  #d1ccbf;
+  --color-gray-5:  #b3ac9d;
+  --color-gray-6:  #918a7c;
+  --color-gray-7:  #70695d;
+  --color-gray-8:  #585247;
+  --color-gray-9:  #413b33;
+  --color-gray-10: #2f2a24;
+  --color-gray-11: #22201c;
+  --color-gray-12: #1a1a17;  /* warm black */
 
   /* ─────────────────────────────────────────────
      Destructive — Radix tomato (distinct from brand red)
@@ -67,12 +67,12 @@
   --color-warning-12: #4e2009;
 
   /* ─────────────────────────────────────────────
-     Typography — Manrope (grotesk, studio-size.com reference)
+     Typography — Inter (free Neue Haas Grotesk equivalent)
      Single typeface for display + body.
      ───────────────────────────────────────────── */
-  --font-display: var(--font-manrope), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
-  --font-body:    var(--font-manrope), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
-  --font-sans:    var(--font-manrope), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-display: var(--font-inter), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-body:    var(--font-inter), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-sans:    var(--font-inter), "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
 
   /* ─────────────────────────────────────────────
      Radii / breakpoints
@@ -109,9 +109,9 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  font-weight: 800;
 }
 
 h1 { font-size: clamp(2.5rem, 1.75rem + 3.75vw, 5rem);    }
@@ -130,6 +130,25 @@ h4 { font-size: clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem); line-height: 1.2; }
   outline: 2px solid var(--color-brand-9);
   outline-offset: 2px;
   border-radius: var(--radius-sm);
+}
+
+/* CTA form fields carry their own static border on the wrapper;
+   suppress the default focus ring inside them. */
+.cta-input,
+.cta-input:focus,
+.cta-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Hide native cursor only on the reel play button. The MouseFollower
+   renders a custom circle only while hovering data-cursor="play". */
+@media (hover: hover) and (pointer: fine) {
+  [data-cursor="play"],
+  [data-cursor="play"] * {
+    cursor: none !important;
+  }
 }
 
 /* Reduced motion — strip all non-essential transitions */

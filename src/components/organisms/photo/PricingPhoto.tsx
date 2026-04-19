@@ -34,7 +34,7 @@ export function PricingPhoto({ accent, pricing }: PricingPhotoProps) {
     >
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16 py-24 md:py-40">
         <Reveal>
-          <p className="text-xs md:text-sm uppercase tracking-[0.22em] text-brand-11 font-semibold">
+          <p className="text-[11px] md:text-xs uppercase tracking-[0.22em] text-brand-11 font-semibold">
             Honest pricing
           </p>
         </Reveal>
@@ -42,10 +42,10 @@ export function PricingPhoto({ accent, pricing }: PricingPhotoProps) {
         <Reveal delay={0.08}>
           <h2
             id="pricing-heading"
-            className="mt-4 mb-8 md:mb-10 max-w-5xl tracking-[-0.03em]"
+            className="mt-4 mb-8 md:mb-10 max-w-5xl font-extrabold tracking-[-0.05em]"
             style={{
               fontSize: "clamp(2.25rem, 1rem + 5.5vw, 6.25rem)",
-              lineHeight: 0.95,
+              lineHeight: 0.92,
             }}
           >
             {pricing.heading}
@@ -93,12 +93,12 @@ export function PricingPhoto({ accent, pricing }: PricingPhotoProps) {
                   <div className="md:col-span-5 flex flex-col justify-start">
                     <p
                       className={cn(
-                        "font-bold tabular-nums tracking-[-0.04em] text-balance",
+                        "font-extrabold tabular-nums tracking-[-0.06em] text-balance",
                         accentText[accent],
                       )}
                       style={{
                         fontSize: "clamp(3rem, 1rem + 6.5vw, 7.5rem)",
-                        lineHeight: 0.95,
+                        lineHeight: 0.9,
                       }}
                       aria-label={`Range ${t.rangeLow.toLocaleString()} to ${t.rangeHigh.toLocaleString()} dollars${t.rangeHighIsMin ? " or more" : ""}${t.perUnit ? ` ${t.perUnit}` : ""}`}
                     >

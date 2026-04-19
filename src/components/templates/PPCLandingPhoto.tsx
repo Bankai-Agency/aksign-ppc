@@ -1,50 +1,51 @@
 import type { LPVariant, SharedContent } from "@/types/lp";
+import { LocaleProvider } from "@/lib/i18n";
 import {
-  Contact,
-  Footer,
-  Header,
-  HowItWorks,
-  Portfolio,
-  ServiceArea,
-  StickyMobileCTA,
-  TrustBar,
-} from "@/components/organisms";
-import {
-  FAQPhoto,
+  CustomerCareCTA,
+  FAQStudio,
+  FeaturedWorkSliderStudio,
   HeroPhoto,
-  PricingPhoto,
-  QuoteSectionPhoto,
-  ServicesPhoto,
+  HowItWorksStudio,
+  LenisProvider,
+  MouseFollower,
+  PreloaderStudio,
+  PricingStudio,
+  ServiceAreaStudio,
+  ServicesScrollModule,
+  ShowreelFullscreen,
+  SimpleTextStatement,
+  StudioFooter,
+  StudioHeader,
+  TrustBarStudio,
 } from "@/components/organisms/photo";
 
 type Props = { lp: LPVariant; shared: SharedContent };
 
 /**
- * Photo-first editorial template — studio-size.com reference.
- * Hero has no form (editorial typographic peak); the form lives in a
- * dedicated dark QuoteSection between Portfolio and Contact.
+ * studio-size.com 1:1 design language with AK Sign PPC content.
+ * Structure: Preloader → Header → Hero → Work → Statement → Showreel
+ * → Services → Pricing → Process → FAQ → Areas → CTA → Footer.
  */
 export default function PPCLandingPhoto({ lp, shared }: Props) {
   return (
-    <>
-      <Header accent={lp.accent} shared={shared} ctaLabel={lp.ctaLabel} ctaHref="#quote" />
-      <HeroPhoto lp={lp} nap={shared.nap} />
-      <TrustBar accent={lp.accent} items={shared.trustBar} />
-      <ServicesPhoto accent={lp.accent} lp={lp} />
-      <PricingPhoto accent={lp.accent} pricing={lp.pricing} />
-      <HowItWorks accent={lp.accent} data={shared.howItWorks} />
-      <Portfolio data={shared.portfolio} variant="gallery" />
-      <QuoteSectionPhoto lp={lp} nap={shared.nap} />
-      <FAQPhoto lpSlug={lp.slug} data={lp.faq} />
-      <ServiceArea accent={lp.accent} data={shared.serviceArea} />
-      <Contact accent={lp.accent} shared={shared} />
-      <Footer accent={lp.accent} shared={shared} />
-      <StickyMobileCTA
-        accent={lp.accent}
-        data={shared.stickyMobileCta}
-        ctaLabel={lp.ctaLabel}
-        ctaHref="#quote"
-      />
-    </>
+    <LocaleProvider>
+      <LenisProvider>
+        <PreloaderStudio />
+        <MouseFollower />
+        <StudioHeader nap={shared.nap} />
+      <HeroPhoto slug={lp.slug} />
+      <TrustBarStudio items={shared.trustBar} />
+      <FeaturedWorkSliderStudio portfolio={shared.portfolio} />
+      <SimpleTextStatement />
+      <ShowreelFullscreen />
+      <ServicesScrollModule />
+      <PricingStudio pricing={lp.pricing} />
+      <HowItWorksStudio data={shared.howItWorks} />
+      <FAQStudio lpSlug={lp.slug} data={lp.faq} />
+      <ServiceAreaStudio data={shared.serviceArea} />
+      <CustomerCareCTA />
+        <StudioFooter shared={shared} />
+      </LenisProvider>
+    </LocaleProvider>
   );
 }

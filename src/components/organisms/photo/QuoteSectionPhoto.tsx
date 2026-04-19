@@ -19,17 +19,17 @@ export function QuoteSectionPhoto({ lp, nap }: QuoteSectionPhotoProps) {
         <div className="grid gap-12 md:gap-20 md:grid-cols-12 items-start">
           <div className="md:col-span-6 lg:col-span-7 flex flex-col gap-8">
             <Reveal>
-              <p className="text-xs md:text-sm uppercase tracking-[0.22em] text-brand-5 font-semibold">
+              <p className="text-[11px] md:text-xs uppercase tracking-[0.22em] text-brand-5 font-semibold">
                 Ready when you are
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2
                 id="quote-heading"
-                className="text-white tracking-[-0.03em]"
+                className="text-white font-extrabold tracking-[-0.05em]"
                 style={{
                   fontSize: "clamp(2.5rem, 1rem + 6vw, 7rem)",
-                  lineHeight: 0.92,
+                  lineHeight: 0.9,
                 }}
               >
                 Quote in one business day.

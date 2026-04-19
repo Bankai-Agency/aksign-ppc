@@ -1,8 +1,10 @@
+"use client";
+
 import type { Accent, LPVariant } from "@/types/lp";
-import { Badge } from "@/components/atoms/Badge";
-import { Icon, type IconName } from "@/components/atoms/Icon";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ImagePlaceholder } from "@/components/atoms/ImagePlaceholder";
-import { Reveal, StaggerGroup, StaggerItem } from "@/components/atoms/Reveal";
+import { Reveal } from "@/components/atoms/Reveal";
 import { cn } from "@/lib/utils";
 
 type ServicesPhotoProps = {
@@ -10,164 +12,178 @@ type ServicesPhotoProps = {
   lp: LPVariant;
 };
 
-const accentBorder: Record<Accent, string> = {
-  red: "border-t-brand-9",
-  white: "border-t-gray-12",
-  shine: "border-t-gray-10",
+type ServiceRow = {
+  title: string;
+  tag: string;
+  description: string;
 };
 
-const iconColor: Record<Accent, string> = {
+const accentText: Record<Accent, string> = {
   red: "text-brand-9",
   white: "text-gray-12",
   shine: "text-gray-11",
 };
 
 /**
- * Photo-first Services — one giant focus row (image left, content right)
- * then two full-bleed secondary cards. No small icon-tiles.
+ * Studio-size Services — numbered list on the left, auto-rotating imagery
+ * on the right that follows the active row (hover overrides rotation).
  */
 export function ServicesPhoto({ accent, lp }: ServicesPhotoProps) {
   const { focus, secondary } = lp.services;
+
+  const rows: ServiceRow[] = [
+    { title: focus.title, tag: focus.tag ?? lp.slug, description: focus.description },
+    ...secondary.map((s) => ({
+      title: s.title,
+      tag: s.tag ?? "service",
+      description: s.description,
+    })),
+    {
+      title: "Permit handling",
+      tag: "permits",
+      description:
+        "We file sign and electrical permits with the Village ourselves. Typical turnaround 2 to 4 weeks — in parallel with fabrication.",
+    },
+    {
+      title: "Installation",
+      tag: "install",
+      description:
+        "In-house install crew: lift trucks, electrical hookups, clean mount. No third-party scheduling, no finger-pointing.",
+    },
+    {
+      title: "Fabrication",
+      tag: "fabrication",
+      description:
+        "Aluminum returns, trim cap, UL-listed LEDs, premium vinyl. We build it all in our Arlington Heights shop — not outsourced.",
+    },
+  ];
+
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const t = setInterval(() => {
+      setActive((prev) => (prev + 1) % rows.length);
+    }, 3200);
+    return () => clearInterval(t);
+  }, [paused, rows.length]);
+
+  const current = rows[active];
 
   return (
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="bg-white"
+      className="bg-white border-t border-gray-3"
     >
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16 py-24 md:py-40">
         <Reveal>
-          <p className="text-xs md:text-sm uppercase tracking-[0.22em] text-brand-11 font-semibold">
-            What we build
+          <p className="text-[11px] md:text-xs uppercase tracking-[0.22em] text-gray-10 font-semibold">
+            Capabilities / 2025
           </p>
         </Reveal>
 
         <Reveal delay={0.08}>
           <h2
             id="services-heading"
-            className="mt-4 mb-16 md:mb-24 max-w-5xl text-balance tracking-[-0.03em]"
+            className="mt-4 mb-16 md:mb-24 max-w-5xl text-balance font-extrabold tracking-[-0.05em] text-gray-12"
             style={{
               fontSize: "clamp(2.25rem, 1rem + 5.5vw, 6.25rem)",
-              lineHeight: 0.95,
+              lineHeight: 0.92,
             }}
           >
-            Signage that does the work of a{" "}
-            <span className={cn(iconColor[accent])}>second storefront.</span>
+            Everything a storefront sign needs,{" "}
+            <span className={cn(accentText[accent])}>under one roof.</span>
           </h2>
         </Reveal>
 
-        {/* Focus — gigantic side-by-side */}
-        <Reveal y={60}>
-          <article className="grid gap-8 md:gap-14 lg:grid-cols-12 mb-20 md:mb-28">
-            <div className="lg:col-span-7">
-              <ImagePlaceholder
-                slot={`service-focus-${lp.slug}`}
-                aspect="portrait"
-                alt={`${focus.title} — featured installation`}
-                icon="Sparkles"
-                label={`FOCUS · ${focus.tag ?? lp.slug}`}
-                sizes="(max-width: 1024px) 100vw, 58vw"
-                className="!rounded-2xl"
-              />
-            </div>
-
-            <div className="lg:col-span-5 flex flex-col justify-between gap-8">
-              <div>
-                <div className={cn("flex items-center gap-3 pt-6 border-t-4", accentBorder[accent])}>
-                  <Icon
-                    name={focus.icon as IconName}
-                    size={28}
-                    className={iconColor[accent]}
-                    aria-hidden
-                  />
-                  <span className="text-xs uppercase tracking-[0.18em] text-gray-10 font-semibold">
-                    Primary service
-                  </span>
-                </div>
-
-                <h3
-                  className="mt-6 tracking-[-0.03em]"
-                  style={{
-                    fontSize: "clamp(1.75rem, 1rem + 3vw, 3.25rem)",
-                    lineHeight: 1,
+        <div className="grid gap-12 md:gap-16 md:grid-cols-12 items-start">
+          <ul
+            className="md:col-span-7 flex flex-col border-t border-gray-3"
+            onMouseLeave={() => setPaused(false)}
+          >
+            {rows.map((r, i) => {
+              const isActive = i === active;
+              return (
+                <li
+                  key={r.title}
+                  className={cn(
+                    "group relative border-b border-gray-3 transition-colors",
+                    isActive ? "bg-gray-1" : "bg-transparent",
+                  )}
+                  onMouseEnter={() => {
+                    setActive(i);
+                    setPaused(true);
                   }}
                 >
-                  {focus.title}
-                </h3>
-
-                <p className="mt-6 text-lg md:text-xl text-gray-10 leading-relaxed text-pretty max-w-prose">
-                  {focus.description}
-                </p>
-              </div>
-
-              <StaggerGroup as="ul" className="flex flex-col gap-3 border-t border-gray-3 pt-6">
-                {focus.bullets.map((b) => (
-                  <StaggerItem
-                    key={b}
-                    as="li"
-                    className="flex items-start gap-3 text-base md:text-lg text-gray-12 font-medium"
+                  <button
+                    type="button"
+                    className="w-full flex items-center gap-6 md:gap-10 py-6 md:py-8 text-left focus-visible:outline-2"
+                    onClick={() => setActive(i)}
                   >
-                    <Icon
-                      name="Check"
-                      size={18}
-                      stroke={2.25}
-                      className={cn("mt-1 shrink-0", iconColor[accent])}
-                    />
-                    <span>{b}</span>
-                  </StaggerItem>
-                ))}
-              </StaggerGroup>
-
-              <div className="flex flex-wrap gap-2">
-                <Badge intent="accent">Free design included</Badge>
-                <Badge intent="neutral">Permit handled</Badge>
-              </div>
-            </div>
-          </article>
-        </Reveal>
-
-        {/* Secondary — 2 huge cards with full-bleed image tops */}
-        <div className="grid gap-8 md:gap-12 md:grid-cols-2">
-          {secondary.map((s, i) => (
-            <Reveal key={s.title} delay={i * 0.08} y={50}>
-              <article className="group flex flex-col gap-6 h-full">
-                <ImagePlaceholder
-                  slot={`service-${s.tag ?? "secondary"}`}
-                  aspect="landscape"
-                  alt={`${s.title} example`}
-                  icon={s.icon as IconName}
-                  label={s.tag ?? "SECONDARY"}
-                  sizes="(max-width: 768px) 100vw, 42vw"
-                  className="!rounded-2xl transition-transform duration-500 group-hover:scale-[1.015]"
-                />
-                <div className="flex flex-col gap-3">
-                  <div className="flex items-center gap-3">
-                    <Icon
-                      name={s.icon as IconName}
-                      size={22}
-                      className={iconColor[accent]}
-                      aria-hidden
-                    />
-                    <span className="text-xs uppercase tracking-[0.18em] text-gray-10 font-semibold">
-                      Also available
+                    <span
+                      className={cn(
+                        "text-xs uppercase tracking-[0.22em] font-semibold tabular-nums transition-colors",
+                        isActive ? accentText[accent] : "text-gray-8",
+                      )}
+                    >
+                      {String(i + 1).padStart(2, "0")}
                     </span>
-                  </div>
-                  <h4
-                    className="tracking-[-0.02em]"
-                    style={{
-                      fontSize: "clamp(1.5rem, 1rem + 1.5vw, 2.5rem)",
-                      lineHeight: 1.05,
-                    }}
-                  >
-                    {s.title}
-                  </h4>
-                  <p className="text-base md:text-lg text-gray-10 leading-relaxed max-w-prose">
-                    {s.description}
-                  </p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+                    <span
+                      className={cn(
+                        "font-extrabold tracking-[-0.035em] transition-colors",
+                        isActive ? "text-gray-12" : "text-gray-10 group-hover:text-gray-12",
+                      )}
+                      style={{
+                        fontSize: "clamp(1.5rem, 1rem + 1.75vw, 2.75rem)",
+                        lineHeight: 1,
+                      }}
+                    >
+                      {r.title}
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+
+          <div className="md:col-span-5 md:sticky md:top-28">
+            <div className="relative overflow-hidden rounded-2xl bg-gray-3 aspect-[4/5]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={current.tag}
+                  initial={{ opacity: 0, scale: 1.02 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="absolute inset-0"
+                >
+                  <ImagePlaceholder
+                    slot={`service-${current.tag}`}
+                    aspect="portrait"
+                    alt={current.title}
+                    icon="Image"
+                    label={current.tag.toUpperCase()}
+                    sizes="(max-width: 768px) 100vw, 42vw"
+                    className="!rounded-2xl h-full"
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={current.tag}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-6 text-base md:text-lg text-gray-10 leading-relaxed max-w-prose"
+              >
+                {current.description}
+              </motion.p>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </section>

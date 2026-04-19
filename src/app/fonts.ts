@@ -1,12 +1,11 @@
-import { Manrope } from "next/font/google";
+import { Inter } from "next/font/google";
 
 /**
- * Manrope — variable grotesk sans with subtle roundness.
- * Single typeface for both display and body per user preference
- * (studio-size.com reference).
+ * Inter — closest free equivalent to Neue Haas Grotesk Display
+ * (studio-size.com typekit font). Variable sans, weights 400-800.
  */
-export const manrope = Manrope({
+export const inter = Inter({
   subsets: ["latin", "latin-ext"],
   display: "swap",
-  variable: "--font-manrope",
+  variable: "--font-inter",
 });

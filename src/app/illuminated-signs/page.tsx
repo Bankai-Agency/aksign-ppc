@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import PPCLandingNumeric from "@/components/templates/PPCLandingNumeric";
+import PPCLandingPhoto from "@/components/templates/PPCLandingPhoto";
 import { getLPVariant, getSharedContent } from "@/lib/content";
 
-const SLUG = "channel-letter-signs" as const;
+const SLUG = "illuminated-signs" as const;
 
 export async function generateMetadata(): Promise<Metadata> {
   const lp = getLPVariant(SLUG);
   return {
-    title: `${lp.meta.title} · Numeric`,
+    title: `${lp.meta.title} · Photo`,
     description: lp.meta.description,
     openGraph: {
       title: lp.meta.ogTitle,
@@ -27,5 +27,5 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   const lp = getLPVariant(SLUG);
   const shared = getSharedContent();
-  return <PPCLandingNumeric lp={lp} shared={shared} />;
+  return <PPCLandingPhoto lp={lp} shared={shared} />;
 }

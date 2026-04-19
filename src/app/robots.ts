@@ -5,7 +5,15 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        disallow: ["/lp/", "/v-photo/", "/v-numeric/", "/thank-you", "/api/", "/dev/"],
+        disallow: [
+          "/",
+          "/channel-letter-signs",
+          "/illuminated-signs",
+          "/vehicle-wraps",
+          "/thank-you",
+          "/api/",
+          "/dev/",
+        ],
       },
     ],
   };

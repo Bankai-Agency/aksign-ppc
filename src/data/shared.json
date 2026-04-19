@@ -106,49 +106,43 @@
       {
         "title": "Illuminated channel letters",
         "category": "channel-letters",
-        "illustrationSrc": "/illustrations/portfolio/channel-letters.svg",
+        "illustrationSrc": "/images/portfolio/1.png",
         "aspect": "portrait"
       },
       {
         "title": "Storefront lightbox",
         "category": "lightbox",
-        "illustrationSrc": "/illustrations/portfolio/lightbox.svg",
+        "illustrationSrc": "/images/portfolio/2.png",
         "aspect": "landscape"
       },
       {
         "title": "Full van wrap",
         "category": "vehicle-wrap",
-        "illustrationSrc": "/illustrations/portfolio/vehicle-wrap.svg",
+        "illustrationSrc": "/images/portfolio/3.png",
         "aspect": "landscape"
-      },
-      {
-        "title": "Window graphics",
-        "category": "window-graphics",
-        "illustrationSrc": "/illustrations/portfolio/window-graphics.svg",
-        "aspect": "square"
       },
       {
         "title": "Halo-lit letters",
         "category": "channel-letters",
-        "illustrationSrc": "/illustrations/portfolio/channel-letters.svg",
+        "illustrationSrc": "/images/portfolio/5.png",
         "aspect": "portrait"
       },
       {
         "title": "Pylon cabinet",
         "category": "lightbox",
-        "illustrationSrc": "/illustrations/portfolio/lightbox.svg",
+        "illustrationSrc": "/images/portfolio/6.png",
         "aspect": "portrait"
       },
       {
         "title": "Box-truck fleet wrap",
         "category": "vehicle-wrap",
-        "illustrationSrc": "/illustrations/portfolio/vehicle-wrap.svg",
+        "illustrationSrc": "/images/portfolio/7.png",
         "aspect": "landscape"
       },
       {
         "title": "Storefront decals",
         "category": "window-graphics",
-        "illustrationSrc": "/illustrations/portfolio/window-graphics.svg",
+        "illustrationSrc": "/images/portfolio/8.png",
         "aspect": "square"
       }
     ]

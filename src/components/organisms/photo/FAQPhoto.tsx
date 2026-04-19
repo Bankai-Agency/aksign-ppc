@@ -33,17 +33,17 @@ export function FAQPhoto({ lpSlug, data }: FAQPhotoProps) {
         <div className="grid gap-12 md:gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
             <Reveal>
-              <p className="text-xs md:text-sm uppercase tracking-[0.22em] text-brand-11 font-semibold">
+              <p className="text-[11px] md:text-xs uppercase tracking-[0.22em] text-brand-11 font-semibold">
                 FAQ
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2
                 id="faq-heading"
-                className="mt-4 tracking-[-0.03em] sticky top-28"
+                className="mt-4 font-extrabold tracking-[-0.05em] sticky top-28"
                 style={{
                   fontSize: "clamp(2.25rem, 1rem + 5vw, 5.5rem)",
-                  lineHeight: 0.95,
+                  lineHeight: 0.92,
                 }}
               >
                 {data.heading}
