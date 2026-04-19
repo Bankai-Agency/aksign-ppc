@@ -1,0 +1,159 @@
+{
+  "slug": "channel-letter-signs",
+  "accent": "red",
+  "ctaLabel": "Get a Free Quote",
+  "serviceTag": "channel-letters",
+  "meta": {
+    "title": "Channel Letter Signs Chicago — Custom Installed in 3–7 Days | AK Sign",
+    "description": "Custom illuminated channel letter signs for Chicago businesses. Design, UL-listed LED fabrication, permit handling, and professional install. Free design, 3–7 day turnaround.",
+    "ogTitle": "Channel Letter Signs Chicago — AK Sign",
+    "ogDescription": "Make your storefront unmistakable day and night. Channel letter signs with UL-listed LEDs, permit handling, and 3–7 day turnaround."
+  },
+  "hero": {
+    "eyebrow": "Serving Chicago + NW Suburbs",
+    "h1": "Channel Letter Signs That Bring You ",
+    "h1Accent": "Customers.",
+    "subcopy": "Custom illuminated channel letters for Chicago businesses. UL-listed LEDs, permit handling, and professional install by our in-house team — from brief to mounted sign in 3 to 7 days.",
+    "trustItems": [
+      "Free custom design included",
+      "3 to 7 day turnaround",
+      "Full-service install by one team",
+      "Serving Chicago + NW Suburbs"
+    ],
+    "phoneHint": "Prefer to talk? Call (312) 898-4581",
+    "formHeading": "Get your quote in one business day"
+  },
+  "services": {
+    "focus": {
+      "icon": "Sparkles",
+      "title": "Channel Letter Signs",
+      "description": "Illuminated 3D letters fabricated with aluminum returns and acrylic/polycarbonate faces — front-lit or halo-lit with UL-listed LEDs.",
+      "bullets": [
+        "Aluminum returns + trim cap",
+        "Front-lit or halo-lit LED",
+        "Pantone-match faces",
+        "Structural + electrical permit handled"
+      ],
+      "tag": "channel-letters"
+    },
+    "secondary": [
+      {
+        "icon": "Lightbulb",
+        "title": "Lightboxes",
+        "description": "Backlit aluminum cabinets with printed faces. Single or double-sided, pylon-mount available.",
+        "bullets": [
+          "Printed vinyl or acrylic face",
+          "Energy-efficient LED backlighting"
+        ],
+        "tag": "lightboxes"
+      },
+      {
+        "icon": "RectangleHorizontal",
+        "title": "Window Graphics",
+        "description": "Premium vinyl graphics, letters, and promotional decals for storefront windows.",
+        "bullets": [
+          "UV-stable premium vinyl",
+          "Full-color weather-rated print"
+        ],
+        "tag": "window-graphics"
+      }
+    ]
+  },
+  "pricing": {
+    "heading": "Channel letter pricing — honest ranges",
+    "intro": "Exact quotes depend on letter size, height, face material, LED type, and install complexity. Here is what typical Chicago storefront projects land at.",
+    "tiers": [
+      {
+        "name": "Small Storefront",
+        "rangeLow": 3000,
+        "rangeHigh": 6000,
+        "scope": "Letters under 18 inches, single row, up to ~15 feet wide.",
+        "bullets": [
+          "Aluminum returns and trim cap",
+          "Front-lit or halo-lit LED illumination",
+          "Single-row installation",
+          "Village permit filing included"
+        ]
+      },
+      {
+        "name": "Medium Retail",
+        "rangeLow": 6000,
+        "rangeHigh": 12000,
+        "scope": "Letters 18–30 inches, logo icon, raceway or flush mount.",
+        "bullets": [
+          "Larger letters with brand logo",
+          "UL-listed LED modules",
+          "Custom face colors (to Pantone)",
+          "Electrical permit coordination"
+        ]
+      },
+      {
+        "name": "Large Building / Monument",
+        "rangeLow": 12000,
+        "rangeHigh": 25000,
+        "rangeHighIsMin": true,
+        "scope": "Letters 30+ inches, building-top signs, multi-face monument signs.",
+        "bullets": [
+          "Custom fabrication to your specs",
+          "Structural engineering if required",
+          "Lift-truck installation",
+          "Full permit + zoning support"
+        ]
+      }
+    ],
+    "disclaimer": "Pricing ranges are Chicago-area averages for planning. Your exact quote depends on design, size, materials, and permit requirements. Free detailed quote in one business day."
+  },
+  "faq": {
+    "heading": "Questions about channel letter signs",
+    "items": [
+      {
+        "q": "What is a channel letter sign?",
+        "a": "A channel letter sign is a 3D illuminated sign where each letter is individually fabricated with aluminum sides and a translucent acrylic or polycarbonate face, lit internally by LEDs."
+      },
+      {
+        "q": "How much does a channel letter sign cost in Chicago?",
+        "a": "Typical Chicago storefront projects range from $3,000 to $12,000. Larger building-mounted installations can reach $25,000 or more depending on size, materials, and permit complexity."
+      },
+      {
+        "q": "How long do channel letter signs last?",
+        "a": "Well-built channel letters last 10 to 15 years. UL-listed LED modules are rated for 50,000+ hours of operation."
+      },
+      {
+        "q": "Do you handle sign permits for Chicago and the suburbs?",
+        "a": "Yes. We file sign and electrical permits with the municipality ourselves. Typical permit turnaround is 2 to 4 weeks, running in parallel with fabrication."
+      },
+      {
+        "q": "Front-lit vs halo-lit channel letters?",
+        "a": "Front-lit letters have a translucent face that glows outward — the most common storefront look. Halo-lit letters have a solid face and backlight the wall behind them, producing a soft outline glow. Halo-lit is more subtle and premium."
+      },
+      {
+        "q": "How long does design and installation take?",
+        "a": "Standard projects go from approved design to mounted sign in 3 to 7 days. Complex or large builds take 2 to 3 weeks. Permit adds 2 to 4 weeks, typically running in parallel."
+      },
+      {
+        "q": "Can you match my exact brand colors?",
+        "a": "Yes. We match Pantone, CMYK, or RAL codes on faces, vinyl overlays, and painted returns. Send your brand guide or a reference file with your quote request."
+      },
+      {
+        "q": "How bright are LED channel letters?",
+        "a": "Storefront-readable from 100+ feet. We specify LED brightness based on your mounting height, ambient lighting, and street distance — so the sign is legible without being harsh."
+      },
+      {
+        "q": "Are your signs weather-rated for Chicago winters?",
+        "a": "Yes. UL-listed LEDs rated for sub-zero temperatures, sealed housings, and weather-rated wiring. Our installs are designed for the full Midwest weather cycle."
+      },
+      {
+        "q": "Can I update the sign if I rebrand later?",
+        "a": "Yes. Refacing is available — we can replace the letter faces without replacing the entire sign structure, which saves most of the original investment."
+      },
+      {
+        "q": "What warranty do you offer on LEDs and fabrication?",
+        "a": "{{PLACEHOLDER: warranty-lp01-q11}}"
+      },
+      {
+        "q": "Do you ship outside the Chicago area?",
+        "a": "Our primary service area is Chicago plus the NW suburbs. Fabrication-only shipping is possible for longer distances — contact us with your address and we'll confirm feasibility."
+      }
+    ]
+  }
+}

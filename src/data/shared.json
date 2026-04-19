@@ -1,0 +1,190 @@
+{
+  "nap": {
+    "name": "AK Sign",
+    "address": {
+      "street": "220 W Campus Dr, Unit D",
+      "city": "Arlington Heights",
+      "state": "IL",
+      "zip": "60004",
+      "country": "USA"
+    },
+    "addressDisplay": "220 W Campus Dr, Unit D, Arlington Heights, IL 60004",
+    "phone": "+13128984581",
+    "phoneDisplay": "(312) 898-4581",
+    "email": "info@aksign.us",
+    "mapCid": "3316532158241573589",
+    "mapEmbedUrl": "https://www.google.com/maps?q=220+W+Campus+Dr+Unit+D+Arlington+Heights+IL+60004&output=embed",
+    "hours": "{{PLACEHOLDER: hours}}",
+    "socials": {
+      "instagram": "https://instagram.com/ak_sign",
+      "telegram": "https://t.me/AK_SIGN",
+      "whatsapp": "https://wa.me/13128984581"
+    }
+  },
+  "header": {
+    "navLinks": [
+      { "label": "Services", "href": "#services" },
+      { "label": "Pricing", "href": "#pricing" },
+      { "label": "Process", "href": "#how-it-works" },
+      { "label": "Areas", "href": "#service-area" },
+      { "label": "FAQ", "href": "#faq" }
+    ],
+    "ctaLabel": "Get a Quote"
+  },
+  "trustBar": [
+    {
+      "icon": "Sparkles",
+      "title": "Free custom design",
+      "subcopy": "Design is included in every quote — no separate fee."
+    },
+    {
+      "icon": "Clock",
+      "title": "3 to 7 day turnaround",
+      "subcopy": "Most signs ship within a week of approval."
+    },
+    {
+      "icon": "Wrench",
+      "title": "Full-service install",
+      "subcopy": "One team handles design, fabrication, and mounting."
+    },
+    {
+      "icon": "MapPin",
+      "title": "Local Arlington Heights",
+      "subcopy": "We know Village permit filing inside out."
+    },
+    {
+      "icon": "Calculator",
+      "title": "1-minute online quote",
+      "subcopy": "Answer two fields, get a detailed quote by next business day."
+    },
+    {
+      "icon": "Award",
+      "title": "High-quality materials",
+      "subcopy": "UL-listed LEDs, 3M / Avery premium cast vinyl."
+    }
+  ],
+  "howItWorks": {
+    "heading": "How it works",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Brief",
+        "description": "Send us your logo, goals, and references via form, WhatsApp, or Telegram."
+      },
+      {
+        "number": 2,
+        "title": "Recommendation",
+        "description": "We review your brief and propose the sign type that fits your goal and budget."
+      },
+      {
+        "number": 3,
+        "title": "Design preview",
+        "description": "Custom design sent for your approval before any fabrication starts."
+      },
+      {
+        "number": 4,
+        "title": "Fabrication",
+        "description": "In-house production: UL-listed LEDs, premium vinyl, aluminum. Typically 3–7 days."
+      },
+      {
+        "number": 5,
+        "title": "Permit",
+        "description": "We file with the Village ourselves. Typical turnaround: 2–4 weeks, in parallel with fabrication."
+      },
+      {
+        "number": 6,
+        "title": "Install",
+        "description": "In-house install crew handles mounting and clean-up."
+      }
+    ]
+  },
+  "portfolio": {
+    "heading": "Recent projects",
+    "note": "Real photos are being added as we complete projects. Request examples when you contact us.",
+    "mode": "placeholder",
+    "placeholders": [
+      {
+        "title": "Illuminated channel letters",
+        "category": "channel-letters",
+        "illustrationSrc": "/illustrations/portfolio/channel-letters.svg",
+        "aspect": "portrait"
+      },
+      {
+        "title": "Storefront lightbox",
+        "category": "lightbox",
+        "illustrationSrc": "/illustrations/portfolio/lightbox.svg",
+        "aspect": "landscape"
+      },
+      {
+        "title": "Full van wrap",
+        "category": "vehicle-wrap",
+        "illustrationSrc": "/illustrations/portfolio/vehicle-wrap.svg",
+        "aspect": "landscape"
+      },
+      {
+        "title": "Window graphics",
+        "category": "window-graphics",
+        "illustrationSrc": "/illustrations/portfolio/window-graphics.svg",
+        "aspect": "square"
+      },
+      {
+        "title": "Halo-lit letters",
+        "category": "channel-letters",
+        "illustrationSrc": "/illustrations/portfolio/channel-letters.svg",
+        "aspect": "portrait"
+      },
+      {
+        "title": "Pylon cabinet",
+        "category": "lightbox",
+        "illustrationSrc": "/illustrations/portfolio/lightbox.svg",
+        "aspect": "portrait"
+      },
+      {
+        "title": "Box-truck fleet wrap",
+        "category": "vehicle-wrap",
+        "illustrationSrc": "/illustrations/portfolio/vehicle-wrap.svg",
+        "aspect": "landscape"
+      },
+      {
+        "title": "Storefront decals",
+        "category": "window-graphics",
+        "illustrationSrc": "/illustrations/portfolio/window-graphics.svg",
+        "aspect": "square"
+      }
+    ]
+  },
+  "serviceArea": {
+    "heading": "Service area",
+    "cities": [
+      { "name": "Arlington Heights", "tier": "P0" },
+      { "name": "Palatine", "tier": "P0" },
+      { "name": "Schaumburg", "tier": "P0" },
+      { "name": "Chicago", "tier": "P0" },
+      { "name": "Mount Prospect", "tier": "P1" },
+      { "name": "Des Plaines", "tier": "P1" },
+      { "name": "Rolling Meadows", "tier": "P1" },
+      { "name": "Elk Grove Village", "tier": "P1" },
+      { "name": "Buffalo Grove", "tier": "P1" },
+      { "name": "Hoffman Estates", "tier": "P1" },
+      { "name": "Wheeling", "tier": "P1" },
+      { "name": "Prospect Heights", "tier": "P1" },
+      { "name": "Barrington", "tier": "P2" },
+      { "name": "Libertyville", "tier": "P2" },
+      { "name": "Inverness", "tier": "P2" }
+    ]
+  },
+  "contact": {
+    "heading": "Contact AK Sign",
+    "intro": "Call, message, or send a request. We reply within one business day.",
+    "formCtaLabel": "Send"
+  },
+  "footer": {
+    "disclaimer": "This page is a paid advertising landing page. Not indexed.",
+    "copyrightTemplate": "© {year} AK Sign. All rights reserved.",
+    "legalLinks": []
+  },
+  "stickyMobileCta": {
+    "label": "Call (312) 898-4581",
+    "href": "tel:+13128984581"
+  }
+}

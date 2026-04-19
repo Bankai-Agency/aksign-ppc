@@ -1,0 +1,159 @@
+{
+  "slug": "illuminated-signs",
+  "accent": "white",
+  "ctaLabel": "Get a Free Quote",
+  "serviceTag": "lightboxes",
+  "meta": {
+    "title": "Illuminated Signs & Lightboxes Chicago — Cabinet Signs | AK Sign",
+    "description": "Backlit lightbox and cabinet signs for Chicago businesses. Custom faces, energy-efficient LEDs, full install and permit handling. Free design, 3–7 day turnaround.",
+    "ogTitle": "Illuminated Lightbox Signs Chicago — AK Sign",
+    "ogDescription": "Backlit lightbox signs that make your business visible day and night. Custom faces, LED illumination, full-service install."
+  },
+  "hero": {
+    "eyebrow": "Serving Chicago + NW Suburbs",
+    "h1": "Illuminated Signs That Light Up Your ",
+    "h1Accent": "Storefront.",
+    "subcopy": "Backlit lightbox and cabinet signs for Chicago businesses. Energy-efficient LED illumination, custom printed faces, and professional install — from design to mounted sign in 3 to 7 days.",
+    "trustItems": [
+      "Free custom design included",
+      "3 to 7 day turnaround",
+      "Full-service install by one team",
+      "Serving Chicago + NW Suburbs"
+    ],
+    "phoneHint": "Prefer to talk? Call (312) 898-4581",
+    "formHeading": "Get your quote in one business day"
+  },
+  "services": {
+    "focus": {
+      "icon": "Lightbulb",
+      "title": "Lightboxes & Cabinet Signs",
+      "description": "Aluminum cabinets with translucent printed faces, LED-backlit. Single or double-sided, custom shapes, pylon-mount available.",
+      "bullets": [
+        "Aluminum cabinet frame",
+        "Printed vinyl or acrylic face",
+        "Energy-efficient LED backlighting",
+        "Wall-, blade-, or pylon-mount"
+      ],
+      "tag": "lightboxes"
+    },
+    "secondary": [
+      {
+        "icon": "Sparkles",
+        "title": "Channel Letter Signs",
+        "description": "3D illuminated letters with aluminum returns and LED illumination.",
+        "bullets": [
+          "Front-lit or halo-lit LED",
+          "Pantone-match faces"
+        ],
+        "tag": "channel-letters"
+      },
+      {
+        "icon": "RectangleHorizontal",
+        "title": "Window Graphics",
+        "description": "Premium vinyl graphics and promotional decals for storefront windows.",
+        "bullets": [
+          "UV-stable premium vinyl",
+          "Full-color weather-rated print"
+        ],
+        "tag": "window-graphics"
+      }
+    ]
+  },
+  "pricing": {
+    "heading": "Lightbox & cabinet sign pricing — honest ranges",
+    "intro": "Exact quotes depend on cabinet size, face material, illumination type, and mounting complexity.",
+    "tiers": [
+      {
+        "name": "Small Storefront",
+        "rangeLow": 2000,
+        "rangeHigh": 5000,
+        "scope": "Cabinet 3×2 to 4×3 feet, single-sided, simple face print.",
+        "bullets": [
+          "Aluminum cabinet frame",
+          "Printed vinyl or acrylic face",
+          "LED backlighting",
+          "Wall-mount installation"
+        ]
+      },
+      {
+        "name": "Medium Retail / Restaurant",
+        "rangeLow": 5000,
+        "rangeHigh": 10000,
+        "scope": "Cabinet 5×3 to 6×4 feet, double-sided, custom-shape possible.",
+        "bullets": [
+          "Double-sided cabinet",
+          "Multi-color printed face",
+          "Energy-efficient LED modules",
+          "Blade sign / projecting mount option"
+        ]
+      },
+      {
+        "name": "Large Custom Cabinet",
+        "rangeLow": 10000,
+        "rangeHigh": 20000,
+        "rangeHighIsMin": true,
+        "scope": "Cabinet 8 feet+, pylon-mount, multi-tenant, or complex shape.",
+        "bullets": [
+          "Custom shaped cabinet",
+          "Pylon / monument mount",
+          "Replaceable tenant panels",
+          "Full structural + electrical permit"
+        ]
+      }
+    ],
+    "disclaimer": "Pricing ranges are Chicago-area averages for planning. Exact quote depends on cabinet size, mount type, face materials, and permit requirements."
+  },
+  "faq": {
+    "heading": "Questions about illuminated signs",
+    "items": [
+      {
+        "q": "What is a lightbox sign?",
+        "a": "A lightbox sign is an illuminated sign housed in an aluminum cabinet with a translucent printed face — vinyl or acrylic — lit from behind by internal LEDs."
+      },
+      {
+        "q": "Cabinet signs vs channel letters — what's the difference?",
+        "a": "Channel letters are individually fabricated 3D letters. Cabinet signs are enclosed boxes with a single printed face. Cabinets are typically faster and more cost-effective, and their faces are easier to refresh."
+      },
+      {
+        "q": "How much does an illuminated lightbox sign cost?",
+        "a": "Typical projects range $2,000 to $10,000. Large custom cabinets or pylon mounts can exceed $20,000 depending on size and structural requirements."
+      },
+      {
+        "q": "Can you print my logo and colors on the face?",
+        "a": "Yes. We print full-color weather-rated vinyl or direct-print acrylic faces. Pantone matching is standard."
+      },
+      {
+        "q": "How long do LED lightbox signs last?",
+        "a": "The aluminum cabinet and LED system last 10 to 15 years (LEDs rated for 50,000+ hours). Printed faces typically need refresh every 5 to 8 years depending on sun exposure."
+      },
+      {
+        "q": "Single-sided vs double-sided?",
+        "a": "Single-sided mounts flush against a wall and is visible from one direction. Double-sided projects perpendicular from the building as a blade sign, visible from both street directions."
+      },
+      {
+        "q": "Can cabinet faces be replaced without rewiring?",
+        "a": "Yes. Cabinet face panels are designed to swap independently from the LED and wiring system — useful for rebrands or rotating promotions."
+      },
+      {
+        "q": "How much power does a lightbox consume?",
+        "a": "Modern LED cabinets draw roughly 50 to 150 watts for a 4×3 ft storefront sign — comparable to a few household bulbs."
+      },
+      {
+        "q": "Are lightbox signs weather-rated for Chicago?",
+        "a": "Yes. Sealed aluminum cabinets, weather-rated LEDs, and UV-stabilized faces handle the full Midwest temperature and precipitation range."
+      },
+      {
+        "q": "Do you handle permits for illuminated signs?",
+        "a": "Yes. We file both sign and electrical permits with the Village. Typical turnaround is 2 to 4 weeks, running in parallel with fabrication."
+      },
+      {
+        "q": "What sizes can you produce?",
+        "a": "Standard cabinets range from 2×2 feet up to 10×8 feet. Larger installations are fabricated modular and joined on site."
+      },
+      {
+        "q": "Can you build a multi-tenant cabinet for a plaza?",
+        "a": "Yes. We build shared cabinet frameworks with replaceable per-tenant panels — a common solution for strip malls and multi-tenant buildings."
+      }
+    ]
+  }
+}

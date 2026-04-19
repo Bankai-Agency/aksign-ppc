@@ -1,0 +1,160 @@
+{
+  "slug": "vehicle-wraps",
+  "accent": "shine",
+  "ctaLabel": "Get a Fleet Quote",
+  "serviceTag": "vehicle-wraps",
+  "meta": {
+    "title": "Fleet Wraps & Commercial Vehicle Graphics Chicago | AK Sign",
+    "description": "Commercial vehicle wraps and fleet graphics for Chicago businesses. Box trucks, vans, pickups, and trailers — premium cast vinyl, professional install, fleet-volume pricing.",
+    "ogTitle": "Commercial Fleet Wraps Chicago — AK Sign",
+    "ogDescription": "Turn your business fleet into a mobile billboard. Commercial vehicle wraps and fleet graphics with professional install."
+  },
+  "hero": {
+    "eyebrow": "Serving Chicago + NW Suburbs",
+    "h1": "Fleet Wraps That Work While Your Team ",
+    "h1Accent": "Drives.",
+    "subcopy": "Commercial vehicle wraps and fleet graphics for Chicago businesses. Box trucks, vans, pickups, and trailers — premium cast vinyl, in-house install, fleet-volume pricing.",
+    "trustItems": [
+      "Free custom design included",
+      "3 to 7 day turnaround",
+      "Batch scheduling for fleets",
+      "Serving Chicago + NW Suburbs"
+    ],
+    "phoneHint": "Prefer to talk? Call (312) 898-4581",
+    "formHeading": "Get your fleet quote in one business day"
+  },
+  "services": {
+    "focus": {
+      "icon": "Truck",
+      "title": "Fleet Wraps & Vehicle Graphics",
+      "description": "Partial or full commercial wraps with premium cast vinyl (3M, Avery Dennison). Box trucks, sprinters, vans, pickups, trailers. Fleet discounts from 3+ vehicles.",
+      "bullets": [
+        "3M / Avery premium cast vinyl",
+        "Partial or full wrap coverage",
+        "Batch scheduling for fleets",
+        "5–7 year rated durability"
+      ],
+      "tag": "vehicle-wraps"
+    },
+    "secondary": [
+      {
+        "icon": "Sparkles",
+        "title": "Channel Letter Signs",
+        "description": "3D illuminated letters for storefronts. Perfect pair for brick-and-mortar operations.",
+        "bullets": [
+          "Front-lit or halo-lit LED",
+          "Pantone-match faces"
+        ],
+        "tag": "channel-letters"
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Lightboxes",
+        "description": "Backlit cabinet signs for your storefront or headquarters.",
+        "bullets": [
+          "Printed vinyl or acrylic face",
+          "Energy-efficient LED backlighting"
+        ],
+        "tag": "lightboxes"
+      }
+    ]
+  },
+  "pricing": {
+    "heading": "Fleet wrap pricing — honest ranges",
+    "intro": "Exact quotes depend on vehicle type, coverage, design complexity, and fleet size.",
+    "tiers": [
+      {
+        "name": "Partial Wrap",
+        "rangeLow": 1500,
+        "rangeHigh": 3500,
+        "scope": "Logo, contact info, and key graphics on doors, hood, and rear. Single vehicle.",
+        "bullets": [
+          "3–4 year cast vinyl",
+          "Custom brand design",
+          "Door, hood, and rear coverage",
+          "1-day install per vehicle"
+        ]
+      },
+      {
+        "name": "Full Wrap — Single Vehicle",
+        "rangeLow": 3500,
+        "rangeHigh": 6500,
+        "scope": "Full-color wrap covering all exterior panels. Box trucks and sprinter vans slightly higher due to square footage.",
+        "bullets": [
+          "5–7 year premium cast vinyl",
+          "Full perimeter coverage",
+          "Custom design with your brand",
+          "2–3 day install per vehicle"
+        ]
+      },
+      {
+        "name": "Fleet Volume",
+        "rangeLow": 5000,
+        "rangeHigh": 15000,
+        "rangeHighIsMin": true,
+        "perUnit": "per vehicle",
+        "scope": "3 or more vehicles branded identically. Volume discounts apply; larger box trucks and trailers priced by sq ft.",
+        "bullets": [
+          "Identical fleet-wide branding",
+          "Volume discount (contact for tiers)",
+          "Batch scheduling to minimize downtime",
+          "Replacement wraps as fleet rotates"
+        ]
+      }
+    ],
+    "disclaimer": "Pricing ranges are for planning. Exact quote depends on vehicle size, coverage, design complexity, and fleet volume. Free detailed quote in one business day."
+  },
+  "faq": {
+    "heading": "Questions about fleet wraps",
+    "items": [
+      {
+        "q": "How much does a fleet wrap cost?",
+        "a": "Partial wraps start at $1,500. Full single-vehicle wraps run $3,500 to $6,500. Fleets of 3 or more vehicles qualify for volume discounts — typically $5,000 to $15,000 per vehicle depending on size."
+      },
+      {
+        "q": "How long does installation take?",
+        "a": "Partial wraps take 1 day per vehicle. Full wraps on vans and pickups take 2 to 3 days. Box trucks take 3 to 4 days. Fleet installs are batched 2 to 3 vehicles at a time so the rest of your fleet stays on the road."
+      },
+      {
+        "q": "How long do commercial vehicle wraps last?",
+        "a": "Premium cast vinyl (3M, Avery) is rated for 5 to 7 years. Economy vinyl runs 3 to 4 years. Durability varies with sun exposure and wash frequency."
+      },
+      {
+        "q": "What vinyl brands do you use?",
+        "a": "Premium cast vinyl from 3M, Avery Dennison, or equivalent. We confirm the exact product line during quoting based on vehicle type and desired lifetime."
+      },
+      {
+        "q": "Can you wrap box trucks, sprinters, and cargo vans?",
+        "a": "Yes — plus pickups, trailers, and smaller commercial vehicles. Larger box trucks are priced by square footage."
+      },
+      {
+        "q": "Are fleet volume discounts available?",
+        "a": "Yes. Discounts kick in at 3 vehicles and scale with fleet size. We also include batch scheduling to minimize operational downtime."
+      },
+      {
+        "q": "Will a wrap damage my paint?",
+        "a": "No. On factory paint in good condition, cast vinyl actually protects from UV and minor scratches. It removes cleanly without residue."
+      },
+      {
+        "q": "How do I care for a wrapped vehicle?",
+        "a": "Hand-wash or brushless automatic washes only. Keep high-pressure sprayers at least 6 inches from edges and seams."
+      },
+      {
+        "q": "Can I wrap leased vehicles?",
+        "a": "Yes. Most leases allow wraps because cast vinyl removes cleanly at lease-end. Check your specific lease language to confirm."
+      },
+      {
+        "q": "Full wrap vs partial wrap?",
+        "a": "A full wrap covers all exterior panels for maximum visibility. A partial wrap covers doors, hood, and rear — most of the brand impact at roughly half the cost."
+      },
+      {
+        "q": "Can you handle large fleet installs — 5 or more at once?",
+        "a": "Yes. We batch-schedule 2 to 3 vehicles at a time while the remainder of the fleet stays operational."
+      },
+      {
+        "q": "Do you provide design services for fleet branding?",
+        "a": "Yes — design is included in every quote. You receive a full vehicle mockup for approval before any production starts."
+      }
+    ]
+  }
+}
