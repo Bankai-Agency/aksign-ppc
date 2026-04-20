@@ -71,7 +71,7 @@ export function MouseFollower() {
       aria-hidden
       className={cn(
         "pointer-events-none fixed left-0 top-0 z-[90] hidden md:flex items-center justify-center rounded-full mix-blend-difference bg-gray-1 transition-[width,height,opacity] duration-300 ease-out",
-        state === "play"
+        state === "play" || state === "drag"
           ? "w-20 h-20 opacity-100"
           : "w-0 h-0 opacity-0",
       )}

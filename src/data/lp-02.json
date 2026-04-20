@@ -61,98 +61,150 @@
   },
   "pricing": {
     "heading": "Lightbox & cabinet sign pricing — honest ranges",
+    "heading_es": "Precios de cajas de luz — rangos honestos",
     "intro": "Exact quotes depend on cabinet size, face material, illumination type, and mounting complexity.",
+    "intro_es": "Las cotizaciones exactas dependen del tamaño del gabinete, material de la cara, tipo de iluminación y complejidad de montaje.",
     "tiers": [
       {
         "name": "Small Storefront",
+        "name_es": "Local pequeño",
         "rangeLow": 2000,
         "rangeHigh": 5000,
         "scope": "Cabinet 3×2 to 4×3 feet, single-sided, simple face print.",
+        "scope_es": "Gabinete de 3×2 a 4×3 pies, una cara, impresión simple.",
         "bullets": [
           "Aluminum cabinet frame",
           "Printed vinyl or acrylic face",
           "LED backlighting",
           "Wall-mount installation"
+        ],
+        "bullets_es": [
+          "Marco de aluminio",
+          "Cara de vinilo o acrílico impreso",
+          "Iluminación LED",
+          "Instalación en pared"
         ]
       },
       {
         "name": "Medium Retail / Restaurant",
+        "name_es": "Comercio / Restaurante mediano",
         "rangeLow": 5000,
         "rangeHigh": 10000,
         "scope": "Cabinet 5×3 to 6×4 feet, double-sided, custom-shape possible.",
+        "scope_es": "Gabinete de 5×3 a 6×4 pies, dos caras, formas a medida.",
         "bullets": [
           "Double-sided cabinet",
           "Multi-color printed face",
           "Energy-efficient LED modules",
           "Blade sign / projecting mount option"
+        ],
+        "bullets_es": [
+          "Gabinete de dos caras",
+          "Cara impresa multicolor",
+          "Módulos LED eficientes",
+          "Opción de letrero tipo bandera"
         ]
       },
       {
         "name": "Large Custom Cabinet",
+        "name_es": "Gabinete grande a medida",
         "rangeLow": 10000,
         "rangeHigh": 20000,
         "rangeHighIsMin": true,
         "scope": "Cabinet 8 feet+, pylon-mount, multi-tenant, or complex shape.",
+        "scope_es": "Gabinete de 8+ pies, pilón, multi-inquilino o forma compleja.",
         "bullets": [
           "Custom shaped cabinet",
           "Pylon / monument mount",
           "Replaceable tenant panels",
           "Full structural + electrical permit"
+        ],
+        "bullets_es": [
+          "Gabinete con forma a medida",
+          "Montaje en pilón / monumental",
+          "Paneles reemplazables por inquilino",
+          "Permisos estructurales y eléctricos completos"
         ]
       }
     ],
-    "disclaimer": "Pricing ranges are Chicago-area averages for planning. Exact quote depends on cabinet size, mount type, face materials, and permit requirements."
+    "disclaimer": "Pricing ranges are Chicago-area averages for planning. Exact quote depends on cabinet size, mount type, face materials, and permit requirements.",
+    "disclaimer_es": "Los rangos son promedios del área de Chicago. La cotización exacta depende del tamaño, tipo de montaje, materiales de la cara y permisos."
   },
   "faq": {
     "heading": "Questions about illuminated signs",
+    "heading_es": "Preguntas sobre letreros iluminados",
     "items": [
       {
         "q": "What is a lightbox sign?",
-        "a": "A lightbox sign is an illuminated sign housed in an aluminum cabinet with a translucent printed face — vinyl or acrylic — lit from behind by internal LEDs."
+        "q_es": "¿Qué es una caja de luz?",
+        "a": "A lightbox sign is an illuminated sign housed in an aluminum cabinet with a translucent printed face — vinyl or acrylic — lit from behind by internal LEDs.",
+        "a_es": "Una caja de luz es un letrero iluminado dentro de un gabinete de aluminio con una cara impresa translúcida — vinilo o acrílico — iluminada desde atrás por LEDs internos."
       },
       {
         "q": "Cabinet signs vs channel letters — what's the difference?",
-        "a": "Channel letters are individually fabricated 3D letters. Cabinet signs are enclosed boxes with a single printed face. Cabinets are typically faster and more cost-effective, and their faces are easier to refresh."
+        "q_es": "Cajas de luz vs letras canal — ¿cuál es la diferencia?",
+        "a": "Channel letters are individually fabricated 3D letters. Cabinet signs are enclosed boxes with a single printed face. Cabinets are typically faster and more cost-effective, and their faces are easier to refresh.",
+        "a_es": "Las letras canal son letras 3D fabricadas individualmente. Las cajas de luz son gabinetes cerrados con una cara impresa única. Las cajas suelen ser más rápidas y económicas, y sus caras son más fáciles de actualizar."
       },
       {
         "q": "How much does an illuminated lightbox sign cost?",
-        "a": "Typical projects range $2,000 to $10,000. Large custom cabinets or pylon mounts can exceed $20,000 depending on size and structural requirements."
+        "q_es": "¿Cuánto cuesta una caja de luz?",
+        "a": "Typical projects range $2,000 to $10,000. Large custom cabinets or pylon mounts can exceed $20,000 depending on size and structural requirements.",
+        "a_es": "Los proyectos típicos van de $2,000 a $10,000. Gabinetes grandes a medida o montajes en pilón pueden superar $20,000 según tamaño y requisitos estructurales."
       },
       {
         "q": "Can you print my logo and colors on the face?",
-        "a": "Yes. We print full-color weather-rated vinyl or direct-print acrylic faces. Pantone matching is standard."
+        "q_es": "¿Pueden imprimir mi logo y colores en la cara?",
+        "a": "Yes. We print full-color weather-rated vinyl or direct-print acrylic faces. Pantone matching is standard.",
+        "a_es": "Sí. Imprimimos caras de vinilo a todo color resistente al clima o directo en acrílico. El igualado Pantone es estándar."
       },
       {
         "q": "How long do LED lightbox signs last?",
-        "a": "The aluminum cabinet and LED system last 10 to 15 years (LEDs rated for 50,000+ hours). Printed faces typically need refresh every 5 to 8 years depending on sun exposure."
+        "q_es": "¿Cuánto duran las cajas de luz LED?",
+        "a": "The aluminum cabinet and LED system last 10 to 15 years (LEDs rated for 50,000+ hours). Printed faces typically need refresh every 5 to 8 years depending on sun exposure.",
+        "a_es": "El gabinete de aluminio y el sistema LED duran de 10 a 15 años (LEDs certificados para más de 50,000 horas). Las caras impresas requieren actualización cada 5–8 años según exposición solar."
       },
       {
         "q": "Single-sided vs double-sided?",
-        "a": "Single-sided mounts flush against a wall and is visible from one direction. Double-sided projects perpendicular from the building as a blade sign, visible from both street directions."
+        "q_es": "¿Una cara o dos caras?",
+        "a": "Single-sided mounts flush against a wall and is visible from one direction. Double-sided projects perpendicular from the building as a blade sign, visible from both street directions.",
+        "a_es": "Una cara se monta al ras de la pared y es visible desde una dirección. Dos caras se proyecta perpendicular al edificio como letrero tipo bandera, visible desde ambas direcciones."
       },
       {
         "q": "Can cabinet faces be replaced without rewiring?",
-        "a": "Yes. Cabinet face panels are designed to swap independently from the LED and wiring system — useful for rebrands or rotating promotions."
+        "q_es": "¿Se pueden cambiar las caras sin recablear?",
+        "a": "Yes. Cabinet face panels are designed to swap independently from the LED and wiring system — useful for rebrands or rotating promotions.",
+        "a_es": "Sí. Los paneles de cara están diseñados para cambiarse independientemente del LED y cableado — útil para rebrands o promociones rotativas."
       },
       {
         "q": "How much power does a lightbox consume?",
-        "a": "Modern LED cabinets draw roughly 50 to 150 watts for a 4×3 ft storefront sign — comparable to a few household bulbs."
+        "q_es": "¿Cuánta energía consume una caja de luz?",
+        "a": "Modern LED cabinets draw roughly 50 to 150 watts for a 4×3 ft storefront sign — comparable to a few household bulbs.",
+        "a_es": "Los gabinetes LED modernos consumen entre 50 y 150 vatios para un letrero de 4×3 pies — comparable a unas pocas bombillas domésticas."
       },
       {
         "q": "Are lightbox signs weather-rated for Chicago?",
-        "a": "Yes. Sealed aluminum cabinets, weather-rated LEDs, and UV-stabilized faces handle the full Midwest temperature and precipitation range."
+        "q_es": "¿Las cajas de luz resisten el clima de Chicago?",
+        "a": "Yes. Sealed aluminum cabinets, weather-rated LEDs, and UV-stabilized faces handle the full Midwest temperature and precipitation range.",
+        "a_es": "Sí. Gabinetes sellados, LEDs resistentes al clima y caras estabilizadas contra UV soportan todo el rango de temperatura y precipitación del Medio Oeste."
       },
       {
         "q": "Do you handle permits for illuminated signs?",
-        "a": "Yes. We file both sign and electrical permits with the Village. Typical turnaround is 2 to 4 weeks, running in parallel with fabrication."
+        "q_es": "¿Gestionan los permisos para letreros iluminados?",
+        "a": "Yes. We file both sign and electrical permits with the Village. Typical turnaround is 2 to 4 weeks, running in parallel with fabrication.",
+        "a_es": "Sí. Tramitamos permisos de letrero y eléctricos con el municipio. Tiempo típico: 2–4 semanas, en paralelo con la fabricación."
       },
       {
         "q": "What sizes can you produce?",
-        "a": "Standard cabinets range from 2×2 feet up to 10×8 feet. Larger installations are fabricated modular and joined on site."
+        "q_es": "¿Qué tamaños pueden producir?",
+        "a": "Standard cabinets range from 2×2 feet up to 10×8 feet. Larger installations are fabricated modular and joined on site.",
+        "a_es": "Los gabinetes estándar van de 2×2 pies hasta 10×8 pies. Las instalaciones más grandes se fabrican modulares y se unen en sitio."
       },
       {
         "q": "Can you build a multi-tenant cabinet for a plaza?",
-        "a": "Yes. We build shared cabinet frameworks with replaceable per-tenant panels — a common solution for strip malls and multi-tenant buildings."
+        "q_es": "¿Pueden hacer un gabinete multi-inquilino para un plaza?",
+        "a": "Yes. We build shared cabinet frameworks with replaceable per-tenant panels — a common solution for strip malls and multi-tenant buildings.",
+        "a_es": "Sí. Construimos estructuras compartidas con paneles reemplazables por inquilino — una solución común para strip malls y edificios multi-inquilino."
       }
     ]
   }

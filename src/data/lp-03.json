@@ -61,99 +61,152 @@
   },
   "pricing": {
     "heading": "Fleet wrap pricing — honest ranges",
+    "heading_es": "Precios de rotulación vehicular — rangos honestos",
     "intro": "Exact quotes depend on vehicle type, coverage, design complexity, and fleet size.",
+    "intro_es": "Las cotizaciones exactas dependen del tipo de vehículo, cobertura, complejidad del diseño y tamaño de la flota.",
     "tiers": [
       {
         "name": "Partial Wrap",
+        "name_es": "Rotulación parcial",
         "rangeLow": 1500,
         "rangeHigh": 3500,
         "scope": "Logo, contact info, and key graphics on doors, hood, and rear. Single vehicle.",
+        "scope_es": "Logo, información de contacto y gráficos clave en puertas, capó y parte trasera. Un vehículo.",
         "bullets": [
           "3–4 year cast vinyl",
           "Custom brand design",
           "Door, hood, and rear coverage",
           "1-day install per vehicle"
+        ],
+        "bullets_es": [
+          "Vinilo fundido 3–4 años",
+          "Diseño de marca a medida",
+          "Cobertura en puertas, capó y trasera",
+          "Instalación en 1 día por vehículo"
         ]
       },
       {
         "name": "Full Wrap — Single Vehicle",
+        "name_es": "Rotulación total — un vehículo",
         "rangeLow": 3500,
         "rangeHigh": 6500,
         "scope": "Full-color wrap covering all exterior panels. Box trucks and sprinter vans slightly higher due to square footage.",
+        "scope_es": "Rotulación a todo color cubriendo todos los paneles exteriores. Camiones y furgonetas Sprinter algo más por pies cuadrados.",
         "bullets": [
           "5–7 year premium cast vinyl",
           "Full perimeter coverage",
           "Custom design with your brand",
           "2–3 day install per vehicle"
+        ],
+        "bullets_es": [
+          "Vinilo fundido premium 5–7 años",
+          "Cobertura perimetral completa",
+          "Diseño a medida con tu marca",
+          "Instalación en 2–3 días por vehículo"
         ]
       },
       {
         "name": "Fleet Volume",
+        "name_es": "Volumen de flota",
         "rangeLow": 5000,
         "rangeHigh": 15000,
         "rangeHighIsMin": true,
         "perUnit": "per vehicle",
+        "perUnit_es": "por vehículo",
         "scope": "3 or more vehicles branded identically. Volume discounts apply; larger box trucks and trailers priced by sq ft.",
+        "scope_es": "3 o más vehículos con la misma marca. Descuentos por volumen; camiones y trailers se cotizan por pie cuadrado.",
         "bullets": [
           "Identical fleet-wide branding",
           "Volume discount (contact for tiers)",
           "Batch scheduling to minimize downtime",
           "Replacement wraps as fleet rotates"
+        ],
+        "bullets_es": [
+          "Branding idéntico en toda la flota",
+          "Descuento por volumen (contáctanos para tiers)",
+          "Programación por lotes para minimizar tiempo muerto",
+          "Reemplazo de rotulación al rotar la flota"
         ]
       }
     ],
-    "disclaimer": "Pricing ranges are for planning. Exact quote depends on vehicle size, coverage, design complexity, and fleet volume. Free detailed quote in one business day."
+    "disclaimer": "Pricing ranges are for planning. Exact quote depends on vehicle size, coverage, design complexity, and fleet volume. Free detailed quote in one business day.",
+    "disclaimer_es": "Los rangos son para planificación. La cotización exacta depende del tamaño del vehículo, cobertura, complejidad del diseño y volumen de la flota. Cotización detallada gratis en un día hábil."
   },
   "faq": {
     "heading": "Questions about fleet wraps",
+    "heading_es": "Preguntas sobre rotulación vehicular",
     "items": [
       {
         "q": "How much does a fleet wrap cost?",
-        "a": "Partial wraps start at $1,500. Full single-vehicle wraps run $3,500 to $6,500. Fleets of 3 or more vehicles qualify for volume discounts — typically $5,000 to $15,000 per vehicle depending on size."
+        "q_es": "¿Cuánto cuesta la rotulación de una flota?",
+        "a": "Partial wraps start at $1,500. Full single-vehicle wraps run $3,500 to $6,500. Fleets of 3 or more vehicles qualify for volume discounts — typically $5,000 to $15,000 per vehicle depending on size.",
+        "a_es": "Las rotulaciones parciales parten de $1,500. Una rotulación total para un vehículo cuesta entre $3,500 y $6,500. Las flotas de 3+ vehículos califican para descuentos por volumen — típicamente $5,000 a $15,000 por vehículo según tamaño."
       },
       {
         "q": "How long does installation take?",
-        "a": "Partial wraps take 1 day per vehicle. Full wraps on vans and pickups take 2 to 3 days. Box trucks take 3 to 4 days. Fleet installs are batched 2 to 3 vehicles at a time so the rest of your fleet stays on the road."
+        "q_es": "¿Cuánto toma la instalación?",
+        "a": "Partial wraps take 1 day per vehicle. Full wraps on vans and pickups take 2 to 3 days. Box trucks take 3 to 4 days. Fleet installs are batched 2 to 3 vehicles at a time so the rest of your fleet stays on the road.",
+        "a_es": "Las rotulaciones parciales toman 1 día por vehículo. Las rotulaciones completas en vans y pickups toman 2–3 días. Los camiones box toman 3–4 días. Las instalaciones de flota se programan por lotes de 2–3 vehículos para que el resto siga operativo."
       },
       {
         "q": "How long do commercial vehicle wraps last?",
-        "a": "Premium cast vinyl (3M, Avery) is rated for 5 to 7 years. Economy vinyl runs 3 to 4 years. Durability varies with sun exposure and wash frequency."
+        "q_es": "¿Cuánto dura una rotulación vehicular comercial?",
+        "a": "Premium cast vinyl (3M, Avery) is rated for 5 to 7 years. Economy vinyl runs 3 to 4 years. Durability varies with sun exposure and wash frequency.",
+        "a_es": "El vinilo fundido premium (3M, Avery) está certificado para 5–7 años. El vinilo económico dura 3–4 años. La durabilidad varía según exposición solar y frecuencia de lavado."
       },
       {
         "q": "What vinyl brands do you use?",
-        "a": "Premium cast vinyl from 3M, Avery Dennison, or equivalent. We confirm the exact product line during quoting based on vehicle type and desired lifetime."
+        "q_es": "¿Qué marcas de vinilo usan?",
+        "a": "Premium cast vinyl from 3M, Avery Dennison, or equivalent. We confirm the exact product line during quoting based on vehicle type and desired lifetime.",
+        "a_es": "Vinilo fundido premium de 3M, Avery Dennison o equivalente. Confirmamos la línea exacta durante la cotización según el tipo de vehículo y la durabilidad deseada."
       },
       {
         "q": "Can you wrap box trucks, sprinters, and cargo vans?",
-        "a": "Yes — plus pickups, trailers, and smaller commercial vehicles. Larger box trucks are priced by square footage."
+        "q_es": "¿Pueden rotular camiones box, Sprinters y vans de carga?",
+        "a": "Yes — plus pickups, trailers, and smaller commercial vehicles. Larger box trucks are priced by square footage.",
+        "a_es": "Sí — también pickups, trailers y vehículos comerciales más pequeños. Los camiones box más grandes se cotizan por pie cuadrado."
       },
       {
         "q": "Are fleet volume discounts available?",
-        "a": "Yes. Discounts kick in at 3 vehicles and scale with fleet size. We also include batch scheduling to minimize operational downtime."
+        "q_es": "¿Hay descuentos por volumen de flota?",
+        "a": "Yes. Discounts kick in at 3 vehicles and scale with fleet size. We also include batch scheduling to minimize operational downtime.",
+        "a_es": "Sí. Los descuentos aplican desde 3 vehículos y escalan con el tamaño de la flota. Incluimos programación por lotes para minimizar el tiempo muerto operativo."
       },
       {
         "q": "Will a wrap damage my paint?",
-        "a": "No. On factory paint in good condition, cast vinyl actually protects from UV and minor scratches. It removes cleanly without residue."
+        "q_es": "¿La rotulación daña la pintura?",
+        "a": "No. On factory paint in good condition, cast vinyl actually protects from UV and minor scratches. It removes cleanly without residue.",
+        "a_es": "No. Sobre pintura de fábrica en buen estado, el vinilo fundido protege contra UV y rayones menores. Se retira limpiamente sin residuos."
       },
       {
         "q": "How do I care for a wrapped vehicle?",
-        "a": "Hand-wash or brushless automatic washes only. Keep high-pressure sprayers at least 6 inches from edges and seams."
+        "q_es": "¿Cómo cuido un vehículo rotulado?",
+        "a": "Hand-wash or brushless automatic washes only. Keep high-pressure sprayers at least 6 inches from edges and seams.",
+        "a_es": "Solo lavado a mano o automático sin cepillos. Mantén las mangueras de alta presión al menos 6 pulgadas de bordes y costuras."
       },
       {
         "q": "Can I wrap leased vehicles?",
-        "a": "Yes. Most leases allow wraps because cast vinyl removes cleanly at lease-end. Check your specific lease language to confirm."
+        "q_es": "¿Puedo rotular vehículos en leasing?",
+        "a": "Yes. Most leases allow wraps because cast vinyl removes cleanly at lease-end. Check your specific lease language to confirm.",
+        "a_es": "Sí. La mayoría de leasings permiten la rotulación porque el vinilo se retira limpiamente al final del contrato. Revisa tu contrato para confirmar."
       },
       {
         "q": "Full wrap vs partial wrap?",
-        "a": "A full wrap covers all exterior panels for maximum visibility. A partial wrap covers doors, hood, and rear — most of the brand impact at roughly half the cost."
+        "q_es": "¿Rotulación completa o parcial?",
+        "a": "A full wrap covers all exterior panels for maximum visibility. A partial wrap covers doors, hood, and rear — most of the brand impact at roughly half the cost.",
+        "a_es": "La rotulación completa cubre todos los paneles exteriores para máxima visibilidad. La parcial cubre puertas, capó y trasera — la mayor parte del impacto a la mitad del costo."
       },
       {
         "q": "Can you handle large fleet installs — 5 or more at once?",
-        "a": "Yes. We batch-schedule 2 to 3 vehicles at a time while the remainder of the fleet stays operational."
+        "q_es": "¿Manejan instalaciones de flotas grandes — 5 o más a la vez?",
+        "a": "Yes. We batch-schedule 2 to 3 vehicles at a time while the remainder of the fleet stays operational.",
+        "a_es": "Sí. Programamos por lotes de 2–3 vehículos a la vez mientras el resto de la flota sigue operativo."
       },
       {
         "q": "Do you provide design services for fleet branding?",
-        "a": "Yes — design is included in every quote. You receive a full vehicle mockup for approval before any production starts."
+        "q_es": "¿Ofrecen diseño para branding de flota?",
+        "a": "Yes — design is included in every quote. You receive a full vehicle mockup for approval before any production starts.",
+        "a_es": "Sí — el diseño está incluido en cada cotización. Recibes un mockup completo del vehículo para aprobación antes de iniciar producción."
       }
     ]
   }

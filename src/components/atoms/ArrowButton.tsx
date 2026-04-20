@@ -23,6 +23,8 @@ type CommonProps = {
   size?: Size;
   icon?: IconKind;
   className?: string;
+  /** Full-width + justify-between on mobile; returns to intrinsic on md+. */
+  fullWidthMobile?: boolean;
 };
 
 type AnchorOnly = {
@@ -94,10 +96,14 @@ export const ArrowButton = forwardRef<
     size = "md",
     icon = "ArrowUpRight",
     className,
+    fullWidthMobile,
   } = props;
 
   const base = cn(
-    "group inline-flex w-fit self-start items-center gap-2 rounded-full transition-colors duration-300",
+    "group inline-flex items-center gap-2 rounded-full transition-colors duration-300",
+    fullWidthMobile
+      ? "w-full justify-between md:w-fit md:self-start md:justify-start"
+      : "w-fit self-start",
     pad[size],
     toneClass[tone],
     className,
@@ -110,10 +116,11 @@ export const ArrowButton = forwardRef<
       size: _s,
       icon: _i,
       className: _cn,
+      fullWidthMobile: _fwm,
       as: _a,
       ...btn
     } = props;
-    void _c; void _t; void _s; void _i; void _cn; void _a;
+    void _c; void _t; void _s; void _i; void _cn; void _fwm; void _a;
     return (
       <button
         ref={ref as React.Ref<HTMLButtonElement>}
@@ -134,10 +141,11 @@ export const ArrowButton = forwardRef<
     size: _s,
     icon: _i,
     className: _cn,
+    fullWidthMobile: _fwm,
     as: _a,
     ...anchor
   } = props;
-  void _c; void _t; void _s; void _i; void _cn; void _a;
+  void _c; void _t; void _s; void _i; void _cn; void _fwm; void _a;
   return (
     <a
       ref={ref as React.Ref<HTMLAnchorElement>}

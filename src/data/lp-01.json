@@ -2,12 +2,17 @@
   "slug": "channel-letter-signs",
   "accent": "red",
   "ctaLabel": "Get a Free Quote",
+  "ctaLabel_es": "Solicitar cotización",
   "serviceTag": "channel-letters",
   "meta": {
     "title": "Channel Letter Signs Chicago — Custom Installed in 3–7 Days | AK Sign",
     "description": "Custom illuminated channel letter signs for Chicago businesses. Design, UL-listed LED fabrication, permit handling, and professional install. Free design, 3–7 day turnaround.",
     "ogTitle": "Channel Letter Signs Chicago — AK Sign",
-    "ogDescription": "Make your storefront unmistakable day and night. Channel letter signs with UL-listed LEDs, permit handling, and 3–7 day turnaround."
+    "ogDescription": "Make your storefront unmistakable day and night. Channel letter signs with UL-listed LEDs, permit handling, and 3–7 day turnaround.",
+    "title_es": "Letras Canal en Chicago — Instalación en 3–7 Días | AK Sign",
+    "description_es": "Letras canal iluminadas a medida para negocios de Chicago. Diseño, fabricación LED con certificación UL, gestión de permisos e instalación profesional. Diseño gratis, entrega en 3–7 días.",
+    "ogTitle_es": "Letras Canal en Chicago — AK Sign",
+    "ogDescription_es": "Destaca tu local día y noche. Letras canal con LEDs certificados UL, gestión de permisos y entrega en 3–7 días."
   },
   "hero": {
     "eyebrow": "Serving Chicago + NW Suburbs",
@@ -61,98 +66,150 @@
   },
   "pricing": {
     "heading": "Channel letter pricing — honest ranges",
+    "heading_es": "Precios de letras canal — rangos honestos",
     "intro": "Exact quotes depend on letter size, height, face material, LED type, and install complexity. Here is what typical Chicago storefront projects land at.",
+    "intro_es": "Las cotizaciones exactas dependen del tamaño de la letra, altura, material de la cara, tipo de LED y complejidad de instalación. Aquí están los rangos típicos para locales en Chicago.",
     "tiers": [
       {
         "name": "Small Storefront",
+        "name_es": "Local pequeño",
         "rangeLow": 3000,
         "rangeHigh": 6000,
         "scope": "Letters under 18 inches, single row, up to ~15 feet wide.",
+        "scope_es": "Letras de menos de 18 pulgadas, una sola fila, hasta ~15 pies de ancho.",
         "bullets": [
           "Aluminum returns and trim cap",
           "Front-lit or halo-lit LED illumination",
           "Single-row installation",
           "Village permit filing included"
+        ],
+        "bullets_es": [
+          "Retornos de aluminio y trim cap",
+          "Iluminación LED frontal o halo",
+          "Instalación en una fila",
+          "Permiso municipal incluido"
         ]
       },
       {
         "name": "Medium Retail",
+        "name_es": "Comercio mediano",
         "rangeLow": 6000,
         "rangeHigh": 12000,
         "scope": "Letters 18–30 inches, logo icon, raceway or flush mount.",
+        "scope_es": "Letras de 18–30 pulgadas, ícono de logo, montaje raceway o al ras.",
         "bullets": [
           "Larger letters with brand logo",
           "UL-listed LED modules",
           "Custom face colors (to Pantone)",
           "Electrical permit coordination"
+        ],
+        "bullets_es": [
+          "Letras más grandes con logo de marca",
+          "Módulos LED con certificación UL",
+          "Colores de cara a medida (según Pantone)",
+          "Coordinación de permiso eléctrico"
         ]
       },
       {
         "name": "Large Building / Monument",
+        "name_es": "Edificio grande / Monumental",
         "rangeLow": 12000,
         "rangeHigh": 25000,
         "rangeHighIsMin": true,
         "scope": "Letters 30+ inches, building-top signs, multi-face monument signs.",
+        "scope_es": "Letras de 30+ pulgadas, letreros en azoteas, letreros monumentales de varias caras.",
         "bullets": [
           "Custom fabrication to your specs",
           "Structural engineering if required",
           "Lift-truck installation",
           "Full permit + zoning support"
+        ],
+        "bullets_es": [
+          "Fabricación a medida según tus especificaciones",
+          "Ingeniería estructural si es necesario",
+          "Instalación con grúa",
+          "Permisos y zonificación completos"
         ]
       }
     ],
-    "disclaimer": "Pricing ranges are Chicago-area averages for planning. Your exact quote depends on design, size, materials, and permit requirements. Free detailed quote in one business day."
+    "disclaimer": "Pricing ranges are Chicago-area averages for planning. Your exact quote depends on design, size, materials, and permit requirements. Free detailed quote in one business day.",
+    "disclaimer_es": "Los rangos de precios son promedios del área de Chicago para planificación. Tu cotización exacta depende del diseño, tamaño, materiales y requisitos de permisos. Cotización detallada gratis en un día hábil."
   },
   "faq": {
     "heading": "Frequently asked questions",
+    "heading_es": "Preguntas frecuentes",
     "items": [
       {
         "q": "What is a channel letter sign?",
-        "a": "A channel letter sign is a 3D illuminated sign where each letter is individually fabricated with aluminum sides and a translucent acrylic or polycarbonate face, lit internally by LEDs."
+        "q_es": "¿Qué es un letrero de letras canal?",
+        "a": "A channel letter sign is a 3D illuminated sign where each letter is individually fabricated with aluminum sides and a translucent acrylic or polycarbonate face, lit internally by LEDs.",
+        "a_es": "Un letrero de letras canal es un letrero iluminado en 3D donde cada letra se fabrica individualmente con costados de aluminio y una cara translúcida de acrílico o policarbonato, iluminada internamente por LEDs."
       },
       {
         "q": "How much does a channel letter sign cost in Chicago?",
-        "a": "Typical Chicago storefront projects range from $3,000 to $12,000. Larger building-mounted installations can reach $25,000 or more depending on size, materials, and permit complexity."
+        "q_es": "¿Cuánto cuesta un letrero de letras canal en Chicago?",
+        "a": "Typical Chicago storefront projects range from $3,000 to $12,000. Larger building-mounted installations can reach $25,000 or more depending on size, materials, and permit complexity.",
+        "a_es": "Los proyectos típicos de local en Chicago van de $3,000 a $12,000. Instalaciones más grandes en edificios pueden alcanzar $25,000 o más según tamaño, materiales y complejidad de permisos."
       },
       {
         "q": "How long do channel letter signs last?",
-        "a": "Well-built channel letters last 10 to 15 years. UL-listed LED modules are rated for 50,000+ hours of operation."
+        "q_es": "¿Cuánto duran los letreros de letras canal?",
+        "a": "Well-built channel letters last 10 to 15 years. UL-listed LED modules are rated for 50,000+ hours of operation.",
+        "a_es": "Las letras canal bien construidas duran de 10 a 15 años. Los módulos LED con certificación UL están calificados para más de 50,000 horas de funcionamiento."
       },
       {
         "q": "Do you handle sign permits for Chicago and the suburbs?",
-        "a": "Yes. We file sign and electrical permits with the municipality ourselves. Typical permit turnaround is 2 to 4 weeks, running in parallel with fabrication."
+        "q_es": "¿Gestionan los permisos de letreros en Chicago y los suburbios?",
+        "a": "Yes. We file sign and electrical permits with the municipality ourselves. Typical permit turnaround is 2 to 4 weeks, running in parallel with fabrication.",
+        "a_es": "Sí. Tramitamos los permisos de letreros y eléctricos con el municipio por cuenta propia. El tiempo típico es de 2 a 4 semanas, en paralelo con la fabricación."
       },
       {
         "q": "Front-lit vs halo-lit channel letters?",
-        "a": "Front-lit letters have a translucent face that glows outward — the most common storefront look. Halo-lit letters have a solid face and backlight the wall behind them, producing a soft outline glow. Halo-lit is more subtle and premium."
+        "q_es": "¿Letras canal frontales o halo?",
+        "a": "Front-lit letters have a translucent face that glows outward — the most common storefront look. Halo-lit letters have a solid face and backlight the wall behind them, producing a soft outline glow. Halo-lit is more subtle and premium.",
+        "a_es": "Las letras frontales tienen una cara translúcida que brilla hacia afuera — la opción más común para locales. Las letras halo tienen una cara sólida e iluminan la pared detrás, produciendo un brillo de contorno suave. El halo es más sutil y premium."
       },
       {
         "q": "How long does design and installation take?",
-        "a": "Standard projects go from approved design to mounted sign in 3 to 7 days. Complex or large builds take 2 to 3 weeks. Permit adds 2 to 4 weeks, typically running in parallel."
+        "q_es": "¿Cuánto tarda el diseño e instalación?",
+        "a": "Standard projects go from approved design to mounted sign in 3 to 7 days. Complex or large builds take 2 to 3 weeks. Permit adds 2 to 4 weeks, typically running in parallel.",
+        "a_es": "Los proyectos estándar pasan de diseño aprobado a letrero instalado en 3–7 días. Los proyectos grandes o complejos toman 2–3 semanas. El permiso añade 2–4 semanas, normalmente en paralelo."
       },
       {
         "q": "Can you match my exact brand colors?",
-        "a": "Yes. We match Pantone, CMYK, or RAL codes on faces, vinyl overlays, and painted returns. Send your brand guide or a reference file with your quote request."
+        "q_es": "¿Pueden igualar exactamente los colores de mi marca?",
+        "a": "Yes. We match Pantone, CMYK, or RAL codes on faces, vinyl overlays, and painted returns. Send your brand guide or a reference file with your quote request.",
+        "a_es": "Sí. Igualamos códigos Pantone, CMYK o RAL en caras, vinilos y retornos pintados. Envía tu guía de marca o archivo de referencia con tu solicitud."
       },
       {
         "q": "How bright are LED channel letters?",
-        "a": "Storefront-readable from 100+ feet. We specify LED brightness based on your mounting height, ambient lighting, and street distance — so the sign is legible without being harsh."
+        "q_es": "¿Qué tan brillantes son las letras canal LED?",
+        "a": "Storefront-readable from 100+ feet. We specify LED brightness based on your mounting height, ambient lighting, and street distance — so the sign is legible without being harsh.",
+        "a_es": "Legibles desde más de 100 pies. Especificamos el brillo LED según la altura de montaje, iluminación ambiental y distancia a la calle — para que el letrero sea legible sin ser agresivo."
       },
       {
         "q": "Are your signs weather-rated for Chicago winters?",
-        "a": "Yes. UL-listed LEDs rated for sub-zero temperatures, sealed housings, and weather-rated wiring. Our installs are designed for the full Midwest weather cycle."
+        "q_es": "¿Sus letreros resisten los inviernos de Chicago?",
+        "a": "Yes. UL-listed LEDs rated for sub-zero temperatures, sealed housings, and weather-rated wiring. Our installs are designed for the full Midwest weather cycle.",
+        "a_es": "Sí. LEDs con certificación UL para temperaturas bajo cero, carcasas selladas y cableado resistente a la intemperie. Nuestras instalaciones están diseñadas para el ciclo climático completo del Medio Oeste."
       },
       {
         "q": "Can I update the sign if I rebrand later?",
-        "a": "Yes. Refacing is available — we can replace the letter faces without replacing the entire sign structure, which saves most of the original investment."
+        "q_es": "¿Puedo actualizar el letrero si cambio la marca luego?",
+        "a": "Yes. Refacing is available — we can replace the letter faces without replacing the entire sign structure, which saves most of the original investment.",
+        "a_es": "Sí. Ofrecemos refacing — podemos reemplazar las caras de las letras sin reemplazar toda la estructura, ahorrando la mayor parte de la inversión original."
       },
       {
         "q": "What warranty do you offer on LEDs and fabrication?",
-        "a": "{{PLACEHOLDER: warranty-lp01-q11}}"
+        "q_es": "¿Qué garantía ofrecen en LEDs y fabricación?",
+        "a": "{{PLACEHOLDER: warranty-lp01-q11}}",
+        "a_es": "{{PLACEHOLDER: warranty-lp01-q11}}"
       },
       {
         "q": "Do you ship outside the Chicago area?",
-        "a": "Our primary service area is Chicago plus the NW suburbs. Fabrication-only shipping is possible for longer distances — contact us with your address and we'll confirm feasibility."
+        "q_es": "¿Envían fuera del área de Chicago?",
+        "a": "Our primary service area is Chicago plus the NW suburbs. Fabrication-only shipping is possible for longer distances — contact us with your address and we'll confirm feasibility.",
+        "a_es": "Nuestra área principal es Chicago y los suburbios del noroeste. Es posible enviar solo la fabricación a distancias mayores — contáctanos con tu dirección y confirmamos la viabilidad."
       }
     ]
   }

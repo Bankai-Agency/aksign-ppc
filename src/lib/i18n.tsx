@@ -14,29 +14,238 @@ export type Locale = "en" | "es";
 type Dict = Record<string, { en: string; es: string }>;
 
 const dict: Dict = {
+  // Navigation
   "nav.services": { en: "Services", es: "Servicios" },
   "nav.work": { en: "Work", es: "Proyectos" },
   "nav.about": { en: "About", es: "Nosotros" },
   "nav.contact": { en: "Contact", es: "Contacto" },
+
+  // CTAs
   "cta.getInTouch": { en: "Get in touch", es: "Contáctanos" },
+  "cta.getFreeQuote": { en: "Get a free quote", es: "Solicitar cotización" },
+  "cta.sendRequest": { en: "Send request", es: "Enviar solicitud" },
   "cta.sayHi": { en: "Hi", es: "Hola" },
-  "section.work": { en: "Work", es: "Proyectos" },
-  "section.about": { en: "Studio", es: "Estudio" },
-  "section.services": { en: "Services", es: "Servicios" },
-  "section.pricing": { en: "Pricing", es: "Precios" },
-  "section.process": { en: "Process", es: "Proceso" },
-  "section.faq": { en: "FAQ", es: "Preguntas" },
-  "section.areas": { en: "Areas", es: "Áreas" },
-  "section.contact": { en: "Contact", es: "Contacto" },
+
+  // Eyebrow labels (sections)
+  "eyebrow.benefits": { en: "(Benefits)", es: "(Beneficios)" },
+  "eyebrow.work": { en: "(Work)", es: "(Proyectos)" },
+  "eyebrow.studio": { en: "(Studio)", es: "(Estudio)" },
+  "eyebrow.services": { en: "(Services)", es: "(Servicios)" },
+  "eyebrow.pricing": { en: "(Pricing)", es: "(Precios)" },
+  "eyebrow.process": { en: "(Process)", es: "(Proceso)" },
+  "eyebrow.faq": { en: "(FAQ)", es: "(Preguntas)" },
+  "eyebrow.areas": { en: "(Areas)", es: "(Zonas)" },
+  "eyebrow.contact": { en: "(Contact)", es: "(Contacto)" },
+
+  // Section H2s — static
+  "section.trustBar.heading": { en: "Why AK Sign", es: "Por qué AK Sign" },
+  "section.work.heading": { en: "Recent projects", es: "Proyectos recientes" },
+  "section.statement.heading": {
+    en: "When craft and permits collide, a storefront stops being a wall and starts being a magnet.",
+    es: "Cuando el oficio y los permisos se unen, una fachada deja de ser un muro y se vuelve un imán.",
+  },
+  "section.contact.heading": {
+    en: "Customer care department",
+    es: "Atención al cliente",
+  },
+
+  // Hero
+  "hero.line1": { en: "Commercial Signage", es: "Señalización comercial" },
+  "hero.line2Prefix": { en: "for", es: "para" },
+  "hero.subheading": {
+    en: "Commercial-grade signage for Chicago-area storefronts — fabricated, permitted and installed in-house by one team.",
+    es: "Señalización de nivel comercial para locales del área de Chicago — fabricada, permitida e instalada internamente por un solo equipo.",
+  },
+  "hero.flip.storefronts": { en: "storefronts", es: "fachadas" },
+  "hero.flip.cafes": { en: "cafés", es: "cafeterías" },
+  "hero.flip.boutiques": { en: "boutiques", es: "boutiques" },
+  "hero.flip.dealerships": { en: "dealerships", es: "concesionarios" },
+  "hero.flip.chicago": { en: "Chicago", es: "Chicago" },
+  "hero.stat.years": { en: "Years in Chicago", es: "Años en Chicago" },
+  "hero.stat.signs": { en: "Signs installed", es: "Letreros instalados" },
+  "hero.stat.days": { en: "Day turnaround", es: "Días de entrega" },
+
+  // Statement body
+  "statement.body": {
+    en: "We are a small Arlington Heights sign shop working end-to-end for Chicago businesses — design, UL-listed fabrication, Village permits, and install. No subs, no finger-pointing, no surprise line items.",
+    es: "Somos un taller pequeño en Arlington Heights que trabaja de principio a fin para empresas de Chicago — diseño, fabricación con certificación UL, permisos municipales e instalación. Sin subcontratistas, sin evasiones, sin cargos sorpresa.",
+  },
+
+  // Process (HowItWorks)
+  "process.heading": { en: "How it works", es: "Cómo funciona" },
+  "process.step1.title": { en: "Brief", es: "Resumen" },
+  "process.step1.desc": {
+    en: "Send us your logo, goals, and references via form, WhatsApp, or Telegram.",
+    es: "Envíanos tu logo, objetivos y referencias por formulario, WhatsApp o Telegram.",
+  },
+  "process.step2.title": { en: "Recommendation", es: "Recomendación" },
+  "process.step2.desc": {
+    en: "We review your brief and propose the sign type that fits your goal and budget.",
+    es: "Revisamos tu brief y proponemos el tipo de letrero que se ajusta a tu objetivo y presupuesto.",
+  },
+  "process.step3.title": { en: "Design preview", es: "Vista previa del diseño" },
+  "process.step3.desc": {
+    en: "Custom design sent for your approval before any fabrication starts.",
+    es: "Diseño personalizado enviado para tu aprobación antes de comenzar la fabricación.",
+  },
+  "process.step4.title": { en: "Fabrication", es: "Fabricación" },
+  "process.step4.desc": {
+    en: "In-house production: UL-listed LEDs, premium vinyl, aluminum. Typically 3–7 days.",
+    es: "Producción interna: LEDs con certificación UL, vinilo premium, aluminio. Habitualmente 3–7 días.",
+  },
+  "process.step5.title": { en: "Permit", es: "Permiso" },
+  "process.step5.desc": {
+    en: "We file with the Village ourselves. Typical turnaround: 2–4 weeks, in parallel with fabrication.",
+    es: "Tramitamos los permisos con el municipio. Tiempo típico: 2–4 semanas, en paralelo a la fabricación.",
+  },
+  "process.step6.title": { en: "Install", es: "Instalación" },
+  "process.step6.desc": {
+    en: "In-house install crew handles mounting and clean-up.",
+    es: "Nuestro equipo interno de instalación se encarga del montaje y la limpieza.",
+  },
+
+  // Benefits (TrustBar)
+  "benefits.0.title": { en: "Free custom design", es: "Diseño gratuito" },
+  "benefits.0.subcopy": {
+    en: "Design is included in every quote — no separate fee.",
+    es: "El diseño está incluido en cada cotización — sin costo aparte.",
+  },
+  "benefits.1.title": { en: "3 to 7 day turnaround", es: "Entrega en 3–7 días" },
+  "benefits.1.subcopy": {
+    en: "Most signs ship within a week of approval.",
+    es: "La mayoría de letreros se envían en una semana tras la aprobación.",
+  },
+  "benefits.2.title": {
+    en: "Full-service install",
+    es: "Instalación llave en mano",
+  },
+  "benefits.2.subcopy": {
+    en: "One team handles design, fabrication, and mounting.",
+    es: "Un solo equipo cubre diseño, fabricación e instalación.",
+  },
+  "benefits.3.title": {
+    en: "Local Arlington Heights",
+    es: "Local en Arlington Heights",
+  },
+  "benefits.3.subcopy": {
+    en: "We know Village permit filing inside out.",
+    es: "Conocemos a fondo los permisos municipales del Village.",
+  },
+  "benefits.4.title": {
+    en: "1-minute online quote",
+    es: "Cotización en 1 minuto",
+  },
+  "benefits.4.subcopy": {
+    en: "Answer two fields, get a detailed quote by next business day.",
+    es: "Llena dos campos y recibe una cotización detallada al siguiente día hábil.",
+  },
+  "benefits.5.title": {
+    en: "High-quality materials",
+    es: "Materiales de alta calidad",
+  },
+  "benefits.5.subcopy": {
+    en: "UL-listed LEDs, 3M / Avery premium cast vinyl.",
+    es: "LEDs con certificación UL, vinilos fundidos 3M / Avery premium.",
+  },
+
+  // Service Area
+  "areas.heading": { en: "Service area", es: "Zona de servicio" },
+  "areas.intro": {
+    en: "Primary coverage across Chicago and the NW suburbs — signage fabricated, permitted and installed by one in-house team.",
+    es: "Cobertura principal en Chicago y los suburbios del noroeste — señalización fabricada, permitida e instalada por un único equipo interno.",
+  },
+  "areas.addressChip": {
+    en: "220 W Campus Dr · Arlington Heights",
+    es: "220 W Campus Dr · Arlington Heights",
+  },
+
+  // CTA (contact section)
+  "cta.body": {
+    en: "Fill out the form and our team will get in touch within one business day — usually less. Tell us about the project: storefront, restaurant, dealership, showroom, fleet. We'll come back with a free detailed quote and a design preview before any fabrication starts.",
+    es: "Completa el formulario y nuestro equipo te contactará en un día hábil — normalmente menos. Cuéntanos sobre el proyecto: local, restaurante, concesionario, showroom, flota. Te enviaremos una cotización detallada gratuita y una vista previa del diseño antes de iniciar la fabricación.",
+  },
+  "cta.legal": {
+    en: "Free detailed quote in one business day — with a design preview before any fabrication starts. No obligation, no surprise line items.",
+    es: "Cotización detallada gratuita en un día hábil — con vista previa del diseño antes de iniciar la fabricación. Sin compromiso, sin cargos sorpresa.",
+  },
+  "form.selectTopic": {
+    en: "Select a sign type…",
+    es: "Selecciona un tipo de letrero…",
+  },
+  "form.yourName": { en: "Your name", es: "Tu nombre" },
+  "form.email": { en: "Email", es: "Correo electrónico" },
+  "form.phone": {
+    en: "+1 (312) 898-4581",
+    es: "+1 (312) 898-4581",
+  },
+  "form.message": {
+    en: "Describe the project, sizes, timeline…",
+    es: "Describe el proyecto, tamaños, plazos…",
+  },
+  "form.topic.channel": { en: "Channel letters", es: "Letras canal" },
+  "form.topic.illuminated": {
+    en: "Illuminated signs",
+    es: "Letreros iluminados",
+  },
+  "form.topic.lightboxes": { en: "Lightboxes", es: "Cajas de luz" },
+  "form.topic.vehicle": { en: "Vehicle wraps", es: "Rotulación vehicular" },
+  "form.topic.other": { en: "Other", es: "Otro" },
+
+  // Modal
+  "modal.heading": {
+    en: "Tell us about your project",
+    es: "Cuéntanos sobre tu proyecto",
+  },
+  "modal.body": {
+    en: "Free detailed quote in one business day — with a design preview before any fabrication starts.",
+    es: "Cotización detallada gratuita en un día hábil — con vista previa del diseño antes de fabricar.",
+  },
+  "modal.legal": {
+    en: "One business day · no obligation",
+    es: "Un día hábil · sin compromiso",
+  },
+
+  // FAQ
+  "faq.heading": {
+    en: "Frequently asked questions",
+    es: "Preguntas frecuentes",
+  },
+
+  // Services (menu labels)
+  "services.channel": { en: "Channel letters", es: "Letras canal" },
+  "services.illuminated": { en: "Illuminated signs", es: "Letreros iluminados" },
+  "services.lightboxes": { en: "Lightboxes", es: "Cajas de luz" },
+  "services.monument": { en: "Monument signs", es: "Letreros monumentales" },
+  "services.window": { en: "Window graphics", es: "Gráficos para ventanas" },
+  "services.vehicle": { en: "Vehicle wraps", es: "Rotulación vehicular" },
+  "services.permits": { en: "Permits + install", es: "Permisos + instalación" },
+  "services.fabrication": { en: "Fabrication", es: "Fabricación" },
+
+  // Reel / Showreel
+  "reel.label": { en: "Reel / 10 sec", es: "Reel / 10 seg" },
+
+  // Footer
   "footer.madeIn": {
     en: "Made in Arlington Heights, IL",
     es: "Hecho en Arlington Heights, IL",
   },
-  "hero.line1": { en: "Commercial", es: "Señalización" },
-  "hero.line2Prefix": { en: "Signage for", es: "comercial para" },
+  "footer.bankaiPrefix": { en: "Made in", es: "Hecho en" },
+  "footer.bankaiName": { en: "Bankai Agency", es: "Bankai Agency" },
+  "footer.copyright": {
+    en: "© {year} AK SIGN",
+    es: "© {year} AK SIGN",
+  },
 };
 
-type Ctx = { locale: Locale; setLocale: (l: Locale) => void; t: (key: keyof typeof dict) => string };
+type DictKey = keyof typeof dict;
+
+type Ctx = {
+  locale: Locale;
+  setLocale: (l: Locale) => void;
+  t: (key: DictKey) => string;
+  /** Pick localized value from an object with {en, es} pair or a string. */
+  pick: <T extends string>(en: T, es?: T | null) => T;
+};
 
 const LocaleContext = createContext<Ctx | null>(null);
 
@@ -59,7 +268,8 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     () => ({
       locale,
       setLocale,
-      t: (key) => dict[key]?.[locale] ?? key,
+      t: (key) => dict[key]?.[locale] ?? (key as unknown as string),
+      pick: (en, es) => (locale === "es" && es ? es : en),
     }),
     [locale],
   );

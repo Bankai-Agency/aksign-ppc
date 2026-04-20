@@ -5,21 +5,23 @@ import { ArrowButton } from "@/components/atoms/ArrowButton";
 import { ImagePlaceholder } from "@/components/atoms/ImagePlaceholder";
 import { LetterReveal } from "@/components/atoms/LetterReveal";
 import { Reveal } from "@/components/atoms/Reveal";
+import { useLeadForm } from "@/lib/lead-form";
+import { useLocale } from "@/lib/i18n";
 import type { LPSlug } from "@/types/lp";
 
-const flipWords = [
-  "storefronts",
-  "cafés",
-  "boutiques",
-  "dealerships",
-  "Chicago",
-];
+const flipKeys = [
+  "hero.flip.storefronts",
+  "hero.flip.cafes",
+  "hero.flip.boutiques",
+  "hero.flip.dealerships",
+  "hero.flip.chicago",
+] as const;
 
-const heroStats: { value: string; label: string }[] = [
-  { value: "10+", label: "Years in Chicago" },
-  { value: "500+", label: "Signs installed" },
-  { value: "3–7", label: "Day turnaround" },
-];
+const heroStats = [
+  { value: "10+", labelKey: "hero.stat.years" },
+  { value: "500+", labelKey: "hero.stat.signs" },
+  { value: "3–7", labelKey: "hero.stat.days" },
+] as const;
 
 const heroImage: Record<LPSlug, { src: string; alt: string }> = {
   "channel-letter-signs": {
@@ -48,6 +50,8 @@ type HeroPhotoProps = {
  */
 export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
   const bg = heroImage[slug] ?? heroImage["channel-letter-signs"];
+  const { openModal } = useLeadForm();
+  const { t, locale } = useLocale();
   const [idx, setIdx] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -55,7 +59,7 @@ export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
     const tick = setInterval(() => {
       setVisible(false);
       const swap = setTimeout(() => {
-        setIdx((p) => (p + 1) % flipWords.length);
+        setIdx((p) => (p + 1) % flipKeys.length);
         setVisible(true);
       }, 220);
       return () => clearTimeout(swap);
@@ -109,28 +113,33 @@ export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
             }}
           >
             <LetterReveal
+              key={`line1-${locale}`}
               as="span"
-              text="Commercial Signage"
+              text={t("hero.line1")}
               className="block"
               delay={1.6}
               stagger={0.04}
             />
             <LetterReveal
+              key={`line2-${locale}`}
               as="span"
-              text="for "
+              text={`${t("hero.line2Prefix")} `}
               className="block whitespace-nowrap"
               delay={1.75}
               stagger={0.04}
             >
               <span
-                className="italic text-brand-6 inline-block overflow-hidden align-baseline transition-opacity duration-200 ease-linear md:min-w-[11ch]"
+                className="italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline transition-opacity duration-200 ease-linear"
                 style={{
                   opacity: visible ? 1 : 0,
-                  paddingBottom: "0.35em",
-                  marginBottom: "-0.28em",
+                  paddingLeft: "0.18em",
+                  paddingRight: "0.3em",
+                  paddingTop: "0.18em",
+                  paddingBottom: "0.18em",
+                  marginBottom: "-0.08em",
                 }}
               >
-                {flipWords[idx]}
+                {t(flipKeys[idx])}
               </span>
             </LetterReveal>
           </h1>
@@ -142,20 +151,36 @@ export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
                 className="text-base md:text-lg lg:text-xl text-gray-1/90 font-medium leading-relaxed"
                 style={{ letterSpacing: "-0.005em" }}
               >
-                Commercial-grade signage for Chicago-area storefronts —
-                fabricated, permitted and installed in-house by one team.
+                {t("hero.subheading")}
               </p>
-              <ArrowButton href="#contact" tone="light" size="lg">
-                Get a free quote
+              <ArrowButton as="button" onClick={openModal} tone="light" size="lg" fullWidthMobile>
+                {t("cta.getFreeQuote")}
               </ArrowButton>
             </div>
+          </Reveal>
+
+          {/* Mobile address chip — shown between CTA and stats */}
+          <Reveal delay={1.5} className="lg:hidden mt-6">
+            <a
+              href="https://maps.google.com/?q=220+W+Campus+Dr+Unit+D+Arlington+Heights+IL"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor="link"
+              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gray-1/10 backdrop-blur-md text-[11px] uppercase tracking-[0.14em] text-gray-1 font-semibold hover:bg-gray-1/20 transition-colors"
+            >
+              <span aria-hidden className="relative inline-flex w-2 h-2">
+                <span className="absolute inset-0 rounded-full bg-brand-9 animate-ping opacity-70" />
+                <span className="relative inline-flex w-2 h-2 rounded-full bg-brand-9" />
+              </span>
+              {t("areas.addressChip")}
+            </a>
           </Reveal>
 
           {/* Mobile/tablet stats rail — in-flow below the CTA */}
           <Reveal delay={1.55} className="lg:hidden mt-10">
             <ul className="flex gap-5 sm:gap-8 text-left text-gray-1">
               {heroStats.map((s) => (
-                <li key={s.label} className="flex flex-col gap-1.5">
+                <li key={s.labelKey} className="flex flex-col gap-1.5">
                   <span
                     className="font-semibold tracking-[-0.03em] tabular-nums"
                     style={{
@@ -165,7 +190,7 @@ export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
                     {s.value}
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.18em] text-gray-1/70 leading-snug">
-                    {s.label}
+                    {t(s.labelKey)}
                   </span>
                 </li>
               ))}
@@ -173,12 +198,32 @@ export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
           </Reveal>
         </div>
 
+        {/* Desktop address — bottom-left, same baseline as stats rail */}
+        <Reveal delay={1.5}>
+          <a
+            href="https://maps.google.com/?q=220+W+Campus+Dr+Unit+D+Arlington+Heights+IL"
+            target="_blank"
+            rel="noreferrer"
+            data-cursor="link"
+            className="hidden lg:inline-flex absolute left-6 md:left-10 lg:left-16 bottom-10 md:bottom-14 items-center gap-3 px-5 py-3 rounded-full bg-gray-1/10 backdrop-blur-md text-sm uppercase tracking-[0.14em] text-gray-1 font-semibold hover:bg-gray-1/20 transition-colors"
+          >
+            <span
+              aria-hidden
+              className="relative inline-flex w-2 h-2"
+            >
+              <span className="absolute inset-0 rounded-full bg-brand-9 animate-ping opacity-70" />
+              <span className="relative inline-flex w-2 h-2 rounded-full bg-brand-9" />
+            </span>
+            {t("areas.addressChip")}
+          </a>
+        </Reveal>
+
         {/* Desktop stats rail — absolute bottom-right */}
         <Reveal delay={1.6}>
           <ul className="hidden lg:flex absolute right-6 md:right-10 lg:right-16 bottom-10 md:bottom-14 items-start gap-10 xl:gap-14 text-left text-gray-1">
             {heroStats.map((s) => (
               <li
-                key={s.label}
+                key={s.labelKey}
                 className="flex flex-col gap-2 w-[140px] shrink-0"
               >
                 <span
@@ -188,7 +233,7 @@ export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
                   {s.value}
                 </span>
                 <span className="text-[11px] uppercase tracking-[0.18em] text-gray-1/70 leading-snug">
-                  {s.label}
+                  {t(s.labelKey)}
                 </span>
               </li>
             ))}

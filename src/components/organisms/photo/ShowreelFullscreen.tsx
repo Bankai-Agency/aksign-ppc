@@ -1,37 +1,28 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Icon } from "@/components/atoms/Icon";
+import { useLocale } from "@/lib/i18n";
 
 /**
- * Showreel — scroll-mask reveal. Video auto-loops muted as the preview
- * (aksign.us style). Click opens full-screen modal with controls.
+ * Showreel — static full-width reel preview with rounded corners. Click
+ * opens the full-screen modal with controls. No scroll-scale animation:
+ * the tile always fills the container width.
  */
 export function ShowreelFullscreen() {
   const [open, setOpen] = useState(false);
-  const wrap = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: wrap,
-    offset: ["start end", "end start"],
-  });
-  const scale = useTransform(scrollYProgress, [0, 0.35, 0.65, 1], [0.88, 1, 1, 0.96]);
-  const borderRadius = useTransform(scrollYProgress, [0, 0.35], [24, 2]);
+  const { t } = useLocale();
 
   return (
     <section aria-label="Reel" className="bg-gray-1">
-      <div
-        className="mx-auto max-w-[1600px] px-2 md:px-10 lg:px-16 pt-4 md:pt-0 pb-16 md:pb-20"
-        ref={wrap}
-      >
-        <motion.button
+      <div className="mx-auto max-w-[1600px] px-2 md:px-10 lg:px-16 pt-4 md:pt-0 pb-16 md:pb-20">
+        <button
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Play reel"
           data-cursor="play"
           data-cursor-label="Play"
-          style={{ scale, borderRadius }}
-          className="group relative block w-full overflow-hidden will-change-transform"
+          className="group relative block w-full overflow-hidden rounded-2xl"
         >
           <div className="relative w-full aspect-[4/5] md:aspect-[16/9] bg-gray-3">
             <video
@@ -54,12 +45,12 @@ export function ShowreelFullscreen() {
           </span>
 
           <span className="pointer-events-none absolute bottom-6 left-6 md:bottom-10 md:left-10 text-[11px] md:text-xs uppercase tracking-[0.22em] text-gray-1 font-medium">
-            Reel / 10 sec
+            {t("reel.label")}
           </span>
           <span className="pointer-events-none absolute bottom-6 right-6 md:bottom-10 md:right-10 text-[11px] md:text-xs uppercase tracking-[0.22em] text-gray-1 font-medium tabular-nums">
             2025
           </span>
-        </motion.button>
+        </button>
       </div>
 
       {open ? (

@@ -142,11 +142,13 @@ h4 { font-size: clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem); line-height: 1.2; }
 }
 
 
-/* Hide native cursor only on the reel play button. The MouseFollower
-   renders a custom circle only while hovering data-cursor="play". */
+/* Hide native cursor where the MouseFollower renders a custom circle
+   (reel play button, portfolio drag rail). */
 @media (hover: hover) and (pointer: fine) {
   [data-cursor="play"],
-  [data-cursor="play"] * {
+  [data-cursor="play"] *,
+  [data-cursor="drag"],
+  [data-cursor="drag"] * {
     cursor: none !important;
   }
 }

@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useLocale, type Locale } from "@/lib/i18n";
+import { useLeadForm } from "@/lib/lead-form";
 import { SocialIcon } from "@/components/atoms/SocialIcon";
 import { Icon } from "@/components/atoms/Icon";
 import { ArrowButton } from "@/components/atoms/ArrowButton";
@@ -25,11 +26,27 @@ type StudioHeaderProps = {
  */
 export function StudioHeader({ nap }: StudioHeaderProps) {
   const { locale, setLocale, t } = useLocale();
+  const { openModal } = useLeadForm();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    let lastY = 0;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const delta = y - lastY;
+      setScrolled(y > 8);
+      // Past ~50% of hero → hide on scroll-down, reveal on scroll-up
+      const threshold = window.innerHeight * 0.5;
+      if (y > threshold) {
+        if (delta > 6) setHidden(true);
+        else if (delta < -6) setHidden(false);
+      } else {
+        setHidden(false);
+      }
+      lastY = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -64,7 +81,10 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
     <>
       <header
         id="page-header"
-        className="fixed inset-x-0 top-0 z-50 px-4 md:px-6 pt-4 md:pt-5"
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 px-6 md:px-10 lg:px-16 pt-4 md:pt-5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+          hidden && !open ? "-translate-y-[120%]" : "translate-y-0",
+        )}
       >
         <div
           className={cn(
@@ -141,7 +161,7 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
 
           {/* CTA */}
           <div className="hidden md:block ml-1">
-            <ArrowButton href="#contact" size="sm" tone="light">
+            <ArrowButton as="button" onClick={openModal} size="sm" tone="light">
               {t("cta.getInTouch")}
             </ArrowButton>
           </div>
@@ -189,6 +209,29 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
             className="md:hidden fixed inset-0 z-40 bg-gray-1 flex flex-col pt-24 pb-10 overflow-y-auto"
           >
             <nav className="mt-auto px-6 flex flex-col gap-1">
+              <div className="flex items-center gap-2 text-sm font-medium mb-6">
+                {(["en", "es"] as const).map((l) => (
+                  <button
+                    key={l}
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setLocale(l);
+                      setOpen(false);
+                    }}
+                    aria-pressed={locale === l}
+                    className={cn(
+                      "uppercase tracking-[0.08em] px-4 py-2 rounded-full border transition-colors cursor-pointer",
+                      locale === l
+                        ? "bg-gray-12 text-gray-1 border-gray-12"
+                        : "border-gray-12/20 text-gray-12 hover:bg-gray-12/5",
+                    )}
+                  >
+                    {l}
+                  </button>
+                ))}
+              </div>
+
               {nav.map((item, i) => (
                 <motion.a
                   key={item.label}
@@ -222,32 +265,16 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
                 </div>
               ) : null}
 
-              <div className="mt-6 flex items-center gap-2 text-sm font-medium">
-                {(["en", "es"] as const).map((l) => (
-                  <button
-                    key={l}
-                    type="button"
-                    onClick={() => setLocale(l)}
-                    aria-pressed={locale === l}
-                    className={cn(
-                      "uppercase tracking-[0.08em] px-3 py-1.5 rounded-full border transition-colors",
-                      locale === l
-                        ? "bg-gray-12 text-gray-1 border-gray-12"
-                        : "border-gray-12/20 text-gray-12 hover:bg-gray-12/5",
-                    )}
-                  >
-                    {l}
-                  </button>
-                ))}
-              </div>
-
               <div className="mt-8">
                 <ArrowButton
-                  href="#contact"
+                  as="button"
                   tone="solid"
                   size="lg"
                   className="w-full justify-between"
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false);
+                    openModal();
+                  }}
                 >
                   {t("cta.getInTouch")}
                 </ArrowButton>

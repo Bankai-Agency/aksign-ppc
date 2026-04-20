@@ -13,5 +13,6 @@ export { ServicesScrollModule } from "./ServicesScrollModule";
 export { ShowreelFullscreen } from "./ShowreelFullscreen";
 export { SimpleTextStatement } from "./SimpleTextStatement";
 export { StudioFooter } from "./StudioFooter";
+export { LeadFormModal } from "./LeadFormModal";
 export { StudioHeader } from "./StudioHeader";
 export { TrustBarStudio } from "./TrustBarStudio";

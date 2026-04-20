@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useLocale } from "@/lib/i18n";
 
 const services = [
   "Channel letters",
@@ -13,7 +14,18 @@ const services = [
   "Vehicle wraps",
   "Permits + install",
   "Fabrication",
-];
+] as const;
+
+const serviceKeys = [
+  "services.channel",
+  "services.illuminated",
+  "services.lightboxes",
+  "services.monument",
+  "services.window",
+  "services.vehicle",
+  "services.permits",
+  "services.fabrication",
+] as const;
 
 const serviceImages: Record<string, string> = {
   "Channel letters": "/images/services/channel-letters.png",
@@ -26,9 +38,8 @@ const serviceImages: Record<string, string> = {
   Fabrication: "/images/services/fabrication.png",
 };
 
-// Pin distance — ~40vh per service keeps the scroll snappy without
-// making items flash past. Tune if too slow/fast.
-const PIN_VH = services.length * 40;
+// Pin distance — ~25vh per service on mobile (lighter scroll effort).
+const PIN_VH = services.length * 25;
 
 /**
  * Services — pinned-scroll module. On md+ the section is tall
@@ -38,6 +49,7 @@ const PIN_VH = services.length * 40;
  * mobile the section falls back to natural flow.
  */
 export function ServicesScrollModule() {
+  const { t } = useLocale();
   const wrap = useRef<HTMLElement | null>(null);
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState<number | null>(null);
@@ -90,16 +102,16 @@ export function ServicesScrollModule() {
               id="services-heading"
               className="text-[11px] md:text-xs uppercase tracking-[0.22em] text-gray-10 font-medium mb-4"
             >
-              (Services)
+              {t("eyebrow.services")}
             </p>
 
             <div
-              className="grid md:grid-cols-2 gap-5 md:gap-12 items-center"
+              className="grid md:grid-cols-2 gap-6 md:gap-12 items-center"
               onMouseLeave={() => setHovered(null)}
             >
-              {/* Left — media card (shorter on mobile to fit viewport) */}
+              {/* Left — media card */}
               <div
-                className="relative overflow-hidden rounded-2xl bg-gray-3 aspect-[16/10] md:aspect-square"
+                className="relative overflow-hidden rounded-2xl bg-gray-3 aspect-[4/3] md:aspect-square"
               >
                 {services.map((s, i) => {
                   const src = serviceImages[s];
@@ -128,7 +140,7 @@ export function ServicesScrollModule() {
               </div>
 
               {/* Right — services list */}
-              <ul className="flex flex-col">
+              <ul className="flex flex-col gap-3 md:gap-2.5">
                 {services.map((s, i) => {
                   const isActive = i === current;
                   return (
@@ -153,7 +165,7 @@ export function ServicesScrollModule() {
                           transition: "color 300ms ease",
                         }}
                       >
-                        {s}
+                        {t(serviceKeys[i])}
                       </button>
                     </li>
                   );

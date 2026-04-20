@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { LetterReveal } from "@/components/atoms/LetterReveal";
+import { useLocale } from "@/lib/i18n";
 
 type FeaturedWorkSliderStudioProps = {
   portfolio: SharedContent["portfolio"];
@@ -18,6 +19,7 @@ type FeaturedWorkSliderStudioProps = {
 export function FeaturedWorkSliderStudio({
   portfolio,
 }: FeaturedWorkSliderStudioProps) {
+  const { t, locale } = useLocale();
   const track = useRef<HTMLUListElement | null>(null);
   const [constraint, setConstraint] = useState(0);
 
@@ -41,25 +43,26 @@ export function FeaturedWorkSliderStudio({
     >
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16 pt-20 md:pt-32">
         <p className="text-[11px] md:text-xs uppercase tracking-[0.22em] text-gray-10 font-medium mb-4">
-          (Work)
+          {t("eyebrow.work")}
         </p>
 
         <div className="mb-10 md:mb-14">
           <LetterReveal
+            key={`work-h-${locale}`}
             as="h2"
             id="work-heading"
-            text="Recent projects"
-            className="font-semibold tracking-[-0.04em] block max-w-4xl"
+            text={t("section.work.heading")}
+            className="font-semibold tracking-[-0.04em] block text-balance max-w-4xl"
             style={{
               fontSize: "clamp(2.25rem, 0.875rem + 3.5vw, 4.5rem)",
-              lineHeight: 1,
+              lineHeight: 0.92,
             }}
             stagger={0.04}
           />
         </div>
       </div>
 
-      <div className="relative overflow-hidden pb-20 md:pb-32">
+      <div className="relative overflow-hidden pb-14 md:pb-24">
         <motion.ul
           ref={track}
           drag="x"
@@ -75,8 +78,8 @@ export function FeaturedWorkSliderStudio({
             <li
               key={`${p.title}-${i}`}
               className="flex-shrink-0 w-[88vw] sm:w-[55vw] md:w-[38vw] lg:w-[28vw]"
-              data-cursor="link"
-              data-cursor-label="View"
+              data-cursor="drag"
+              data-cursor-label="Drag"
             >
               <figure className="flex flex-col gap-4 pointer-events-none">
                 <div
@@ -89,7 +92,7 @@ export function FeaturedWorkSliderStudio({
                       alt={p.title}
                       fill
                       draggable={false}
-                      className="object-cover"
+                      className="object-cover scale-[1.08]"
                       sizes="(max-width: 768px) 78vw, 28vw"
                     />
                   ) : null}
