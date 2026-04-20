@@ -127,29 +127,36 @@ export const ServiceCardSchema = z.object({
   tag: ServiceTagSchema.optional(),
 });
 
-export const TierSchema = z.object({
-  name: z.string().min(1),
-  rangeLow: z.number().int().positive(),
-  rangeHigh: z.number().int().positive(),
-  rangeHighIsMin: z.boolean().optional(),
-  perUnit: z.string().optional(),
-  scope: z.string().min(1),
-  bullets: z.array(z.string().min(1)).min(3).max(5),
-});
+export const TierSchema = z
+  .object({
+    name: z.string().min(1),
+    rangeLow: z.number().int().positive(),
+    rangeHigh: z.number().int().positive(),
+    rangeHighIsMin: z.boolean().optional(),
+    perUnit: z.string().optional(),
+    scope: z.string().min(1),
+    bullets: z.array(z.string().min(1)).min(3).max(5),
+  })
+  .passthrough();
 
-export const FAQItemSchema = z.object({
-  q: z.string().min(1),
-  a: z.string().min(1),
-});
+export const FAQItemSchema = z
+  .object({
+    q: z.string().min(1),
+    a: z.string().min(1),
+  })
+  .passthrough();
 
-export const MetaSchema = z.object({
-  title: z.string().min(1).max(120),
-  description: z.string().min(1).max(300),
-  ogTitle: z.string().min(1).max(120),
-  ogDescription: z.string().min(1).max(300),
-});
+export const MetaSchema = z
+  .object({
+    title: z.string().min(1).max(120),
+    description: z.string().min(1).max(300),
+    ogTitle: z.string().min(1).max(120),
+    ogDescription: z.string().min(1).max(300),
+  })
+  .passthrough();
 
 export const LPSlugSchema = z.enum([
+  "home",
   "channel-letter-signs",
   "illuminated-signs",
   "vehicle-wraps",
@@ -157,33 +164,41 @@ export const LPSlugSchema = z.enum([
 
 export const AccentSchema = z.enum(["red", "white", "shine"]);
 
-export const LPVariantSchema = z.object({
-  slug: LPSlugSchema,
-  accent: AccentSchema,
-  ctaLabel: z.string().min(1),
-  serviceTag: ServiceTagSchema,
-  meta: MetaSchema,
-  hero: z.object({
-    eyebrow: z.string().min(1),
-    h1: z.string().min(1),
-    h1Accent: z.string().min(1),
-    subcopy: z.string().min(1),
-    trustItems: z.array(z.string().min(1)).min(3).max(6),
-    phoneHint: z.string().min(1),
-    formHeading: z.string().min(1),
-  }),
-  services: z.object({
-    focus: ServiceCardSchema,
-    secondary: z.tuple([ServiceCardSchema, ServiceCardSchema]),
-  }),
-  pricing: z.object({
-    heading: z.string().min(1),
-    intro: z.string().min(1),
-    tiers: z.tuple([TierSchema, TierSchema, TierSchema]),
-    disclaimer: z.string().min(1),
-  }),
-  faq: z.object({
-    heading: z.string().min(1),
-    items: z.array(FAQItemSchema).length(12),
-  }),
-});
+export const LPVariantSchema = z
+  .object({
+    slug: LPSlugSchema,
+    accent: AccentSchema,
+    ctaLabel: z.string().min(1),
+    serviceTag: ServiceTagSchema,
+    meta: MetaSchema,
+    hero: z
+      .object({
+        eyebrow: z.string().min(1),
+        h1: z.string().min(1),
+        h1Accent: z.string().min(1),
+        subcopy: z.string().min(1),
+        trustItems: z.array(z.string().min(1)).min(3).max(6),
+        phoneHint: z.string().min(1),
+        formHeading: z.string().min(1),
+      })
+      .passthrough(),
+    services: z.object({
+      focus: ServiceCardSchema,
+      secondary: z.tuple([ServiceCardSchema, ServiceCardSchema]),
+    }),
+    pricing: z
+      .object({
+        heading: z.string().min(1),
+        intro: z.string().min(1),
+        tiers: z.tuple([TierSchema, TierSchema, TierSchema]),
+        disclaimer: z.string().min(1),
+      })
+      .passthrough(),
+    faq: z
+      .object({
+        heading: z.string().min(1),
+        items: z.array(FAQItemSchema).length(12),
+      })
+      .passthrough(),
+  })
+  .passthrough();
