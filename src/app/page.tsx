@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PPCLandingPhoto from "@/components/templates/PPCLandingPhoto";
 import { getLPVariant, getSharedContent } from "@/lib/content";
 
-const SLUG = "channel-letter-signs" as const;
+const SLUG = "home" as const;
 
 export async function generateMetadata(): Promise<Metadata> {
   const lp = getLPVariant(SLUG);
@@ -16,10 +16,9 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
     },
     robots: {
-      index: false,
-      follow: false,
-      nocache: true,
-      googleBot: { index: false, follow: false },
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true },
     },
   };
 }

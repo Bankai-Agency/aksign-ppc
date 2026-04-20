@@ -24,6 +24,10 @@ const heroStats = [
 ] as const;
 
 const heroImage: Record<LPSlug, { src: string; alt: string }> = {
+  home: {
+    src: "/images/hero-channel-letter-signs.png",
+    alt: "AK Sign flagship commercial signage installation",
+  },
   "channel-letter-signs": {
     src: "/images/hero-channel-letter-signs.png",
     alt: "AK Sign flagship channel letter installation",

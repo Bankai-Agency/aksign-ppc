@@ -1,0 +1,219 @@
+{
+  "slug": "home",
+  "accent": "red",
+  "ctaLabel": "Get a Free Quote",
+  "ctaLabel_es": "Solicitar cotización",
+  "serviceTag": "other",
+  "meta": {
+    "title": "AK Sign — Commercial Signs, Wraps & Installation in Arlington Heights, IL",
+    "description": "Full-service sign shop in Arlington Heights. Channel letters, lightboxes, vehicle wraps, and window graphics. Design, UL-listed LED fabrication, permit filing, and install — by one in-house team. 3–7 day turnaround.",
+    "ogTitle": "AK Sign — Commercial Signs Built, Permitted, Installed",
+    "ogDescription": "One team for design, fabrication, permits, and install. Serving Chicago + NW suburbs. Free quote in one business day.",
+    "title_es": "AK Sign — Letreros comerciales, rotulación e instalación en Arlington Heights, IL",
+    "description_es": "Taller de letreros de servicio completo en Arlington Heights. Letras canal, cajas de luz, rotulación vehicular y gráficos para ventanas. Diseño, fabricación LED con certificación UL, permisos e instalación — todo por un solo equipo interno. Entrega en 3–7 días.",
+    "ogTitle_es": "AK Sign — Letreros comerciales fabricados, permitidos e instalados",
+    "ogDescription_es": "Un solo equipo para diseño, fabricación, permisos e instalación. Servicio en Chicago y suburbios del noroeste. Cotización gratis en un día hábil."
+  },
+  "hero": {
+    "eyebrow": "Serving Chicago + NW Suburbs",
+    "h1": "Commercial Signs, Built and Installed by ",
+    "h1Accent": "One Team.",
+    "subcopy": "Full-service sign shop for Chicago storefronts, showrooms and fleets — channel letters, lightboxes, vehicle wraps, and window graphics. Design, UL-listed fabrication, Village permit filing and install handled in-house.",
+    "trustItems": [
+      "Free custom design included",
+      "3 to 7 day turnaround",
+      "Full-service install by one team",
+      "Serving Chicago + NW Suburbs"
+    ],
+    "phoneHint": "Prefer to talk? Call (312) 898-4581",
+    "formHeading": "Get your quote in one business day"
+  },
+  "services": {
+    "focus": {
+      "icon": "Sparkles",
+      "title": "Channel Letter Signs",
+      "description": "Illuminated 3D letters fabricated in-house — front-lit or halo-lit, aluminum returns, UL-listed LEDs.",
+      "bullets": [
+        "Aluminum returns + acrylic faces",
+        "Front-lit or halo-lit LED",
+        "Pantone-match colors",
+        "Structural + electrical permit handled"
+      ],
+      "tag": "channel-letters"
+    },
+    "secondary": [
+      {
+        "icon": "Lightbulb",
+        "title": "Lightboxes & Cabinets",
+        "description": "Backlit aluminum cabinets with printed faces. Single or double-sided, pylon-mount available.",
+        "bullets": [
+          "Printed vinyl or acrylic face",
+          "Energy-efficient LED backlighting"
+        ],
+        "tag": "lightboxes"
+      },
+      {
+        "icon": "Truck",
+        "title": "Vehicle Wraps & Graphics",
+        "description": "Partial to full wraps in premium 3M and Avery cast vinyl. Fleet volume discount from 3+ vehicles.",
+        "bullets": [
+          "Premium cast vinyl",
+          "Fleet batch scheduling"
+        ],
+        "tag": "vehicle-wraps"
+      }
+    ]
+  },
+  "pricing": {
+    "heading": "One shop, every sign type — honest ranges",
+    "heading_es": "Un solo taller, todo tipo de letreros — rangos honestos",
+    "intro": "Actual quotes depend on size, materials, illumination, and permit requirements. Below are the working ranges we see for Chicago-area commercial projects across our three main services.",
+    "intro_es": "Las cotizaciones exactas dependen del tamaño, los materiales, la iluminación y los requisitos de permisos. A continuación, los rangos típicos en los que trabajamos para proyectos comerciales del área de Chicago en nuestros tres servicios principales.",
+    "tiers": [
+      {
+        "name": "Channel Letter Signs",
+        "name_es": "Letras canal",
+        "rangeLow": 3000,
+        "rangeHigh": 25000,
+        "rangeHighIsMin": true,
+        "scope": "3D illuminated letters — front-lit or halo-lit. Storefronts, building-mounted, or monument.",
+        "scope_es": "Letras 3D iluminadas — frontales o halo. Locales, edificios o letreros monumentales.",
+        "bullets": [
+          "UL-listed LED modules",
+          "Aluminum returns + acrylic faces",
+          "Pantone-match brand colors",
+          "Structural + electrical permit"
+        ],
+        "bullets_es": [
+          "Módulos LED con certificación UL",
+          "Retornos de aluminio y caras acrílicas",
+          "Colores de marca según Pantone",
+          "Permiso estructural y eléctrico"
+        ]
+      },
+      {
+        "name": "Lightboxes & Cabinets",
+        "name_es": "Cajas de luz y cabinetes",
+        "rangeLow": 2000,
+        "rangeHigh": 20000,
+        "rangeHighIsMin": true,
+        "scope": "Backlit aluminum cabinets — single or double-sided, pylon-mount, multi-tenant.",
+        "scope_es": "Cabinetes de aluminio retroiluminados — una o dos caras, montaje en pilón, multi-inquilino.",
+        "bullets": [
+          "Printed vinyl or acrylic faces",
+          "Energy-efficient LED backlighting",
+          "Single or double-sided",
+          "Village permit filing included"
+        ],
+        "bullets_es": [
+          "Caras en vinilo impreso o acrílico",
+          "Retroiluminación LED de bajo consumo",
+          "Una o dos caras",
+          "Trámite de permiso municipal incluido"
+        ]
+      },
+      {
+        "name": "Vehicle Wraps & Graphics",
+        "name_es": "Rotulación vehicular y gráficos",
+        "rangeLow": 1500,
+        "rangeHigh": 15000,
+        "rangeHighIsMin": true,
+        "perUnit": "per vehicle",
+        "scope": "Partial to full wraps in premium cast vinyl. Fleet volume discount from 3+ vehicles.",
+        "scope_es": "Rotulación parcial o total en vinilo fundido premium. Descuento por flota desde 3 vehículos.",
+        "bullets": [
+          "3M / Avery premium cast vinyl",
+          "Partial or full coverage",
+          "1–3 day install per vehicle",
+          "Fleet batch scheduling"
+        ],
+        "bullets_es": [
+          "Vinilo fundido 3M / Avery premium",
+          "Cobertura parcial o total",
+          "Instalación de 1–3 días por vehículo",
+          "Programación por lotes para flotas"
+        ]
+      }
+    ],
+    "disclaimer": "Pricing ranges are Chicago-area averages for planning. Exact quote depends on design, size, materials, and permit requirements. Free detailed quote in one business day.",
+    "disclaimer_es": "Los rangos de precios son promedios del área de Chicago para planificación. La cotización exacta depende del diseño, tamaño, materiales y requisitos de permisos. Cotización detallada gratis en un día hábil."
+  },
+  "faq": {
+    "heading": "Frequently asked questions",
+    "heading_es": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "What services does AK Sign offer?",
+        "q_es": "¿Qué servicios ofrece AK Sign?",
+        "a": "We handle four main sign types end-to-end: channel letter signs, lightboxes and cabinet signs, vehicle wraps and fleet graphics, and window graphics. Design, fabrication, permits, and installation are all done in-house — no subcontractors.",
+        "a_es": "Cubrimos cuatro tipos principales de letreros de principio a fin: letras canal, cajas de luz y cabinetes, rotulación vehicular y gráficos para flotas, y gráficos para ventanas. Diseño, fabricación, permisos e instalación — todo en interno, sin subcontratistas."
+      },
+      {
+        "q": "How does the quote process work?",
+        "q_es": "¿Cómo funciona el proceso de cotización?",
+        "a": "Send us your logo, goals, and any references via form, WhatsApp, or Telegram. We review and propose the sign type that fits your goal and budget, then send a free detailed quote within one business day — with a design preview before any fabrication begins.",
+        "a_es": "Envíanos tu logo, objetivos y referencias por formulario, WhatsApp o Telegram. Revisamos y proponemos el tipo de letrero que se ajusta a tu objetivo y presupuesto, y te enviamos una cotización detallada gratis en un día hábil — con vista previa del diseño antes de iniciar la fabricación."
+      },
+      {
+        "q": "What's the turnaround from quote to installed sign?",
+        "q_es": "¿Cuál es el tiempo desde la cotización hasta el letrero instalado?",
+        "a": "Most projects go from approved design to mounted sign in 3 to 7 days. Larger or complex builds take 2 to 3 weeks. Sign and electrical permits add 2 to 4 weeks but typically run in parallel with fabrication.",
+        "a_es": "La mayoría de los proyectos pasan del diseño aprobado al letrero instalado en 3–7 días. Los proyectos grandes o complejos toman 2–3 semanas. Los permisos añaden 2–4 semanas, normalmente en paralelo con la fabricación."
+      },
+      {
+        "q": "Do you handle permits for Chicago and the suburbs?",
+        "q_es": "¿Gestionan los permisos para Chicago y los suburbios?",
+        "a": "Yes. We file sign and electrical permits with the Village ourselves and hold a Sign Contractor License for Chicago. Typical permit turnaround is 2 to 4 weeks, running in parallel with fabrication.",
+        "a_es": "Sí. Tramitamos los permisos de letreros y eléctricos con el municipio y contamos con licencia de Sign Contractor para Chicago. El tiempo típico es de 2–4 semanas, en paralelo con la fabricación."
+      },
+      {
+        "q": "What's your service area?",
+        "q_es": "¿Cuál es su zona de servicio?",
+        "a": "Primary coverage: Arlington Heights, Palatine, Schaumburg, and Chicago. Extended coverage across the NW suburbs — Mount Prospect, Des Plaines, Rolling Meadows, Elk Grove Village, Buffalo Grove, Hoffman Estates, Wheeling, and Prospect Heights. Further areas (Barrington, Libertyville, Inverness) on request.",
+        "a_es": "Cobertura principal: Arlington Heights, Palatine, Schaumburg y Chicago. Cobertura extendida en los suburbios del noroeste — Mount Prospect, Des Plaines, Rolling Meadows, Elk Grove Village, Buffalo Grove, Hoffman Estates, Wheeling y Prospect Heights. Otras zonas (Barrington, Libertyville, Inverness) bajo pedido."
+      },
+      {
+        "q": "Can you match our exact brand colors?",
+        "q_es": "¿Pueden igualar exactamente los colores de nuestra marca?",
+        "a": "Yes. We match Pantone, CMYK, and RAL codes on printed faces, vinyl overlays, and painted returns. Send your brand guide or a reference file along with your quote request.",
+        "a_es": "Sí. Igualamos códigos Pantone, CMYK y RAL en caras impresas, vinilos y retornos pintados. Envía tu guía de marca o un archivo de referencia junto con tu solicitud de cotización."
+      },
+      {
+        "q": "What warranty do you offer?",
+        "q_es": "¿Qué garantía ofrecen?",
+        "a": "UL-listed LED modules we use are rated for 50,000+ hours of operation. Fabrication and installation carry a written warranty against defects — specific duration depends on the product and is confirmed with your quote.",
+        "a_es": "Los módulos LED con certificación UL que usamos están calificados para más de 50,000 horas de funcionamiento. La fabricación e instalación llevan garantía escrita contra defectos — la duración específica depende del producto y se confirma con la cotización."
+      },
+      {
+        "q": "Can you remove, reface, or replace an existing sign?",
+        "q_es": "¿Pueden retirar, renovar o reemplazar un letrero existente?",
+        "a": "Yes. We handle removal of old signage as part of an install, and refacing is available for most existing cabinets and channel letters — swapping faces without replacing the full structure saves most of the original investment.",
+        "a_es": "Sí. Nos encargamos del retiro del letrero antiguo como parte de la instalación, y ofrecemos refacing para la mayoría de cabinetes y letras canal — cambiar solo las caras sin reemplazar toda la estructura ahorra la mayor parte de la inversión original."
+      },
+      {
+        "q": "Do you work with multi-location brands and franchises?",
+        "q_es": "¿Trabajan con marcas multi-local y franquicias?",
+        "a": "Yes. We handle multi-location rollouts with consistent brand specs across sites — centralized project management, batch scheduling, and per-location permit filing. Request a fleet or franchise quote and we'll scope the full rollout.",
+        "a_es": "Sí. Gestionamos despliegues multi-local manteniendo consistencia de marca entre sedes — gestión de proyectos centralizada, programación por lotes y trámite de permisos por ubicación. Solicita cotización de flota o franquicia y armamos el despliegue completo."
+      },
+      {
+        "q": "What are your payment terms?",
+        "q_es": "¿Cuáles son sus términos de pago?",
+        "a": "Standard terms: a deposit secures design and material orders, with the balance due on install completion. Exact split depends on project size and is confirmed in the written quote before any fabrication starts.",
+        "a_es": "Términos estándar: un depósito asegura el diseño y el pedido de materiales, y el saldo se paga al completar la instalación. La distribución exacta depende del tamaño del proyecto y se confirma en la cotización escrita antes de iniciar la fabricación."
+      },
+      {
+        "q": "Are your signs weather-rated for Chicago winters?",
+        "q_es": "¿Sus letreros resisten los inviernos de Chicago?",
+        "a": "Yes. UL-listed LEDs are rated for sub-zero temperatures, housings are sealed, and wiring is weather-rated. Everything we install is built for the full Midwest weather cycle.",
+        "a_es": "Sí. Los LEDs con certificación UL resisten temperaturas bajo cero, las carcasas son selladas y el cableado es resistente a la intemperie. Todo lo que instalamos está diseñado para el ciclo climático completo del Medio Oeste."
+      },
+      {
+        "q": "How do I start a project?",
+        "q_es": "¿Cómo inicio un proyecto?",
+        "a": "Fill out the Get a Quote form on this page, or reach us directly on WhatsApp or Telegram (+1 312 898 4581). Share your logo, what kind of sign you want, the address, and a photo of the facade or vehicle. You'll have a detailed quote and a design preview within one business day.",
+        "a_es": "Completa el formulario de cotización en esta página, o escríbenos directo por WhatsApp o Telegram (+1 312 898 4581). Envíanos tu logo, qué tipo de letrero buscas, la dirección y una foto de la fachada o vehículo. Recibirás cotización detallada y vista previa del diseño en un día hábil."
+      }
+    ]
+  }
+}

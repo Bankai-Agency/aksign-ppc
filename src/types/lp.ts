@@ -7,6 +7,7 @@
  */
 
 export type LPSlug =
+  | "home"
   | "channel-letter-signs"
   | "illuminated-signs"
   | "vehicle-wraps";

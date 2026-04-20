@@ -7,6 +7,7 @@
  */
 
 import sharedJson from "@/data/shared.json";
+import homeJson from "@/data/home.json";
 import lp01Json from "@/data/lp-01.json";
 import lp02Json from "@/data/lp-02.json";
 import lp03Json from "@/data/lp-03.json";
@@ -18,11 +19,13 @@ import {
 import type { LPSlug, LPVariant, SharedContent } from "@/types/lp";
 
 const shared: SharedContent = SharedContentSchema.parse(sharedJson);
+const home: LPVariant = LPVariantSchema.parse(homeJson);
 const lp01: LPVariant = LPVariantSchema.parse(lp01Json);
 const lp02: LPVariant = LPVariantSchema.parse(lp02Json);
 const lp03: LPVariant = LPVariantSchema.parse(lp03Json);
 
 const variants: Record<LPSlug, LPVariant> = {
+  home,
   "channel-letter-signs": lp01,
   "illuminated-signs": lp02,
   "vehicle-wraps": lp03,
