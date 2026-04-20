@@ -40,7 +40,7 @@ export function FAQStudio({ lpSlug, data }: FAQStudioProps) {
     >
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16 py-20 md:py-28">
         <div className="grid gap-12 md:gap-16 md:grid-cols-12">
-          <div className="md:col-span-4">
+          <div className="md:col-span-6">
             <p className="text-[11px] md:text-xs uppercase tracking-[0.22em] text-gray-10 font-medium mb-4">
               (FAQ)
             </p>
@@ -48,7 +48,7 @@ export function FAQStudio({ lpSlug, data }: FAQStudioProps) {
               as="h2"
               id="faq-heading"
               text={data.heading}
-              className="font-semibold tracking-[-0.04em] block md:sticky md:top-28"
+              className="font-semibold tracking-[-0.04em] block md:sticky md:top-28 max-w-[14ch]"
               style={{
                 fontSize: "clamp(2.25rem, 0.875rem + 3.5vw, 4.5rem)",
                 lineHeight: 1,
@@ -57,7 +57,7 @@ export function FAQStudio({ lpSlug, data }: FAQStudioProps) {
             />
           </div>
 
-          <div className="md:col-span-8">
+          <div className="md:col-span-6">
             <Accordion.Root
               type="single"
               collapsible

@@ -122,7 +122,7 @@ export function StudioFooter({ shared }: StudioFooterProps) {
                   title={s.label}
                   aria-label={s.label}
                   data-cursor="link"
-                  className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-1 border border-gray-1 text-gray-12 hover:bg-gray-12 hover:text-gray-1 hover:border-gray-1 transition-colors"
+                  className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/25 text-white hover:bg-white/20 hover:border-white/50 transition-colors"
                 >
                   <SocialIcon name={s.name} size={18} />
                 </a>

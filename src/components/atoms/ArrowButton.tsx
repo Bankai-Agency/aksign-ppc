@@ -74,9 +74,8 @@ function Inner({
       <span
         aria-hidden
         className={cn(
-          "ab-sq inline-flex shrink-0 items-center justify-center rounded-full transition-[background-color,color,transform] duration-300",
+          "ab-sq inline-flex shrink-0 items-center justify-center rounded-full transition-colors duration-300",
           square[size],
-          "group-hover:translate-x-0.5",
         )}
       >
         <Icon name={icon} size={squareIcon[size]} stroke={2} />

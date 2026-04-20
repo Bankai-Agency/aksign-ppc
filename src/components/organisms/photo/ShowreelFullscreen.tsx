@@ -67,14 +67,14 @@ export function ShowreelFullscreen() {
           role="dialog"
           aria-modal="true"
           aria-label="Reel video"
-          className="fixed inset-0 z-[60] bg-gray-12/95 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[60] bg-gray-12/95 flex items-center justify-center"
           onClick={() => setOpen(false)}
         >
           <button
             type="button"
             aria-label="Close"
             onClick={() => setOpen(false)}
-            className="absolute top-6 right-6 md:top-10 md:right-10 w-12 h-12 rounded-full bg-gray-1 text-gray-12 flex items-center justify-center hover:scale-105 transition-transform z-10"
+            className="absolute top-5 right-5 md:top-8 md:right-8 w-12 h-12 rounded-full bg-gray-1 text-gray-12 flex items-center justify-center hover:scale-105 transition-transform z-10"
           >
             <Icon name="X" size={20} />
           </button>
@@ -83,7 +83,7 @@ export function ShowreelFullscreen() {
             controls
             autoPlay
             playsInline
-            className="w-full max-w-6xl aspect-video rounded-sm bg-gray-12"
+            className="max-h-[100svh] max-w-[100vw] md:max-h-[92vh] md:max-w-[92vw] h-auto w-auto bg-gray-12 rounded-none md:rounded-md object-contain"
             onClick={(e) => e.stopPropagation()}
           />
         </div>

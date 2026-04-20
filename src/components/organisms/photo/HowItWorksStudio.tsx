@@ -48,7 +48,7 @@ export function HowItWorksStudio({ data }: HowItWorksStudioProps) {
         <div className="mt-16 md:mt-24 grid gap-10 md:gap-16 lg:grid-cols-12 items-start">
           <StaggerGroup
             as="ul"
-            className="lg:col-span-7 flex flex-col border-t border-gray-12/15"
+            className="lg:col-span-6 flex flex-col border-t border-gray-12/15"
             stagger={0.08}
           >
             {data.steps.map((step, i) => (
@@ -93,7 +93,7 @@ export function HowItWorksStudio({ data }: HowItWorksStudioProps) {
           </StaggerGroup>
 
           {/* Right-side process photo — sticky on desktop */}
-          <div className="lg:col-span-5 lg:sticky lg:top-28">
+          <div className="lg:col-span-6 lg:sticky lg:top-28">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gray-2">
               <Image
                 src="/images/services/fabrication.png"

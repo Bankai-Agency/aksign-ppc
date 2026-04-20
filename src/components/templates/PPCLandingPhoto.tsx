@@ -6,7 +6,6 @@ import {
   FeaturedWorkSliderStudio,
   HeroPhoto,
   HowItWorksStudio,
-  LenisProvider,
   MouseFollower,
   PreloaderStudio,
   PricingStudio,
@@ -29,10 +28,9 @@ type Props = { lp: LPVariant; shared: SharedContent };
 export default function PPCLandingPhoto({ lp, shared }: Props) {
   return (
     <LocaleProvider>
-      <LenisProvider>
-        <PreloaderStudio />
-        <MouseFollower />
-        <StudioHeader nap={shared.nap} />
+      <PreloaderStudio />
+      <MouseFollower />
+      <StudioHeader nap={shared.nap} />
       <HeroPhoto slug={lp.slug} />
       <TrustBarStudio items={shared.trustBar} />
       <FeaturedWorkSliderStudio portfolio={shared.portfolio} />
@@ -44,8 +42,7 @@ export default function PPCLandingPhoto({ lp, shared }: Props) {
       <FAQStudio lpSlug={lp.slug} data={lp.faq} />
       <ServiceAreaStudio data={shared.serviceArea} />
       <CustomerCareCTA />
-        <StudioFooter shared={shared} />
-      </LenisProvider>
+      <StudioFooter shared={shared} />
     </LocaleProvider>
   );
 }

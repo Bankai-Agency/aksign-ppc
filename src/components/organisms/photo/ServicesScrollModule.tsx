@@ -84,8 +84,8 @@ export function ServicesScrollModule() {
       }}
     >
       <div className="relative">
-        <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-          <div className="mx-auto max-w-[1600px] w-full px-6 md:px-10 lg:px-16">
+        <div className="sticky md:static top-0 h-screen md:h-auto flex items-center md:items-stretch overflow-hidden md:overflow-visible">
+          <div className="mx-auto max-w-[1600px] w-full px-6 md:px-10 lg:px-16 md:py-20 lg:py-32">
             <p
               id="services-heading"
               className="text-[11px] md:text-xs uppercase tracking-[0.22em] text-gray-10 font-medium mb-4"
@@ -163,9 +163,11 @@ export function ServicesScrollModule() {
           </div>
         </div>
 
-        {/* Spacer — creates pin distance for all viewports */}
+        {/* Spacer — creates pin distance on mobile only; desktop uses
+            natural flow so the section doesn't take a giant 400vh slot. */}
         <div
           aria-hidden
+          className="md:hidden"
           style={{ height: `${PIN_VH}vh` }}
         />
       </div>

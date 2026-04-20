@@ -27,7 +27,6 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
   const { locale, setLocale, t } = useLocale();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState<string>("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -44,29 +43,11 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
     };
   }, [open]);
 
-  useEffect(() => {
-    const ids = ["services", "work", "pricing", "how-it-works", "faq", "contact"];
-    const nodes = ids
-      .map((id) => document.getElementById(id))
-      .filter((n): n is HTMLElement => Boolean(n));
-    if (nodes.length === 0) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive(e.target.id);
-        });
-      },
-      { rootMargin: "-40% 0px -55% 0px", threshold: 0 },
-    );
-    nodes.forEach((n) => io.observe(n));
-    return () => io.disconnect();
-  }, []);
-
   const nav = [
-    { label: t("nav.services"), href: "#services", id: "services" },
-    { label: t("nav.work"), href: "#work", id: "work" },
-    { label: t("nav.about"), href: "#how-it-works", id: "how-it-works" },
-    { label: t("nav.contact"), href: "#contact", id: "contact" },
+    { label: t("nav.services"), href: "#services" },
+    { label: t("nav.work"), href: "#work" },
+    { label: t("nav.about"), href: "#how-it-works" },
+    { label: t("nav.contact"), href: "#contact" },
   ];
 
   const socials = nap
@@ -112,30 +93,20 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
 
           {/* Nav */}
           <nav className="hidden md:flex items-center text-gray-1">
-            {nav.map((item) => {
-              const isActive = active === item.id;
-              return (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  data-cursor="link"
-                  className={cn(
-                    "relative inline-flex items-center gap-2 px-3 lg:px-4 h-10 rounded-full text-[15px] transition-colors",
-                    isActive
-                      ? "text-gray-1"
-                      : "text-gray-1/70 hover:text-gray-1",
-                  )}
-                >
-                  {isActive ? (
-                    <span
-                      aria-hidden
-                      className="w-1.5 h-1.5 rounded-full bg-brand-9"
-                    />
-                  ) : null}
-                  <span>{item.label}</span>
-                </a>
-              );
-            })}
+            {nav.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                data-cursor="link"
+                className="group relative inline-flex items-center gap-2 px-3 lg:px-4 h-10 rounded-full text-[15px] transition-colors text-gray-1/70 hover:text-gray-1"
+              >
+                <span
+                  aria-hidden
+                  className="w-1.5 h-1.5 rounded-full bg-brand-9 opacity-0 group-hover:opacity-100 transition-opacity"
+                />
+                <span>{item.label}</span>
+              </a>
+            ))}
           </nav>
 
           {/* Divider */}
