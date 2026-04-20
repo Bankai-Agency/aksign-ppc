@@ -21,9 +21,8 @@ const stepIcons: IconName[] = [
 ];
 
 /**
- * How-it-works — giant heading on top, two-column body below: numbered
- * steps (with pictogram per step) on the left, a sticky process photo
- * on the right.
+ * How-it-works — giant heading on top, two-column body below: 6 vertical
+ * step tiles on the left, a sticky process photo on the right.
  */
 export function HowItWorksStudio({ data }: HowItWorksStudioProps) {
   const { t, locale } = useLocale();
@@ -50,36 +49,35 @@ export function HowItWorksStudio({ data }: HowItWorksStudioProps) {
           stagger={0.04}
         />
 
-        <div className="mt-6 md:mt-6 grid gap-10 md:gap-16 lg:grid-cols-12 items-start">
+        <div className="mt-8 md:mt-14 grid gap-10 md:gap-16 lg:grid-cols-12 items-start">
           <StaggerGroup
             as="ul"
-            className="lg:col-span-6 flex flex-col gap-4 md:gap-6"
+            className="lg:col-span-6 flex flex-col gap-4 md:gap-5"
             stagger={0.08}
           >
             {data.steps.map((step, i) => (
               <StaggerItem
                 key={step.number}
                 as="li"
-                className="flex flex-col gap-5 md:grid md:grid-cols-[auto_auto_1fr] md:gap-4 md:items-start py-4 md:py-5"
+                y={30}
+                className="rounded-2xl bg-gray-2 p-6 md:p-7 grid grid-cols-[auto_auto_1fr] gap-4 md:gap-5 items-start"
               >
-                <div className="flex items-start md:contents">
-                  <span className="order-2 md:order-none ml-auto md:ml-0 shrink-0 text-xs uppercase tracking-[0.22em] text-gray-10 font-medium tabular-nums md:self-start md:pt-2">
-                    {String(step.number).padStart(2, "0")}
-                  </span>
+                <span className="text-xs uppercase tracking-[0.22em] text-gray-10 font-medium tabular-nums self-start pt-3">
+                  {String(step.number).padStart(2, "0")}
+                </span>
 
-                  <span
-                    aria-hidden
-                    className="order-1 md:order-none shrink-0 inline-flex items-center justify-center w-12 h-12 md:w-11 md:h-11 rounded-full bg-gray-12 text-gray-1 md:self-start"
-                  >
-                    <Icon
-                      name={stepIcons[i] ?? "Sparkles"}
-                      size={20}
-                      stroke={1.75}
-                    />
-                  </span>
-                </div>
+                <span
+                  aria-hidden
+                  className="shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-full bg-gray-12 text-gray-1 self-start"
+                >
+                  <Icon
+                    name={stepIcons[i] ?? "Sparkles"}
+                    size={20}
+                    stroke={1.75}
+                  />
+                </span>
 
-                <div className="flex flex-col gap-1 md:self-start">
+                <div className="flex flex-col gap-1 self-start">
                   <h3
                     className="font-semibold tracking-[-0.035em]"
                     style={{
