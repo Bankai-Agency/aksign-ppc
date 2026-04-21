@@ -11,9 +11,13 @@
   },
   "hero": {
     "eyebrow": "Serving Chicago + NW Suburbs",
+    "eyebrow_es": "Servicio en Chicago + suburbios del noroeste",
     "h1": "Illuminated Signs That Light Up Your ",
+    "h1_es": "Letreros iluminados que hacen brillar tu ",
     "h1Accent": "Storefront.",
+    "h1Accent_es": "local.",
     "subcopy": "Backlit lightbox and cabinet signs for Chicago businesses. Energy-efficient LED illumination, custom printed faces, and professional install — from design to mounted sign in 3 to 7 days.",
+    "subcopy_es": "Cajas de luz y cabinetes retroiluminados para negocios de Chicago. Iluminación LED de bajo consumo, caras impresas a medida e instalación profesional — del diseño al letrero instalado en 3–7 días.",
     "trustItems": [
       "Free custom design included",
       "3 to 7 day turnaround",

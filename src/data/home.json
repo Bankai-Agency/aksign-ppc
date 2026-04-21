@@ -16,9 +16,13 @@
   },
   "hero": {
     "eyebrow": "Serving Chicago + NW Suburbs",
+    "eyebrow_es": "Servicio en Chicago + suburbios del noroeste",
     "h1": "Commercial Signs, Built and Installed by ",
+    "h1_es": "Letreros comerciales, fabricados e instalados por ",
     "h1Accent": "One Team.",
+    "h1Accent_es": "un solo equipo.",
     "subcopy": "Full-service sign shop for Chicago storefronts, showrooms and fleets — channel letters, lightboxes, vehicle wraps, and window graphics. Design, UL-listed fabrication, Village permit filing and install handled in-house.",
+    "subcopy_es": "Taller de letreros de servicio completo para locales, showrooms y flotas en Chicago — letras canal, cajas de luz, rotulación vehicular y gráficos para ventanas. Diseño, fabricación con certificación UL, trámite de permisos municipales e instalación interna.",
     "trustItems": [
       "Free custom design included",
       "3 to 7 day turnaround",

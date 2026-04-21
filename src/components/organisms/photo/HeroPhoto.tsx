@@ -7,7 +7,7 @@ import { LetterReveal } from "@/components/atoms/LetterReveal";
 import { Reveal } from "@/components/atoms/Reveal";
 import { useLeadForm } from "@/lib/lead-form";
 import { useLocale } from "@/lib/i18n";
-import type { LPSlug } from "@/types/lp";
+import type { LPSlug, LPVariant } from "@/types/lp";
 
 const flipKeys = [
   "hero.flip.storefronts",
@@ -44,20 +44,35 @@ const heroImage: Record<LPSlug, { src: string; alt: string }> = {
 
 type HeroPhotoProps = {
   slug?: LPSlug;
+  lp?: LPVariant;
 };
 
 /**
- * Hero — full-bleed background photo with layered scrims (vertical
- * for bottom text + horizontal for left-side text contrast). Background
- * picture is picked per LP slug so LP-01 / LP-02 / LP-03 each get
- * their own shot; everything else is shared.
+ * Hero — full-bleed background photo with layered scrims. Per-page H1
+ * comes from lp.hero.{h1,h1Accent,subcopy} so each LP can lead with
+ * its own service-specific headline (per handoff specs). The home slug
+ * keeps the brand-level rotating "flip-pill" H1 driven by the i18n
+ * dict because its job is to cover all four services at once.
  */
-export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
+export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps) {
   const bg = heroImage[slug] ?? heroImage["channel-letter-signs"];
   const { openModal } = useLeadForm();
   const { t, locale } = useLocale();
   const [idx, setIdx] = useState(0);
   const [visible, setVisible] = useState(true);
+
+  const isHome = slug === "home";
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const h: any = lp?.hero ?? {};
+  const pickStr = (en: string | undefined, es: string | undefined) =>
+    (locale === "es" && es ? es : en) ?? "";
+  const staticH1 = pickStr(h.h1, h.h1_es);
+  const staticH1Accent = pickStr(h.h1Accent, h.h1Accent_es);
+  const staticSubcopy = pickStr(h.subcopy, h.subcopy_es);
+  const staticCtaLabel = pickStr(
+    lp ? (lp as unknown as { ctaLabel?: string; ctaLabel_es?: string }).ctaLabel : undefined,
+    lp ? (lp as unknown as { ctaLabel?: string; ctaLabel_es?: string }).ctaLabel_es : undefined,
+  );
 
   useEffect(() => {
     const tick = setInterval(() => {
@@ -116,36 +131,53 @@ export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
               lineHeight: 0.95,
             }}
           >
-            <LetterReveal
-              key={`line1-${locale}`}
-              as="span"
-              text={t("hero.line1")}
-              className="block"
-              delay={1.6}
-              stagger={0.04}
-            />
-            <LetterReveal
-              key={`line2-${locale}`}
-              as="span"
-              text={`${t("hero.line2Prefix")} `}
-              className="block whitespace-nowrap"
-              delay={1.75}
-              stagger={0.04}
-            >
-              <span
-                className="italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline transition-opacity duration-200 ease-linear"
-                style={{
-                  opacity: visible ? 1 : 0,
-                  paddingLeft: "0.18em",
-                  paddingRight: "0.3em",
-                  paddingTop: "0.18em",
-                  paddingBottom: "0.18em",
-                  marginBottom: "-0.08em",
-                }}
+            {isHome ? (
+              <>
+                <LetterReveal
+                  key={`line1-${locale}`}
+                  as="span"
+                  text={t("hero.line1")}
+                  className="block"
+                  delay={1.6}
+                  stagger={0.04}
+                />
+                <LetterReveal
+                  key={`line2-${locale}`}
+                  as="span"
+                  text={`${t("hero.line2Prefix")} `}
+                  className="block whitespace-nowrap"
+                  delay={1.75}
+                  stagger={0.04}
+                >
+                  <span
+                    className="italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline transition-opacity duration-200 ease-linear"
+                    style={{
+                      opacity: visible ? 1 : 0,
+                      paddingLeft: "0.18em",
+                      paddingRight: "0.3em",
+                      paddingTop: "0.18em",
+                      paddingBottom: "0.18em",
+                      marginBottom: "-0.08em",
+                    }}
+                  >
+                    {t(flipKeys[idx])}
+                  </span>
+                </LetterReveal>
+              </>
+            ) : (
+              <LetterReveal
+                key={`staticH1-${slug}-${locale}`}
+                as="span"
+                text={staticH1}
+                className="block text-balance"
+                delay={1.6}
+                stagger={0.03}
               >
-                {t(flipKeys[idx])}
-              </span>
-            </LetterReveal>
+                <span className="italic text-brand-9 whitespace-nowrap">
+                  {staticH1Accent}
+                </span>
+              </LetterReveal>
+            )}
           </h1>
 
           {/* Subheading + CTA — directly under H1 */}
@@ -155,10 +187,10 @@ export function HeroPhoto({ slug = "channel-letter-signs" }: HeroPhotoProps) {
                 className="text-base md:text-lg lg:text-xl text-gray-1/90 font-medium leading-relaxed"
                 style={{ letterSpacing: "-0.005em" }}
               >
-                {t("hero.subheading")}
+                {isHome ? t("hero.subheading") : staticSubcopy}
               </p>
               <ArrowButton as="button" onClick={openModal} tone="light" size="lg" fullWidthMobile>
-                {t("cta.getFreeQuote")}
+                {isHome || !staticCtaLabel ? t("cta.getFreeQuote") : staticCtaLabel}
               </ArrowButton>
             </div>
           </Reveal>
