@@ -205,6 +205,33 @@ const dict: Dict = {
     es: "Un día hábil · sin compromiso",
   },
 
+  // Success (post-submit) modal
+  "success.heading": {
+    en: "Thanks — we got your request.",
+    es: "¡Gracias! Recibimos tu solicitud.",
+  },
+  "success.body": {
+    en: "Our team will be in touch within one business day with your detailed quote and a design preview. Urgent? Call us directly.",
+    es: "Nuestro equipo te contactará en un día hábil con una cotización detallada y una vista previa del diseño. ¿Urgente? Llámanos directamente.",
+  },
+  "success.callCta": { en: "Call (312) 898-4581", es: "Llamar (312) 898-4581" },
+  "success.close": { en: "Close", es: "Cerrar" },
+
+  // Submit states + errors
+  "cta.sending": { en: "Sending…", es: "Enviando…" },
+  "form.error.generic": {
+    en: "Something went wrong — please try again or call us.",
+    es: "Algo salió mal — intenta de nuevo o llámanos.",
+  },
+  "form.error.rateLimit": {
+    en: "You just submitted a request — please wait a moment before trying again.",
+    es: "Acabas de enviar una solicitud — espera un momento antes de intentar de nuevo.",
+  },
+  "form.error.validation": {
+    en: "Please double-check the form fields and try again.",
+    es: "Revisa los campos del formulario e inténtalo de nuevo.",
+  },
+
   // FAQ
   "faq.heading": {
     en: "Frequently asked questions",

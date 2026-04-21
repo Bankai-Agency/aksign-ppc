@@ -7,6 +7,7 @@ import { ArrowButton } from "@/components/atoms/ArrowButton";
 import { useLeadForm } from "@/lib/lead-form";
 import { formatPhoneMask } from "@/lib/format-phone";
 import { useLocale } from "@/lib/i18n";
+import { submitLead } from "@/lib/submit-lead";
 
 const topics = [
   "Channel letters",
@@ -25,13 +26,15 @@ const pill =
  * inside. Close via ESC, backdrop click, or the X-button.
  */
 export function LeadFormModal() {
-  const { open, closeModal } = useLeadForm();
+  const { open, closeModal, showSuccess } = useLeadForm();
   const { t } = useLocale();
   const [topic, setTopic] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [question, setQuestion] = useState("");
+  const [sending, setSending] = useState(false);
+  const [errorKey, setErrorKey] = useState<string | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -46,15 +49,46 @@ export function LeadFormModal() {
     };
   }, [open, closeModal]);
 
-  const onSubmit = (e: FormEvent) => {
+  // Reset transient state whenever the dialog closes so the next open
+  // starts clean.
+  useEffect(() => {
+    if (open) return;
+    setErrorKey(null);
+    setSending(false);
+  }, [open]);
+
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `[${topic || "Lead"}] ${name || "Lead"}`,
-    );
-    const body = encodeURIComponent(
-      `Topic: ${topic}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nQuestion:\n${question}`,
-    );
-    window.location.href = `mailto:info@aksign.us?subject=${subject}&body=${body}`;
+    if (sending) return;
+    setSending(true);
+    setErrorKey(null);
+    const result = await submitLead({
+      topic,
+      name,
+      email,
+      phone,
+      message: question,
+      formId: "hero-modal",
+    });
+    setSending(false);
+    if (result.ok) {
+      // Reset fields, close form, show success dialog.
+      setTopic("");
+      setName("");
+      setEmail("");
+      setPhone("");
+      setQuestion("");
+      closeModal();
+      showSuccess();
+      return;
+    }
+    if (result.error === "rate_limit") {
+      setErrorKey("form.error.rateLimit");
+    } else if (result.error === "validation_failed") {
+      setErrorKey("form.error.validation");
+    } else {
+      setErrorKey("form.error.generic");
+    }
   };
 
   return (
@@ -185,12 +219,28 @@ export function LeadFormModal() {
               style={{ letterSpacing: "-0.01em" }}
             />
 
+            {errorKey ? (
+              <p
+                role="alert"
+                className="text-sm text-brand-9 bg-brand-9/10 rounded-xl px-4 py-3 leading-relaxed"
+              >
+                {t(errorKey as never)}
+              </p>
+            ) : null}
+
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 pt-3">
               <p className="text-xs md:text-sm text-gray-1/55 leading-relaxed">
                 {t("modal.legal")}
               </p>
-              <ArrowButton as="button" type="submit" tone="light" size="lg" fullWidthMobile>
-                {t("cta.sendRequest")}
+              <ArrowButton
+                as="button"
+                type="submit"
+                tone="light"
+                size="lg"
+                fullWidthMobile
+                disabled={sending}
+              >
+                {sending ? t("cta.sending") : t("cta.sendRequest")}
               </ArrowButton>
             </div>
           </motion.form>

@@ -17,6 +17,7 @@ import {
   SimpleTextStatement,
   StudioFooter,
   StudioHeader,
+  SuccessModal,
   TrustBarStudio,
 } from "@/components/organisms/photo";
 
@@ -49,6 +50,7 @@ export default function PPCLandingPhoto({ lp, shared }: Props) {
         <CustomerCareCTA />
         <StudioFooter shared={shared} />
         <LeadFormModal />
+        <SuccessModal />
       </LeadFormProvider>
     </LocaleProvider>
   );
