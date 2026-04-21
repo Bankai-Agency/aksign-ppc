@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { inter } from "./fonts";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
-
-export const SITE_URL = "https://aksign-ppc.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

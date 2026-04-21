@@ -9,7 +9,7 @@
 
 import sharedJson from "@/data/shared.json";
 import homeJson from "@/data/home.json";
-import { SITE_URL } from "@/app/layout";
+import { SITE_URL } from "@/lib/site";
 
 type SharedShape = typeof sharedJson;
 type HomeShape = typeof homeJson;

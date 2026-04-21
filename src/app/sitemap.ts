@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "./layout";
+import { SITE_URL } from "@/lib/site";
 
 /**
  * Only the brand homepage is indexable; the three PPC slugs
