@@ -16,6 +16,13 @@
     "h1_es": "Rotulación de flota que trabaja mientras tu equipo ",
     "h1Accent": "Drives.",
     "h1Accent_es": "conduce.",
+    "h1AccentList": [
+      { "en": "Drives.", "es": "conduce." },
+      { "en": "Delivers.", "es": "entrega." },
+      { "en": "Travels.", "es": "viaja." },
+      { "en": "Works.", "es": "trabaja." },
+      { "en": "Rolls.", "es": "rueda." }
+    ],
     "subcopy": "Commercial vehicle wraps and fleet graphics for Chicago businesses. Box trucks, vans, pickups, and trailers — premium cast vinyl, in-house install, fleet-volume pricing.",
     "subcopy_es": "Rotulación de vehículos comerciales y gráficos para flotas en Chicago. Camiones, furgonetas, pickups y remolques — vinilo fundido premium, instalación interna, precios por volumen de flota.",
     "trustItems": [

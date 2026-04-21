@@ -74,17 +74,28 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
     lp ? (lp as unknown as { ctaLabel?: string; ctaLabel_es?: string }).ctaLabel_es : undefined,
   );
 
+  // Per-LP flip accent: array of {en, es} word pairs. When present (and
+  // non-home), the final accent word rotates like the home flip-pill.
+  const lpAccentList: Array<{ en: string; es: string }> = Array.isArray(h.h1AccentList)
+    ? h.h1AccentList
+    : [];
+  const lpAccentCount = lpAccentList.length;
+
+  const rotateCount = isHome ? flipKeys.length : lpAccentCount;
+  const shouldRotate = rotateCount > 1;
+
   useEffect(() => {
+    if (!shouldRotate) return;
     const tick = setInterval(() => {
       setVisible(false);
       const swap = setTimeout(() => {
-        setIdx((p) => (p + 1) % flipKeys.length);
+        setIdx((p) => (p + 1) % rotateCount);
         setVisible(true);
       }, 220);
       return () => clearTimeout(swap);
     }, 2400);
     return () => clearInterval(tick);
-  }, []);
+  }, [shouldRotate, rotateCount]);
 
   return (
     <section
@@ -149,18 +160,29 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                   delay={1.75}
                   stagger={0.04}
                 >
-                  <span
-                    className="italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline transition-opacity duration-200 ease-linear"
-                    style={{
-                      opacity: visible ? 1 : 0,
-                      paddingLeft: "0.18em",
-                      paddingRight: "0.3em",
-                      paddingTop: "0.18em",
-                      paddingBottom: "0.18em",
-                      marginBottom: "-0.08em",
-                    }}
-                  >
-                    {t(flipKeys[idx])}
+                  {/* Pill stack — inline-grid sizes to widest word so text
+                      before the pill does not reflow when it rotates. */}
+                  <span className="inline-grid align-baseline">
+                    {flipKeys.map((k, i) => {
+                      const active = i === idx % flipKeys.length;
+                      return (
+                        <span
+                          key={k}
+                          aria-hidden={!active}
+                          className="[grid-area:1/1] italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline transition-opacity duration-200 ease-linear whitespace-nowrap"
+                          style={{
+                            opacity: active ? (visible ? 1 : 0) : 0,
+                            paddingLeft: "0.18em",
+                            paddingRight: "0.3em",
+                            paddingTop: "0.18em",
+                            paddingBottom: "0.18em",
+                            marginBottom: "-0.08em",
+                          }}
+                        >
+                          {t(k)}
+                        </span>
+                      );
+                    })}
                   </span>
                 </LetterReveal>
               </>
@@ -173,9 +195,44 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                 delay={1.6}
                 stagger={0.03}
               >
-                <span className="italic text-brand-9 whitespace-nowrap">
-                  {staticH1Accent}
-                </span>
+                {lpAccentCount > 1 ? (
+                  <span className="inline-grid align-baseline">
+                    {lpAccentList.map((w, i) => {
+                      const txt = pickStr(w.en, w.es);
+                      const active = i === idx % lpAccentCount;
+                      return (
+                        <span
+                          key={`${slug}-accent-${i}`}
+                          aria-hidden={!active}
+                          className="[grid-area:1/1] italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline transition-opacity duration-200 ease-linear whitespace-nowrap"
+                          style={{
+                            opacity: active ? (visible ? 1 : 0) : 0,
+                            paddingLeft: "0.18em",
+                            paddingRight: "0.3em",
+                            paddingTop: "0.18em",
+                            paddingBottom: "0.18em",
+                            marginBottom: "-0.08em",
+                          }}
+                        >
+                          {txt}
+                        </span>
+                      );
+                    })}
+                  </span>
+                ) : (
+                  <span
+                    className="italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline whitespace-nowrap"
+                    style={{
+                      paddingLeft: "0.18em",
+                      paddingRight: "0.3em",
+                      paddingTop: "0.18em",
+                      paddingBottom: "0.18em",
+                      marginBottom: "-0.08em",
+                    }}
+                  >
+                    {staticH1Accent}
+                  </span>
+                )}
               </LetterReveal>
             )}
           </h1>
