@@ -50,7 +50,7 @@ export function SuccessModal() {
             exit={{ opacity: 0, y: 20, scale: 0.98 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-[520px] bg-gray-12 text-gray-1 rounded-3xl p-8 md:p-10 flex flex-col items-start gap-6"
+            className="relative w-full max-w-[520px] bg-gray-12 text-gray-1 rounded-3xl p-8 md:p-12 flex flex-col items-center text-center gap-6"
           >
             <button
               type="button"
@@ -63,9 +63,9 @@ export function SuccessModal() {
 
             <span
               aria-hidden
-              className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-brand-9 text-gray-1"
+              className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-9 text-gray-1"
             >
-              <Icon name="Check" size={28} stroke={2.25} />
+              <Icon name="Check" size={32} stroke={2.25} />
             </span>
 
             <h2
@@ -78,27 +78,21 @@ export function SuccessModal() {
               {t("success.heading")}
             </h2>
 
-            <p className="text-base md:text-lg text-gray-1/75 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-1/75 leading-relaxed max-w-[42ch]">
               {t("success.body")}
             </p>
 
-            <div className="flex flex-col md:flex-row md:items-center gap-3 w-full pt-2">
+            <div className="flex flex-col items-center gap-3 w-full pt-2">
               <ArrowButton
-                as="a"
-                href="tel:+13128984581"
-                tone="light"
-                size="md"
-                fullWidthMobile
-              >
-                {t("success.callCta")}
-              </ArrowButton>
-              <button
+                as="button"
                 type="button"
                 onClick={hideSuccess}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm md:text-base font-medium text-gray-1/70 hover:text-gray-1 transition-colors"
+                tone="light"
+                size="lg"
+                fullWidthMobile
               >
-                {t("success.close")}
-              </button>
+                {t("cta.continue")}
+              </ArrowButton>
             </div>
           </motion.div>
         </motion.div>

@@ -216,6 +216,7 @@ const dict: Dict = {
   },
   "success.callCta": { en: "Call (312) 898-4581", es: "Llamar (312) 898-4581" },
   "success.close": { en: "Close", es: "Cerrar" },
+  "cta.continue": { en: "Continue", es: "Continuar" },
 
   // Submit states + errors
   "cta.sending": { en: "Sending…", es: "Enviando…" },
