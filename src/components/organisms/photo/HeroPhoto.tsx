@@ -186,7 +186,7 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                       only — it hugs its content and never shows
                       empty red bg around shorter words. */}
                   <span
-                    className="relative inline-block align-baseline whitespace-nowrap italic"
+                    className="relative inline-block align-baseline whitespace-nowrap italic overflow-hidden rounded-md"
                     style={{ marginBottom: "-0.08em" }}
                   >
                     <span
@@ -227,7 +227,7 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
               >
                 {lpAccentCount > 1 ? (
                   <span
-                    className="relative inline-block align-baseline whitespace-nowrap italic"
+                    className="relative inline-block align-baseline whitespace-nowrap italic overflow-hidden rounded-md"
                     style={{ marginBottom: "-0.08em" }}
                   >
                     <span
