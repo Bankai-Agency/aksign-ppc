@@ -1,12 +1,29 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { inter } from "./fonts";
 import "./globals.css";
 
+export const SITE_URL = "https://aksign-ppc.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "AK Sign — Commercial Signage, Arlington Heights IL",
   description:
     "Custom illuminated signs, lightboxes, and vehicle wraps for Chicago-area businesses. Design, UL-listed LED fabrication, permit handling, and install.",
+  applicationName: "AK Sign",
+  authors: [{ name: "AK Sign" }],
+  creator: "AK Sign",
+  publisher: "AK Sign",
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0A0A0A",
+  colorScheme: "dark light",
 };
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
