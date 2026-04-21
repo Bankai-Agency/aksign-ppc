@@ -218,5 +218,49 @@
         "a_es": "Sí. Construimos estructuras compartidas con paneles reemplazables por inquilino — una solución común para strip malls y edificios multi-inquilino."
       }
     ]
-  }
+  },
+  "trustBar": [
+    {
+      "icon": "Zap",
+      "title": "Energy-Efficient LED",
+      "title_es": "LED de bajo consumo",
+      "subcopy": "Low-power cabinet backlighting",
+      "subcopy_es": "Retroiluminación eficiente para cabinetes"
+    },
+    {
+      "icon": "RectangleHorizontal",
+      "title": "Single or Double-Sided",
+      "title_es": "Una o dos caras",
+      "subcopy": "Pylon-mount compatible cabinets",
+      "subcopy_es": "Cabinetes compatibles con montaje en pilón"
+    },
+    {
+      "icon": "Shapes",
+      "title": "Custom Shapes and Sizes",
+      "title_es": "Formas y tamaños a medida",
+      "subcopy": "Fabricated to your specs",
+      "subcopy_es": "Fabricados según tus especificaciones"
+    },
+    {
+      "icon": "Layers",
+      "title": "Printed Vinyl or Acrylic Faces",
+      "title_es": "Caras en vinilo impreso o acrílico",
+      "subcopy": "Per-project material choice",
+      "subcopy_es": "Elección de material por proyecto"
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Weather-Rated for Chicago",
+      "title_es": "Resistente al clima de Chicago",
+      "subcopy": "Sealed enclosures, sub-zero LEDs",
+      "subcopy_es": "Carcasas selladas, LEDs bajo cero"
+    },
+    {
+      "icon": "Clock",
+      "title": "3 to 7 Day Turnaround",
+      "title_es": "Entrega en 3 a 7 días",
+      "subcopy": "In-house design, build, install",
+      "subcopy_es": "Diseño, fabricación e instalación internos"
+    }
+  ]
 }

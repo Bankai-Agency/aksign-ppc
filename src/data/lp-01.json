@@ -223,5 +223,49 @@
         "a_es": "Nuestra área principal es Chicago y los suburbios del noroeste. Es posible enviar solo la fabricación a distancias mayores — contáctanos con tu dirección y confirmamos la viabilidad."
       }
     ]
-  }
+  },
+  "trustBar": [
+    {
+      "icon": "BadgeCheck",
+      "title": "UL-Listed LED Modules",
+      "title_es": "Módulos LED con certificación UL",
+      "subcopy": "50,000+ hour rated illumination",
+      "subcopy_es": "Iluminación certificada para más de 50,000 horas"
+    },
+    {
+      "icon": "Palette",
+      "title": "Pantone-Match Brand Colors",
+      "title_es": "Colores de marca según Pantone",
+      "subcopy": "Custom face prints and painted returns",
+      "subcopy_es": "Caras impresas y retornos pintados a medida"
+    },
+    {
+      "icon": "Lightbulb",
+      "title": "Front-Lit or Halo-Lit",
+      "title_es": "Iluminación frontal o halo",
+      "subcopy": "Your choice of illumination style",
+      "subcopy_es": "Elige el estilo de iluminación"
+    },
+    {
+      "icon": "FileCheck",
+      "title": "Permits Filed for You",
+      "title_es": "Permisos gestionados por nosotros",
+      "subcopy": "Sign + electrical with the Village",
+      "subcopy_es": "Letrero y eléctrico ante el municipio"
+    },
+    {
+      "icon": "Layers",
+      "title": "Aluminum + Acrylic Build",
+      "title_es": "Construcción en aluminio y acrílico",
+      "subcopy": "10 to 15 year outdoor service life",
+      "subcopy_es": "Vida útil exterior de 10 a 15 años"
+    },
+    {
+      "icon": "Clock",
+      "title": "3 to 7 Day Turnaround",
+      "title_es": "Entrega en 3 a 7 días",
+      "subcopy": "In-house design, build, install",
+      "subcopy_es": "Diseño, fabricación e instalación internos"
+    }
+  ]
 }

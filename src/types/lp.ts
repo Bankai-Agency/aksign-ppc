@@ -158,4 +158,7 @@ export type LPVariant = {
     heading: string;
     items: FAQItem[];
   };
+  /** Optional per-LP override for the TrustBar. Falls back to
+   *  shared.trustBar (brand-level) when absent. */
+  trustBar?: TrustUSP[];
 };

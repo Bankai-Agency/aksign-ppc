@@ -2,6 +2,7 @@
   "slug": "vehicle-wraps",
   "accent": "shine",
   "ctaLabel": "Get a Fleet Quote",
+  "ctaLabel_es": "Solicitar cotización de flota",
   "serviceTag": "vehicle-wraps",
   "meta": {
     "title": "Fleet Wraps & Commercial Vehicle Graphics Chicago | AK Sign",
@@ -220,5 +221,49 @@
         "a_es": "Sí — el diseño está incluido en cada cotización. Recibes un mockup completo del vehículo para aprobación antes de iniciar producción."
       }
     ]
-  }
+  },
+  "trustBar": [
+    {
+      "icon": "Award",
+      "title": "3M + Avery Premium Vinyl",
+      "title_es": "Vinilo premium 3M + Avery",
+      "subcopy": "5 to 7 year outdoor rating",
+      "subcopy_es": "Certificación exterior de 5 a 7 años"
+    },
+    {
+      "icon": "Percent",
+      "title": "Fleet-Volume Pricing",
+      "title_es": "Precios por volumen de flota",
+      "subcopy": "Discount starts at 3 vehicles",
+      "subcopy_es": "Descuento desde 3 vehículos"
+    },
+    {
+      "icon": "CalendarRange",
+      "title": "Batch Install Scheduling",
+      "title_es": "Instalación programada por lotes",
+      "subcopy": "Minimize fleet downtime",
+      "subcopy_es": "Minimiza tiempos fuera de servicio"
+    },
+    {
+      "icon": "Scissors",
+      "title": "Partial or Full Wrap",
+      "title_es": "Rotulación parcial o total",
+      "subcopy": "Per-vehicle coverage choice",
+      "subcopy_es": "Cobertura por vehículo a elección"
+    },
+    {
+      "icon": "Truck",
+      "title": "Vans, Trucks, Pickups, Trailers",
+      "title_es": "Furgonetas, camiones, pickups, remolques",
+      "subcopy": "Any commercial vehicle",
+      "subcopy_es": "Cualquier vehículo comercial"
+    },
+    {
+      "icon": "Wrench",
+      "title": "Design + Print + Install In-House",
+      "title_es": "Diseño, impresión e instalación internos",
+      "subcopy": "One vendor, no subcontractors",
+      "subcopy_es": "Un solo proveedor, sin subcontratistas"
+    }
+  ]
 }

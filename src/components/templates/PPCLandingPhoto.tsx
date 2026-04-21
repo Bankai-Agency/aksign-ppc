@@ -37,7 +37,7 @@ export default function PPCLandingPhoto({ lp, shared }: Props) {
         <MouseFollower />
         <StudioHeader nap={shared.nap} />
         <HeroPhoto slug={lp.slug} lp={lp} />
-        <TrustBarStudio items={shared.trustBar} />
+        <TrustBarStudio items={lp.trustBar ?? shared.trustBar} />
         <FeaturedWorkSliderStudio portfolio={shared.portfolio} />
         <SimpleTextStatement />
         <ShowreelFullscreen />

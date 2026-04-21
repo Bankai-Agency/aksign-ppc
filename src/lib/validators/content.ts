@@ -39,11 +39,13 @@ export const NavLinkSchema = z.object({
   href: z.string().min(1),
 });
 
-export const TrustUSPSchema = z.object({
-  icon: z.string().min(1),
-  title: z.string().min(1),
-  subcopy: z.string().min(1),
-});
+export const TrustUSPSchema = z
+  .object({
+    icon: z.string().min(1),
+    title: z.string().min(1),
+    subcopy: z.string().min(1),
+  })
+  .passthrough();
 
 export const StepSchema = z.object({
   number: z.number().int().min(1).max(6),
@@ -200,5 +202,6 @@ export const LPVariantSchema = z
         items: z.array(FAQItemSchema).length(12),
       })
       .passthrough(),
+    trustBar: z.array(TrustUSPSchema).length(6).optional(),
   })
   .passthrough();
