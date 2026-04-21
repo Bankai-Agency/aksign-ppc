@@ -234,8 +234,8 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                       aria-hidden
                       className="invisible inline-block whitespace-nowrap"
                       style={{
-                        paddingLeft: "0.18em",
-                        paddingRight: "0.3em",
+                        paddingLeft: "0.22em",
+                        paddingRight: "0.22em",
                         paddingTop: "0.18em",
                         paddingBottom: "0.18em",
                       }}
@@ -246,8 +246,8 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                       className="absolute top-0 left-0 text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden whitespace-nowrap transition-opacity duration-200 ease-linear"
                       style={{
                         opacity: visible ? 1 : 0,
-                        paddingLeft: "0.18em",
-                        paddingRight: "0.3em",
+                        paddingLeft: "0.22em",
+                        paddingRight: "0.22em",
                         paddingTop: "0.18em",
                         paddingBottom: "0.18em",
                       }}
