@@ -84,6 +84,26 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
   const rotateCount = isHome ? flipKeys.length : lpAccentCount;
   const shouldRotate = rotateCount > 1;
 
+  // Active + widest words for the rotating pill. The ghost (widest)
+  // reserves layout width so the absolute pill can hug the active
+  // word without shifting the text that precedes it.
+  const lpActiveAccent =
+    lpAccentCount > 0
+      ? pickStr(
+          lpAccentList[idx % lpAccentCount]?.en,
+          lpAccentList[idx % lpAccentCount]?.es,
+        )
+      : staticH1Accent;
+  const lpWidestAccent = lpAccentList.reduce((best, item) => {
+    const txt = pickStr(item.en, item.es);
+    return txt.length > best.length ? txt : best;
+  }, staticH1Accent);
+  const homeActiveFlip = t(flipKeys[idx % flipKeys.length]);
+  const homeWidestFlip = flipKeys.reduce((best, k) => {
+    const txt = t(k);
+    return txt.length > best.length ? txt : best;
+  }, "");
+
   useEffect(() => {
     if (!shouldRotate) return;
     const tick = setInterval(() => {
@@ -160,29 +180,39 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                   delay={1.75}
                   stagger={0.04}
                 >
-                  {/* Pill stack — inline-grid sizes to widest word so text
-                      before the pill does not reflow when it rotates. */}
-                  <span className="inline-grid align-baseline">
-                    {flipKeys.map((k, i) => {
-                      const active = i === idx % flipKeys.length;
-                      return (
-                        <span
-                          key={k}
-                          aria-hidden={!active}
-                          className="[grid-area:1/1] italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline transition-opacity duration-200 ease-linear whitespace-nowrap"
-                          style={{
-                            opacity: active ? (visible ? 1 : 0) : 0,
-                            paddingLeft: "0.18em",
-                            paddingRight: "0.3em",
-                            paddingTop: "0.18em",
-                            paddingBottom: "0.18em",
-                            marginBottom: "-0.08em",
-                          }}
-                        >
-                          {t(k)}
-                        </span>
-                      );
-                    })}
+                  {/* Invisible ghost reserves the width of the widest
+                      variant so text before the pill stays pinned.
+                      The absolute pill is sized to the active word
+                      only — it hugs its content and never shows
+                      empty red bg around shorter words. */}
+                  <span
+                    className="relative inline-block align-baseline whitespace-nowrap italic"
+                    style={{ marginBottom: "-0.08em" }}
+                  >
+                    <span
+                      aria-hidden
+                      className="invisible inline-block whitespace-nowrap"
+                      style={{
+                        paddingLeft: "0.18em",
+                        paddingRight: "0.3em",
+                        paddingTop: "0.18em",
+                        paddingBottom: "0.18em",
+                      }}
+                    >
+                      {homeWidestFlip}
+                    </span>
+                    <span
+                      className="absolute top-0 left-0 text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden whitespace-nowrap transition-opacity duration-200 ease-linear"
+                      style={{
+                        opacity: visible ? 1 : 0,
+                        paddingLeft: "0.18em",
+                        paddingRight: "0.3em",
+                        paddingTop: "0.18em",
+                        paddingBottom: "0.18em",
+                      }}
+                    >
+                      {homeActiveFlip}
+                    </span>
                   </span>
                 </LetterReveal>
               </>
@@ -196,28 +226,34 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                 stagger={0.03}
               >
                 {lpAccentCount > 1 ? (
-                  <span className="inline-grid align-baseline">
-                    {lpAccentList.map((w, i) => {
-                      const txt = pickStr(w.en, w.es);
-                      const active = i === idx % lpAccentCount;
-                      return (
-                        <span
-                          key={`${slug}-accent-${i}`}
-                          aria-hidden={!active}
-                          className="[grid-area:1/1] italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline transition-opacity duration-200 ease-linear whitespace-nowrap"
-                          style={{
-                            opacity: active ? (visible ? 1 : 0) : 0,
-                            paddingLeft: "0.18em",
-                            paddingRight: "0.3em",
-                            paddingTop: "0.18em",
-                            paddingBottom: "0.18em",
-                            marginBottom: "-0.08em",
-                          }}
-                        >
-                          {txt}
-                        </span>
-                      );
-                    })}
+                  <span
+                    className="relative inline-block align-baseline whitespace-nowrap italic"
+                    style={{ marginBottom: "-0.08em" }}
+                  >
+                    <span
+                      aria-hidden
+                      className="invisible inline-block whitespace-nowrap"
+                      style={{
+                        paddingLeft: "0.18em",
+                        paddingRight: "0.3em",
+                        paddingTop: "0.18em",
+                        paddingBottom: "0.18em",
+                      }}
+                    >
+                      {lpWidestAccent}
+                    </span>
+                    <span
+                      className="absolute top-0 left-0 text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden whitespace-nowrap transition-opacity duration-200 ease-linear"
+                      style={{
+                        opacity: visible ? 1 : 0,
+                        paddingLeft: "0.18em",
+                        paddingRight: "0.3em",
+                        paddingTop: "0.18em",
+                        paddingBottom: "0.18em",
+                      }}
+                    >
+                      {lpActiveAccent}
+                    </span>
                   </span>
                 ) : (
                   <span
