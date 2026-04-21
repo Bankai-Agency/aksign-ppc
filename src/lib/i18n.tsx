@@ -235,6 +235,21 @@ const dict: Dict = {
     en: "© {year} AK SIGN",
     es: "© {year} AK SIGN",
   },
+
+  // Footer navigation columns (all-caps labels)
+  "footer.nav.home": { en: "HOME", es: "INICIO" },
+  "footer.nav.work": { en: "WORK", es: "PROYECTOS" },
+  "footer.nav.about": { en: "ABOUT", es: "NOSOTROS" },
+  "footer.nav.channelLetters": { en: "CHANNEL LETTERS", es: "LETRAS CANAL" },
+  "footer.nav.illuminated": { en: "ILLUMINATED", es: "ILUMINADOS" },
+  "footer.nav.vehicleWraps": { en: "VEHICLE WRAPS", es: "ROTULACIÓN" },
+  "footer.nav.services": { en: "SERVICES", es: "SERVICIOS" },
+  "footer.nav.pricing": { en: "PRICING", es: "PRECIOS" },
+  "footer.nav.process": { en: "PROCESS", es: "PROCESO" },
+  "footer.nav.faq": { en: "FAQ", es: "PREGUNTAS" },
+  "footer.nav.contact": { en: "CONTACT", es: "CONTACTO" },
+  "footer.nav.privacy": { en: "PRIVACY POLICY", es: "PRIVACIDAD" },
+  "footer.nav.terms": { en: "TERMS & CONDITIONS", es: "TÉRMINOS" },
 };
 
 type DictKey = keyof typeof dict;

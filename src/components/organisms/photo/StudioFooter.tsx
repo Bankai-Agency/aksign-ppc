@@ -9,40 +9,29 @@ type StudioFooterProps = {
   shared: SharedContent;
 };
 
-const columns: { title: string; items: { label: string; href: string }[] }[] = [
-  {
-    title: "",
-    items: [
-      { label: "HOME", href: "/" },
-      { label: "WORK", href: "#work" },
-      { label: "ABOUT", href: "#about" },
-    ],
-  },
-  {
-    title: "",
-    items: [
-      { label: "CHANNEL LETTERS", href: "#services" },
-      { label: "ILLUMINATED", href: "#services" },
-      { label: "VEHICLE WRAPS", href: "#services" },
-    ],
-  },
-  {
-    title: "",
-    items: [
-      { label: "SERVICES", href: "#services" },
-      { label: "PRICING", href: "#pricing" },
-      { label: "PROCESS", href: "#how-it-works" },
-      { label: "FAQ", href: "#faq" },
-    ],
-  },
-  {
-    title: "",
-    items: [
-      { label: "CONTACT", href: "#contact" },
-      { label: "PRIVACY POLICY", href: "#privacy" },
-      { label: "TERMS & CONDITIONS", href: "#terms" },
-    ],
-  },
+// Nav columns — labels pulled from i18n dict for EN/ES localization.
+const columnDefs: { labelKey: string; href: string }[][] = [
+  [
+    { labelKey: "footer.nav.home", href: "/" },
+    { labelKey: "footer.nav.work", href: "#work" },
+    { labelKey: "footer.nav.about", href: "#about" },
+  ],
+  [
+    { labelKey: "footer.nav.channelLetters", href: "#services" },
+    { labelKey: "footer.nav.illuminated", href: "#services" },
+    { labelKey: "footer.nav.vehicleWraps", href: "#services" },
+  ],
+  [
+    { labelKey: "footer.nav.services", href: "#services" },
+    { labelKey: "footer.nav.pricing", href: "#pricing" },
+    { labelKey: "footer.nav.process", href: "#how-it-works" },
+    { labelKey: "footer.nav.faq", href: "#faq" },
+  ],
+  [
+    { labelKey: "footer.nav.contact", href: "#contact" },
+    { labelKey: "footer.nav.privacy", href: "#privacy" },
+    { labelKey: "footer.nav.terms", href: "#terms" },
+  ],
 ];
 
 /**
@@ -100,16 +89,16 @@ export function StudioFooter({ shared }: StudioFooterProps) {
       <div className="relative mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16 pt-16 md:pt-20 pb-8 md:pb-10 min-h-[80svh] flex flex-col">
         {/* Top — 4 columns of nav + right-aligned socials */}
         <div className="grid gap-8 md:gap-6 grid-cols-2 md:grid-cols-6 text-xs md:text-[13px] tracking-[0.12em] font-medium">
-          {columns.map((col, i) => (
+          {columnDefs.map((col, i) => (
             <ul key={i} className="flex flex-col gap-2.5">
-              {col.items.map((item) => (
-                <li key={item.label}>
+              {col.map((item) => (
+                <li key={item.labelKey}>
                   <a
                     href={item.href}
                     data-cursor="link"
                     className="inline-block hover:opacity-60 transition-opacity"
                   >
-                    {item.label}
+                    {t(item.labelKey as never)}
                   </a>
                 </li>
               ))}
