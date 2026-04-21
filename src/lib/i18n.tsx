@@ -211,8 +211,8 @@ const dict: Dict = {
     es: "¡Gracias! Recibimos tu solicitud.",
   },
   "success.body": {
-    en: "Our team will be in touch within one business day with your detailed quote and a design preview. Urgent? Call us directly.",
-    es: "Nuestro equipo te contactará en un día hábil con una cotización detallada y una vista previa del diseño. ¿Urgente? Llámanos directamente.",
+    en: "Our team will be in touch within one business day with your detailed quote and a design preview.",
+    es: "Nuestro equipo te contactará en un día hábil con una cotización detallada y una vista previa del diseño.",
   },
   "success.callCta": { en: "Call (312) 898-4581", es: "Llamar (312) 898-4581" },
   "success.close": { en: "Close", es: "Cerrar" },

@@ -89,7 +89,7 @@ export function SuccessModal() {
                 onClick={hideSuccess}
                 tone="light"
                 size="lg"
-                fullWidthMobile
+                className="self-center md:self-center"
               >
                 {t("cta.continue")}
               </ArrowButton>
