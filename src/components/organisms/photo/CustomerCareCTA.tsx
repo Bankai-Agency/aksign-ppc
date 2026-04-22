@@ -1,12 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { LetterReveal } from "@/components/atoms/LetterReveal";
 import { Icon } from "@/components/atoms/Icon";
 import { ArrowButton } from "@/components/atoms/ArrowButton";
 import { formatPhoneMask } from "@/lib/format-phone";
 import { useLocale } from "@/lib/i18n";
-import { useLeadForm } from "@/lib/lead-form";
 import { submitLead } from "@/lib/submit-lead";
 
 const topics = [
@@ -27,7 +27,7 @@ const pill =
  */
 export function CustomerCareCTA() {
   const { t, locale } = useLocale();
-  const { showSuccess } = useLeadForm();
+  const router = useRouter();
   const [topic, setTopic] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -56,7 +56,7 @@ export function CustomerCareCTA() {
       setEmail("");
       setPhone("");
       setQuestion("");
-      showSuccess();
+      router.push("/thank-you?form_id=contact-cta");
       return;
     }
     if (result.error === "rate_limit") setErrorKey("form.error.rateLimit");

@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { useEffect, useState, type FormEvent } from "react";
 import { Icon } from "@/components/atoms/Icon";
 import { ArrowButton } from "@/components/atoms/ArrowButton";
@@ -26,8 +27,9 @@ const pill =
  * inside. Close via ESC, backdrop click, or the X-button.
  */
 export function LeadFormModal() {
-  const { open, closeModal, showSuccess } = useLeadForm();
+  const { open, closeModal } = useLeadForm();
   const { t } = useLocale();
+  const router = useRouter();
   const [topic, setTopic] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -72,14 +74,14 @@ export function LeadFormModal() {
     });
     setSending(false);
     if (result.ok) {
-      // Reset fields, close form, show success dialog.
+      // Reset fields, close the dialog, route to /thank-you.
       setTopic("");
       setName("");
       setEmail("");
       setPhone("");
       setQuestion("");
       closeModal();
-      showSuccess();
+      router.push("/thank-you?form_id=hero-modal");
       return;
     }
     if (result.error === "rate_limit") {
