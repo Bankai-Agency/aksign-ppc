@@ -1,6 +1,6 @@
 # AK Sign PPC — Project Context
 
-Last updated: 2026-04-20
+Last updated: 2026-04-22
 
 PPC landing pages for **AK Sign** — commercial signage shop in Arlington
 Heights, IL. Single codebase serving 3 paid-search landing pages with a
@@ -18,8 +18,8 @@ FAQ). All URLs are `noindex` — these are PPC-only pages, not SEO assets.
 - **Radix UI** — Accordion (FAQ), Label
 - **Inter** (variable font via `next/font/google`)
 - **pnpm** — standalone install at `~/Library/pnpm/pnpm`
-- **Zod + react-hook-form + resend** — installed, form currently uses
-  `mailto:` fallback; `/api/lead` endpoint not wired to Resend yet.
+- **Zod + react-hook-form + resend** — lead form POSTs to `/api/lead`
+  (Resend + Telegram dispatchers wired via `Promise.allSettled`).
 
 ## Repo
 
@@ -212,13 +212,15 @@ This keeps TypeScript happy without updating Zod schema types.
 
 ## Lead form capture
 
-**Current state:** `mailto:info@aksign.us` — form submit opens the
-user's mail client with pre-filled subject + body. This is a fallback.
+**Current state:** forms POST to `/api/lead` via the shared
+`src/lib/submit-lead.ts` helper. The route logs every lead and fans
+out to Resend + Telegram with `Promise.allSettled` — neither is
+required for a 200 (both dispatchers silently skip if env vars are
+missing). On success: `SuccessModal` opens; on failure: inline alert
+(rate-limit / validation / generic).
 
-**TODO:** wire `/api/lead` to Resend (already installed) and optionally
-Telegram bot. Env vars needed: `RESEND_API_KEY`, `TG_BOT_TOKEN`,
-`TG_CHAT_ID`, `LEAD_EMAIL_DESTINATION` — all placeholders in
-shared/env.
+Env vars used by the route: `RESEND_API_KEY`, `TG_BOT_TOKEN`,
+`TG_CHAT_ID`, `LEAD_EMAIL_DESTINATION`.
 
 ---
 
