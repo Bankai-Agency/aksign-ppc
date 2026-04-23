@@ -309,11 +309,12 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
           <Reveal delay={1.55} className="lg:hidden mt-10">
             <ul className="flex gap-5 sm:gap-8 text-left text-gray-1">
               {heroStats.map((s) => (
-                <li key={s.labelKey} className="flex flex-col gap-1.5">
+                <li key={s.labelKey} className="flex flex-col gap-1">
                   <span
                     className="font-semibold tracking-[-0.03em] tabular-nums"
                     style={{
                       fontSize: "clamp(1.75rem, 1rem + 2vw, 2.5rem)",
+                      lineHeight: 1,
                     }}
                   >
                     {s.value}
@@ -353,11 +354,14 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
             {heroStats.map((s) => (
               <li
                 key={s.labelKey}
-                className="flex flex-col gap-2 w-[140px] shrink-0"
+                className="flex flex-col gap-1.5 w-[140px] shrink-0"
               >
                 <span
                   className="font-semibold tracking-[-0.03em] tabular-nums"
-                  style={{ fontSize: "clamp(2.5rem, 1.25rem + 2.5vw, 3.5rem)" }}
+                  style={{
+                    fontSize: "clamp(2.5rem, 1.25rem + 2.5vw, 3.5rem)",
+                    lineHeight: 1,
+                  }}
                 >
                   {s.value}
                 </span>
