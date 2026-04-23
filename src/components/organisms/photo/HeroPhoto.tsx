@@ -5,7 +5,6 @@ import { ArrowButton } from "@/components/atoms/ArrowButton";
 import { Icon } from "@/components/atoms/Icon";
 import { ImagePlaceholder } from "@/components/atoms/ImagePlaceholder";
 import { LetterReveal } from "@/components/atoms/LetterReveal";
-import { Reveal } from "@/components/atoms/Reveal";
 import { useLeadForm } from "@/lib/lead-form";
 import { useLocale } from "@/lib/i18n";
 import type { LPSlug, LPVariant } from "@/types/lp";
@@ -274,7 +273,7 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
           </h1>
 
           {/* Subheading + CTA — directly under H1 */}
-          <Reveal delay={1.4} className="mt-6 md:mt-8">
+          <div className="mt-6 md:mt-8">
             <div className="flex flex-col gap-5 md:gap-6 max-w-[44ch] lg:max-w-[78ch]">
               <p
                 className="text-base md:text-lg lg:text-xl text-gray-1/90 font-medium leading-relaxed text-balance"
@@ -312,10 +311,10 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                 </a>
               </div>
             </div>
-          </Reveal>
+          </div>
 
           {/* Mobile/tablet stats rail — in-flow below the CTA */}
-          <Reveal delay={1.55} className="lg:hidden mt-10">
+          <div className="lg:hidden mt-10">
             <ul className="flex gap-5 sm:gap-8 text-left text-gray-1">
               {heroStats.map((s) => (
                 <li key={s.labelKey} className="flex flex-col gap-0.5">
@@ -335,11 +334,11 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                 </li>
               ))}
             </ul>
-          </Reveal>
+          </div>
         </div>
 
         {/* Desktop stats rail — pinned to bottom-left, under the CTA column */}
-        <Reveal delay={1.6}>
+        <div>
           <ul className="hidden lg:flex absolute left-6 md:left-10 lg:left-16 bottom-10 md:bottom-14 items-start gap-10 xl:gap-14 text-left text-gray-1">
             {heroStats.map((s) => (
               <li
@@ -362,7 +361,7 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
               </li>
             ))}
           </ul>
-        </Reveal>
+        </div>
       </div>
     </section>
   );
