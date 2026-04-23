@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 type RevealProps = {
   children: ReactNode;
@@ -18,6 +18,27 @@ const variants: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
+/**
+ * Render-time "is this a touch device" check. Returns false on the
+ * server and during the first client render, then flips to true on
+ * hydration for touch devices. That hop lets the server + initial
+ * client render produce the static (no-framer) tree, which is what
+ * mobile needs for TBT / Speed Index — the motion runtime never
+ * attaches IntersectionObservers on touch hardware.
+ */
+function useIsTouch() {
+  const [isTouch, setIsTouch] = useState(false);
+  useEffect(() => {
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(hover: none)").matches
+    ) {
+      setIsTouch(true);
+    }
+  }, []);
+  return isTouch;
+}
+
 export function Reveal({
   children,
   delay = 0,
@@ -27,6 +48,11 @@ export function Reveal({
   className,
   as = "div",
 }: RevealProps) {
+  const isTouch = useIsTouch();
+  if (isTouch) {
+    const Tag = as;
+    return <Tag className={className}>{children}</Tag>;
+  }
   const MotionCmp = motion[as];
   return (
     <MotionCmp
@@ -58,6 +84,11 @@ export function StaggerGroup({
   className?: string;
   as?: "div" | "ul" | "ol";
 }) {
+  const isTouch = useIsTouch();
+  if (isTouch) {
+    const Tag = as;
+    return <Tag className={className}>{children}</Tag>;
+  }
   const MotionCmp = motion[as];
   return (
     <MotionCmp
@@ -91,6 +122,11 @@ export function StaggerItem({
   className?: string;
   as?: "div" | "li";
 }) {
+  const isTouch = useIsTouch();
+  if (isTouch) {
+    const Tag = as;
+    return <Tag className={className}>{children}</Tag>;
+  }
   const MotionCmp = motion[as];
   return (
     <MotionCmp
