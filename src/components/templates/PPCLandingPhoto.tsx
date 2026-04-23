@@ -1,23 +1,75 @@
+import dynamic from "next/dynamic";
 import type { LPVariant, SharedContent } from "@/types/lp";
 import { LocaleProvider } from "@/lib/i18n";
 import { LeadFormProvider } from "@/lib/lead-form";
 import {
-  CustomerCareCTA,
-  FAQStudio,
-  FeaturedWorkSliderStudio,
   HeroPhoto,
-  HowItWorksStudio,
-  LeadFormModal,
   MouseFollower,
-  PricingStudio,
-  ServiceAreaStudio,
-  ServicesScrollModule,
-  ShowreelFullscreen,
-  SimpleTextStatement,
-  StudioFooter,
   StudioHeader,
-  TrustBarStudio,
 } from "@/components/organisms/photo";
+
+// Below-fold organisms — each imported DIRECTLY from its own source
+// file (not the barrel) so every dynamic chunk contains only that
+// organism's code, not the entire module set. Previous attempt pulled
+// the barrel re-export inside every dynamic() which duplicated work
+// and tanked mobile LCP on Slow-4G. Keeping ssr on (default) so HTML
+// still renders server-side; only the client JS chunks split.
+const TrustBarStudio = dynamic(() =>
+  import("@/components/organisms/photo/TrustBarStudio").then((m) => m.TrustBarStudio),
+);
+const FeaturedWorkSliderStudio = dynamic(() =>
+  import("@/components/organisms/photo/FeaturedWorkSliderStudio").then(
+    (m) => m.FeaturedWorkSliderStudio,
+  ),
+);
+const SimpleTextStatement = dynamic(() =>
+  import("@/components/organisms/photo/SimpleTextStatement").then(
+    (m) => m.SimpleTextStatement,
+  ),
+);
+const ShowreelFullscreen = dynamic(() =>
+  import("@/components/organisms/photo/ShowreelFullscreen").then(
+    (m) => m.ShowreelFullscreen,
+  ),
+);
+const ServicesScrollModule = dynamic(() =>
+  import("@/components/organisms/photo/ServicesScrollModule").then(
+    (m) => m.ServicesScrollModule,
+  ),
+);
+const PricingStudio = dynamic(() =>
+  import("@/components/organisms/photo/PricingStudio").then(
+    (m) => m.PricingStudio,
+  ),
+);
+const HowItWorksStudio = dynamic(() =>
+  import("@/components/organisms/photo/HowItWorksStudio").then(
+    (m) => m.HowItWorksStudio,
+  ),
+);
+const FAQStudio = dynamic(() =>
+  import("@/components/organisms/photo/FAQStudio").then((m) => m.FAQStudio),
+);
+const ServiceAreaStudio = dynamic(() =>
+  import("@/components/organisms/photo/ServiceAreaStudio").then(
+    (m) => m.ServiceAreaStudio,
+  ),
+);
+const CustomerCareCTA = dynamic(() =>
+  import("@/components/organisms/photo/CustomerCareCTA").then(
+    (m) => m.CustomerCareCTA,
+  ),
+);
+const StudioFooter = dynamic(() =>
+  import("@/components/organisms/photo/StudioFooter").then(
+    (m) => m.StudioFooter,
+  ),
+);
+const LeadFormModal = dynamic(() =>
+  import("@/components/organisms/photo/LeadFormModal").then(
+    (m) => m.LeadFormModal,
+  ),
+);
 
 type Props = { lp: LPVariant; shared: SharedContent };
 
