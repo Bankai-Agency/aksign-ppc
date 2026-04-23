@@ -13,14 +13,21 @@ export function PreloaderStudio() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    const isMobile =
+      typeof window !== "undefined" &&
+      (window.matchMedia("(hover: none)").matches ||
+        window.matchMedia("(max-width: 767px)").matches);
     const start = performance.now();
-    const duration = 1800;
+    // Mobile: bail after ~500ms — the full 1.8s wordmark reveal masks
+    // the hero for long enough to trash LCP. Desktop keeps the full
+    // editorial intro since perf headroom is there.
+    const duration = isMobile ? 500 : 1800;
     let raf = 0;
     const tick = (t: number) => {
       const p = Math.min(1, (t - start) / duration);
       setProgress(p);
       if (p < 1) raf = requestAnimationFrame(tick);
-      else setTimeout(() => setMounted(false), 180);
+      else setTimeout(() => setMounted(false), isMobile ? 60 : 180);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);

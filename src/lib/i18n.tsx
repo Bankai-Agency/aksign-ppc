@@ -38,7 +38,7 @@ const dict: Dict = {
   "eyebrow.contact": { en: "(Contact)", es: "(Contacto)" },
 
   // Section H2s — static
-  "section.trustBar.heading": { en: "Why AK Sign", es: "Por qué AK Sign" },
+  "section.trustBar.heading": { en: "Why AK\u00A0Sign", es: "Por qué AK\u00A0Sign" },
   "section.work.heading": { en: "Recent projects", es: "Proyectos recientes" },
   "section.statement.heading": {
     en: "When craft and permits collide, a storefront stops being a wall and starts being a magnet.",
@@ -53,22 +53,22 @@ const dict: Dict = {
   "hero.line1": { en: "Commercial Signage", es: "Señalización comercial" },
   "hero.line2Prefix": { en: "for", es: "para" },
   "hero.subheading": {
-    en: "Commercial-grade signage for Chicago-area storefronts — fabricated, permitted and installed in-house by one team.",
-    es: "Señalización de nivel comercial para locales del área de Chicago — fabricada, permitida e instalada internamente por un solo equipo.",
+    en: "Commercial-grade signage for Chicago-area storefronts — fabricated, permitted and installed in-house by one\u00A0team.",
+    es: "Señalización de nivel comercial para locales del área de Chicago — fabricada, permitida e instalada internamente por un solo\u00A0equipo.",
   },
   "hero.flip.storefronts": { en: "storefronts", es: "fachadas" },
   "hero.flip.cafes": { en: "cafés", es: "cafeterías" },
   "hero.flip.boutiques": { en: "boutiques", es: "boutiques" },
   "hero.flip.dealerships": { en: "dealerships", es: "concesionarios" },
   "hero.flip.chicago": { en: "Chicago", es: "Chicago" },
-  "hero.stat.years": { en: "Years in Chicago", es: "Años en Chicago" },
+  "hero.stat.years": { en: "Years in\u00A0Chicago", es: "Años en\u00A0Chicago" },
   "hero.stat.signs": { en: "Signs installed", es: "Letreros instalados" },
-  "hero.stat.days": { en: "Day turnaround", es: "Días de entrega" },
+  "hero.stat.days": { en: "Day turnaround", es: "Días de\u00A0entrega" },
 
   // Statement body
   "statement.body": {
-    en: "We are a small Arlington Heights sign shop working end-to-end for Chicago businesses — design, UL-listed fabrication, Village permits, and install. No subs, no finger-pointing, no surprise line items.",
-    es: "Somos un taller pequeño en Arlington Heights que trabaja de principio a fin para empresas de Chicago — diseño, fabricación con certificación UL, permisos municipales e instalación. Sin subcontratistas, sin evasiones, sin cargos sorpresa.",
+    en: "We are a small Arlington\u00A0Heights sign shop working end-to-end for Chicago businesses — design, UL-listed fabrication, Village permits, and install. No subs, no finger-pointing, no surprise line\u00A0items.",
+    es: "Somos un taller pequeño en Arlington\u00A0Heights que trabaja de principio a fin para empresas de Chicago — diseño, fabricación con certificación\u00A0UL, permisos municipales e instalación. Sin subcontratistas, sin evasiones, sin cargos\u00A0sorpresa.",
   },
 
   // Process (HowItWorks)
@@ -107,66 +107,70 @@ const dict: Dict = {
   // Benefits (TrustBar)
   "benefits.0.title": { en: "Free custom design", es: "Diseño gratuito" },
   "benefits.0.subcopy": {
-    en: "Design is included in every quote — no separate fee.",
-    es: "El diseño está incluido en cada cotización — sin costo aparte.",
+    en: "Design is included in every quote — no separate\u00A0fee.",
+    es: "El diseño está incluido en cada cotización — sin costo\u00A0aparte.",
   },
-  "benefits.1.title": { en: "3 to 7 day turnaround", es: "Entrega en 3–7 días" },
+  "benefits.1.title": { en: "3\u00A0to\u00A07 day turnaround", es: "Entrega en\u00A03–7\u00A0días" },
   "benefits.1.subcopy": {
-    en: "Most signs ship within a week of approval.",
-    es: "La mayoría de letreros se envían en una semana tras la aprobación.",
+    en: "Most signs ship within a week of\u00A0approval.",
+    es: "La mayoría de letreros se envían en una semana tras la\u00A0aprobación.",
   },
   "benefits.2.title": {
     en: "Full-service install",
-    es: "Instalación llave en mano",
+    es: "Instalación llave en\u00A0mano",
   },
   "benefits.2.subcopy": {
-    en: "One team handles design, fabrication, and mounting.",
-    es: "Un solo equipo cubre diseño, fabricación e instalación.",
+    en: "One team handles design, fabrication, and\u00A0mounting.",
+    es: "Un solo equipo cubre diseño, fabricación e\u00A0instalación.",
   },
   "benefits.3.title": {
-    en: "Local Arlington Heights",
-    es: "Local en Arlington Heights",
+    en: "Local Arlington\u00A0Heights",
+    es: "Local en Arlington\u00A0Heights",
   },
   "benefits.3.subcopy": {
-    en: "We know Village permit filing inside out.",
-    es: "Conocemos a fondo los permisos municipales del Village.",
+    en: "We know Village permit filing inside\u00A0out.",
+    es: "Conocemos a fondo los permisos municipales del\u00A0Village.",
   },
   "benefits.4.title": {
-    en: "1-minute online quote",
-    es: "Cotización en 1 minuto",
+    en: "1-minute online\u00A0quote",
+    es: "Cotización en 1\u00A0minuto",
   },
   "benefits.4.subcopy": {
-    en: "Answer two fields, get a detailed quote by next business day.",
-    es: "Llena dos campos y recibe una cotización detallada al siguiente día hábil.",
+    en: "Answer two fields, get a detailed quote by next business\u00A0day.",
+    es: "Llena dos campos y recibe una cotización detallada al siguiente día\u00A0hábil.",
   },
   "benefits.5.title": {
     en: "High-quality materials",
-    es: "Materiales de alta calidad",
+    es: "Materiales de alta\u00A0calidad",
   },
   "benefits.5.subcopy": {
-    en: "UL-listed LEDs, 3M / Avery premium cast vinyl.",
-    es: "LEDs con certificación UL, vinilos fundidos 3M / Avery premium.",
+    en: "UL-listed\u00A0LEDs, 3M\u00A0/\u00A0Avery premium cast\u00A0vinyl.",
+    es: "LEDs con certificación\u00A0UL, vinilos fundidos 3M\u00A0/\u00A0Avery\u00A0premium.",
   },
 
   // Service Area
   "areas.heading": { en: "Service area", es: "Zona de servicio" },
   "areas.intro": {
-    en: "Primary coverage across Chicago and the NW suburbs — signage fabricated, permitted and installed by one in-house team.",
-    es: "Cobertura principal en Chicago y los suburbios del noroeste — señalización fabricada, permitida e instalada por un único equipo interno.",
+    en: "Primary coverage across Chicago and the NW\u00A0suburbs — signage fabricated, permitted and installed by one in-house\u00A0team.",
+    es: "Cobertura principal en Chicago y los suburbios del\u00A0noroeste — señalización fabricada, permitida e instalada por un único equipo\u00A0interno.",
   },
   "areas.addressChip": {
-    en: "220 W Campus Dr · Arlington Heights",
-    es: "220 W Campus Dr · Arlington Heights",
+    en: "220\u00A0W\u00A0Campus\u00A0Dr · Arlington\u00A0Heights",
+    es: "220\u00A0W\u00A0Campus\u00A0Dr · Arlington\u00A0Heights",
+  },
+  "areas.mapCta": {
+    en: "Open address in Google\u00A0Maps",
+    es: "Abrir dirección en Google\u00A0Maps",
   },
 
   // CTA (contact section)
   "cta.body": {
-    en: "Fill out the form and our team will get in touch within one business day — usually less. Tell us about the project: storefront, restaurant, dealership, showroom, fleet. We'll come back with a free detailed quote and a design preview before any fabrication starts.",
-    es: "Completa el formulario y nuestro equipo te contactará en un día hábil — normalmente menos. Cuéntanos sobre el proyecto: local, restaurante, concesionario, showroom, flota. Te enviaremos una cotización detallada gratuita y una vista previa del diseño antes de iniciar la fabricación.",
+    en: "Fill out the form and our team will get in touch within one business\u00A0day — usually less. Tell us about the project: storefront, restaurant, dealership, showroom, fleet. We'll come back with a free detailed quote and a design preview before any fabrication\u00A0starts.",
+    es: "Completa el formulario y nuestro equipo te contactará en un día\u00A0hábil — normalmente menos. Cuéntanos sobre el proyecto: local, restaurante, concesionario, showroom, flota. Te enviaremos una cotización detallada gratuita y una vista previa del diseño antes de iniciar la\u00A0fabricación.",
   },
   "cta.legal": {
-    en: "Free detailed quote in one business day — with a design preview before any fabrication starts. No obligation, no surprise line items.",
-    es: "Cotización detallada gratuita en un día hábil — con vista previa del diseño antes de iniciar la fabricación. Sin compromiso, sin cargos sorpresa.",
+    en: "Free detailed quote in one business\u00A0day — with a design preview before any fabrication\u00A0starts. No obligation, no surprise line\u00A0items.",
+    es: "Cotización detallada gratuita en un día\u00A0hábil — con vista previa del diseño antes de iniciar la\u00A0fabricación. Sin compromiso, sin cargos\u00A0sorpresa.",
   },
   "form.selectTopic": {
     en: "Select a sign type…",
@@ -197,12 +201,12 @@ const dict: Dict = {
     es: "Cuéntanos sobre tu proyecto",
   },
   "modal.body": {
-    en: "Free detailed quote in one business day — with a design preview before any fabrication starts.",
-    es: "Cotización detallada gratuita en un día hábil — con vista previa del diseño antes de fabricar.",
+    en: "Free detailed quote in one business\u00A0day — with a design preview before any fabrication\u00A0starts.",
+    es: "Cotización detallada gratuita en un día\u00A0hábil — con vista previa del diseño antes de\u00A0fabricar.",
   },
   "modal.legal": {
-    en: "One business day · no obligation",
-    es: "Un día hábil · sin compromiso",
+    en: "One business\u00A0day · no obligation",
+    es: "Un día\u00A0hábil · sin compromiso",
   },
 
   // Success (post-submit) modal
@@ -211,12 +215,16 @@ const dict: Dict = {
     es: "¡Gracias! Recibimos tu solicitud.",
   },
   "success.body": {
-    en: "Our team will be in touch within one business day with your detailed quote and a design preview.",
-    es: "Nuestro equipo te contactará en un día hábil con una cotización detallada y una vista previa del diseño.",
+    en: "Our team will be in touch within one business\u00A0day with your detailed quote and a design\u00A0preview.",
+    es: "Nuestro equipo te contactará en un día\u00A0hábil con una cotización detallada y una vista previa del\u00A0diseño.",
   },
   "success.callCta": { en: "Call (312) 898-4581", es: "Llamar (312) 898-4581" },
   "success.close": { en: "Close", es: "Cerrar" },
   "cta.continue": { en: "Continue", es: "Continuar" },
+  "cta.requestThisQuote": {
+    en: "Request this quote",
+    es: "Solicitar esta cotización",
+  },
 
   // Submit states + errors
   "cta.sending": { en: "Sending…", es: "Enviando…" },

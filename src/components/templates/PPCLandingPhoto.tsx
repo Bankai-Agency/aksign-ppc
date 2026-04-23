@@ -42,7 +42,7 @@ export default function PPCLandingPhoto({ lp, shared }: Props) {
         <SimpleTextStatement />
         <ShowreelFullscreen />
         <ServicesScrollModule />
-        <PricingStudio pricing={lp.pricing} />
+        <PricingStudio pricing={lp.pricing} lpSlug={lp.slug} />
         <HowItWorksStudio data={shared.howItWorks} />
         <FAQStudio lpSlug={lp.slug} data={lp.faq} />
         <ServiceAreaStudio data={shared.serviceArea} nap={shared.nap} />

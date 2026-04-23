@@ -11,6 +11,9 @@ export function LenisProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // Skip Lenis on touch devices — native iOS/Android momentum scroll
+    // is faster and cheaper; smoothing the wheel is a desktop nicety.
+    if (window.matchMedia("(hover: none)").matches) return;
 
     const lenis = new Lenis({
       duration: 1.15,

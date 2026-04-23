@@ -51,10 +51,9 @@ export function FAQStudio({ lpSlug, data }: FAQStudioProps) {
               as="h2"
               id="faq-heading"
               text={t("faq.heading")}
-              className="font-semibold tracking-[-0.04em] block text-balance md:sticky md:top-28 max-w-[14ch]"
+              className="font-semibold tracking-[-0.04em] block text-balance md:sticky md:top-28 max-w-[14ch] leading-[1.1] md:leading-[0.92]"
               style={{
                 fontSize: "clamp(2.25rem, 0.875rem + 3.5vw, 4.5rem)",
-                lineHeight: 0.92,
               }}
               stagger={0.04}
             />

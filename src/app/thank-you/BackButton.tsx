@@ -19,7 +19,7 @@ export function BackButton({ children }: { children: React.ReactNode }) {
     <button
       type="button"
       onClick={onClick}
-      className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-gray-1/25 text-gray-1 uppercase tracking-[-0.01em] font-semibold text-sm hover:bg-gray-1 hover:text-gray-12 transition-colors duration-300"
+      className="w-full md:w-auto inline-flex items-center justify-center h-14 px-8 rounded-full border border-gray-1/25 text-gray-1 uppercase tracking-[-0.01em] font-semibold text-sm hover:bg-gray-1 hover:text-gray-12 transition-colors duration-300"
     >
       {children}
     </button>

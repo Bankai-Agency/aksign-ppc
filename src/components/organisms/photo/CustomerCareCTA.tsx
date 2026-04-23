@@ -81,10 +81,9 @@ export function CustomerCareCTA() {
               as="h2"
               id="cta-heading"
               text={t("section.contact.heading")}
-              className="font-semibold tracking-[-0.04em] block text-balance max-w-[16ch]"
+              className="font-semibold tracking-[-0.04em] block text-balance max-w-[16ch] leading-[1.1] md:leading-[0.92]"
               style={{
                 fontSize: "clamp(2.25rem, 0.875rem + 3.5vw, 4.5rem)",
-                lineHeight: 0.92,
               }}
               stagger={0.04}
             />

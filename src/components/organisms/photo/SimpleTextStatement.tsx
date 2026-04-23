@@ -27,10 +27,9 @@ export function SimpleTextStatement() {
           as="h2"
           id="statement"
           text={t("section.statement.heading")}
-          className="mt-10 md:mt-14 font-semibold tracking-[-0.04em] max-w-[22ch] text-balance block"
+          className="mt-10 md:mt-14 font-semibold tracking-[-0.04em] max-w-[22ch] text-balance block leading-[1.1] md:leading-[0.95]"
           style={{
             fontSize: "clamp(2.25rem, 0.875rem + 3.5vw, 4.5rem)",
-            lineHeight: 0.95,
           }}
           delay={0.1}
           stagger={0.035}
@@ -42,7 +41,7 @@ export function SimpleTextStatement() {
               {t("statement.body")}
             </p>
             <div>
-              <ArrowButton as="button" onClick={openModal} tone="solid" size="lg" fullWidthMobile>
+              <ArrowButton as="button" onClick={() => openModal()} tone="solid" size="lg" fullWidthMobile>
                 {t("cta.getInTouch")}
               </ArrowButton>
             </div>

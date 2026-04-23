@@ -159,9 +159,22 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
             <LocaleDropdown locale={locale} setLocale={setLocale} />
           </div>
 
+          {/* Phone — tap-to-call on desktop header */}
+          {nap ? (
+            <a
+              href={`tel:${nap.phone}`}
+              aria-label={`Call ${nap.phoneDisplay}`}
+              data-cursor="link"
+              className="hidden md:inline-flex items-center gap-2 px-3 lg:px-4 h-10 rounded-full text-sm lg:text-[15px] text-gray-1 hover:bg-gray-1/10 transition-colors tabular-nums"
+            >
+              <Icon name="Phone" size={14} stroke={2} />
+              <span className="hidden lg:inline">{nap.phoneDisplay}</span>
+            </a>
+          ) : null}
+
           {/* CTA */}
           <div className="hidden md:block ml-1">
-            <ArrowButton as="button" onClick={openModal} size="sm" tone="light">
+            <ArrowButton as="button" onClick={() => openModal()} size="sm" tone="light">
               {t("cta.getInTouch")}
             </ArrowButton>
           </div>
@@ -202,10 +215,10 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
         {open ? (
           <motion.div
             key="dropdown"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ y: "-100%" }}
+            animate={{ y: "0%" }}
+            exit={{ y: "-100%" }}
+            transition={{ duration: 0.55, ease: [0.83, 0, 0.17, 1] }}
             className="md:hidden fixed inset-0 z-40 bg-gray-1 flex flex-col pt-24 pb-10 overflow-y-auto"
           >
             <nav className="mt-auto px-6 flex flex-col gap-1">
@@ -257,7 +270,7 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
                       rel="noreferrer"
                       title={s.title}
                       aria-label={s.title}
-                      className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gray-2 border border-gray-12 text-gray-12 hover:bg-gray-12 hover:text-gray-1 transition-colors"
+                      className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gray-2 text-gray-12 hover:bg-gray-12 hover:text-gray-1 transition-colors"
                     >
                       <SocialIcon name={s.name} size={22} />
                     </a>
@@ -265,7 +278,18 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
                 </div>
               ) : null}
 
-              <div className="mt-8">
+              <div className="mt-8 flex flex-col gap-3">
+                {nap ? (
+                  <a
+                    href={`tel:${nap.phone}`}
+                    onClick={() => setOpen(false)}
+                    aria-label={`Call ${nap.phoneDisplay}`}
+                    className="inline-flex items-center justify-center gap-3 h-14 w-full rounded-full border border-gray-12/25 text-gray-12 text-sm font-semibold uppercase tracking-[-0.02em] tabular-nums hover:bg-gray-12 hover:text-gray-1 transition-colors"
+                  >
+                    <Icon name="Phone" size={16} stroke={1.75} />
+                    {nap.phoneDisplay}
+                  </a>
+                ) : null}
                 <ArrowButton
                   as="button"
                   tone="solid"

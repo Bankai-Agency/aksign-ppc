@@ -70,7 +70,7 @@ export function StudioFooter({ shared }: StudioFooterProps) {
       <div className="absolute inset-0">
         <ImagePlaceholder
           slot="footer-bg"
-          src="/images/footer-bg.png"
+          src="/images/footer-bg.webp"
           aspect="wide"
           alt=""
           icon="Image"

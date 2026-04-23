@@ -1,28 +1,19 @@
 "use client";
 
-import Image from "next/image";
 import type { SharedContent } from "@/types/lp";
 import { LetterReveal } from "@/components/atoms/LetterReveal";
 import { StaggerGroup, StaggerItem } from "@/components/atoms/Reveal";
-import { Icon, type IconName } from "@/components/atoms/Icon";
 import { useLocale } from "@/lib/i18n";
 
 type HowItWorksStudioProps = {
   data: SharedContent["howItWorks"];
 };
 
-const stepIcons: IconName[] = [
-  "FileEdit",
-  "Lightbulb",
-  "PencilRuler",
-  "Factory",
-  "FileCheck",
-  "Wrench",
-];
-
 /**
- * How-it-works — giant heading on top, two-column body below: 6 vertical
- * step tiles on the left, a sticky process photo on the right.
+ * How-it-works — six process steps laid out as flat tiles on a light
+ * section background. No shadows, no borders: tiles differ from the
+ * section purely by a warmer off-white fill. Grid: 1 col mobile,
+ * 2 cols md, 3 cols lg (two rows of three).
  */
 export function HowItWorksStudio({ data }: HowItWorksStudioProps) {
   const { t, locale } = useLocale();
@@ -41,73 +32,55 @@ export function HowItWorksStudio({ data }: HowItWorksStudioProps) {
           as="h2"
           id="process-heading"
           text={t("process.heading")}
-          className="font-semibold tracking-[-0.04em] block text-balance max-w-[16ch]"
+          className="font-semibold tracking-[-0.04em] block text-balance max-w-[16ch] leading-[1.1] md:leading-[0.92]"
           style={{
             fontSize: "clamp(2.25rem, 0.875rem + 3.5vw, 4.5rem)",
-            lineHeight: 0.92,
           }}
           stagger={0.04}
         />
 
-        <div className="mt-8 md:mt-14 grid gap-10 md:gap-16 lg:grid-cols-12 items-start">
-          <StaggerGroup
-            as="ul"
-            className="lg:col-span-6 flex flex-col gap-4 md:gap-5"
-            stagger={0.08}
-          >
-            {data.steps.map((step, i) => (
+        <StaggerGroup
+          as="ol"
+          className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4"
+          stagger={0.06}
+        >
+          {data.steps.map((step) => {
+            const title =
+              t(`process.step${step.number}.title` as never) || step.title;
+            const desc =
+              t(`process.step${step.number}.desc` as never) ||
+              step.description;
+            return (
               <StaggerItem
                 key={step.number}
                 as="li"
-                y={30}
-                className="rounded-2xl bg-gray-2 p-6 md:p-7 grid grid-cols-[auto_auto_1fr] gap-4 md:gap-5 items-start"
+                y={20}
+                className="bg-gray-2 rounded-2xl px-7 py-9 md:px-9 md:py-12 flex flex-col gap-7 md:gap-8"
               >
-                <span className="text-xs uppercase tracking-[0.22em] text-gray-10 font-medium tabular-nums self-start pt-3">
-                  {String(step.number).padStart(2, "0")}
-                </span>
-
                 <span
                   aria-hidden
-                  className="shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-full bg-gray-12 text-gray-1 self-start"
+                  className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-gray-12 text-gray-1 font-semibold tabular-nums text-sm tracking-[-0.02em]"
                 >
-                  <Icon
-                    name={stepIcons[i] ?? "Sparkles"}
-                    size={20}
-                    stroke={1.75}
-                  />
+                  {String(step.number).padStart(2, "0")}
                 </span>
-
-                <div className="flex flex-col gap-1 self-start">
+                <div className="flex flex-col gap-2">
                   <h3
-                    className="font-semibold tracking-[-0.035em]"
+                    className="font-semibold tracking-[-0.025em]"
                     style={{
-                      fontSize: "clamp(1.25rem, 1rem + 1vw, 1.875rem)",
-                      lineHeight: 1.1,
+                      fontSize: "clamp(1.25rem, 1rem + 1vw, 1.75rem)",
+                      lineHeight: 1.15,
                     }}
                   >
-                    {t(`process.step${step.number}.title` as never) || step.title}
+                    {title}
                   </h3>
-                  <p className="text-base md:text-lg text-gray-10 leading-relaxed max-w-prose">
-                    {t(`process.step${step.number}.desc` as never) || step.description}
+                  <p className="text-sm md:text-base text-gray-10 leading-relaxed">
+                    {desc}
                   </p>
                 </div>
               </StaggerItem>
-            ))}
-          </StaggerGroup>
-
-          {/* Right-side process photo — desktop only, sticky */}
-          <div className="hidden lg:block lg:col-span-6 lg:sticky lg:top-28">
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gray-2">
-              <Image
-                src="/images/services/fabrication.png"
-                alt="AK Sign fabrication floor — channel letter construction"
-                fill
-                sizes="(min-width: 1024px) 38vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
+            );
+          })}
+        </StaggerGroup>
       </div>
     </section>
   );

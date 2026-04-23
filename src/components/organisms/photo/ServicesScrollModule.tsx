@@ -28,14 +28,14 @@ const serviceKeys = [
 ] as const;
 
 const serviceImages: Record<string, string> = {
-  "Channel letters": "/images/services/channel-letters.png",
-  "Illuminated signs": "/images/services/illuminated-signs.png",
-  Lightboxes: "/images/services/lightboxes.png",
-  "Monument signs": "/images/services/monument-signs.png",
-  "Window graphics": "/images/services/window-graphics.png",
-  "Vehicle wraps": "/images/services/vehicle-wraps.png",
-  "Permits + install": "/images/services/permits-install.png",
-  Fabrication: "/images/services/fabrication.png",
+  "Channel letters": "/images/services/channel-letters.webp",
+  "Illuminated signs": "/images/services/illuminated-signs.webp",
+  Lightboxes: "/images/services/lightboxes.webp",
+  "Monument signs": "/images/services/monument-signs.webp",
+  "Window graphics": "/images/services/window-graphics.webp",
+  "Vehicle wraps": "/images/services/vehicle-wraps.webp",
+  "Permits + install": "/images/services/permits-install.webp",
+  Fabrication: "/images/services/fabrication.webp",
 };
 
 // Pin distance — ~25vh per service on mobile (lighter scroll effort).

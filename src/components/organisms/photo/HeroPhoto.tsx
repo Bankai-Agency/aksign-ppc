@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ArrowButton } from "@/components/atoms/ArrowButton";
+import { Icon } from "@/components/atoms/Icon";
 import { ImagePlaceholder } from "@/components/atoms/ImagePlaceholder";
 import { LetterReveal } from "@/components/atoms/LetterReveal";
 import { Reveal } from "@/components/atoms/Reveal";
@@ -25,19 +26,19 @@ const heroStats = [
 
 const heroImage: Record<LPSlug, { src: string; alt: string }> = {
   home: {
-    src: "/images/hero-channel-letter-signs.png",
+    src: "/images/hero-channel-letter-signs.webp",
     alt: "AK Sign flagship commercial signage installation",
   },
   "channel-letter-signs": {
-    src: "/images/hero-channel-letter-signs.png",
+    src: "/images/hero-channel-letter-signs.webp",
     alt: "AK Sign flagship channel letter installation",
   },
   "illuminated-signs": {
-    src: "/images/hero-illuminated-signs.png",
+    src: "/images/hero-illuminated-signs.webp",
     alt: "AK Sign illuminated lightbox installation",
   },
   "vehicle-wraps": {
-    src: "/images/hero-vehicle-wraps.png",
+    src: "/images/hero-vehicle-wraps.webp",
     alt: "AK Sign full-wrap vehicle installation",
   },
 };
@@ -156,10 +157,9 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
         <div className="w-full flex flex-col">
           <h1
             id="hero-h1"
-            className="title font-semibold tracking-[-0.04em] text-gray-1"
+            className="title font-semibold tracking-[-0.04em] text-gray-1 leading-[2.5] md:leading-[0.95]"
             style={{
               fontSize: "clamp(3rem, 0.5rem + 6vw, 6.5rem)",
-              lineHeight: 0.95,
             }}
           >
             {isHome ? (
@@ -186,16 +186,16 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                       only — it hugs its content and never shows
                       empty red bg around shorter words. */}
                   <span
-                    className="relative inline-block align-baseline whitespace-nowrap italic overflow-hidden rounded-md"
+                    className="relative inline-block align-baseline whitespace-nowrap italic"
                     style={{ marginBottom: "-0.08em" }}
                   >
                     <span
                       aria-hidden
                       className="invisible inline-block whitespace-nowrap"
                       style={{
-                        paddingLeft: "0.18em",
-                        paddingRight: "0.3em",
-                        paddingTop: "0.18em",
+                        paddingLeft: "0.14em",
+                        paddingRight: "0.22em",
+                        paddingTop: "0.08em",
                         paddingBottom: "0.18em",
                       }}
                     >
@@ -205,9 +205,9 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                       className="absolute top-0 left-0 text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden whitespace-nowrap transition-opacity duration-200 ease-linear"
                       style={{
                         opacity: visible ? 1 : 0,
-                        paddingLeft: "0.18em",
-                        paddingRight: "0.3em",
-                        paddingTop: "0.18em",
+                        paddingLeft: "0.14em",
+                        paddingRight: "0.22em",
+                        paddingTop: "0.08em",
                         paddingBottom: "0.18em",
                       }}
                     >
@@ -227,16 +227,16 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
               >
                 {lpAccentCount > 1 ? (
                   <span
-                    className="relative inline-block align-baseline whitespace-nowrap italic overflow-hidden rounded-md"
+                    className="relative inline-block align-baseline whitespace-nowrap italic"
                     style={{ marginBottom: "-0.08em" }}
                   >
                     <span
                       aria-hidden
                       className="invisible inline-block whitespace-nowrap"
                       style={{
-                        paddingLeft: "0.22em",
-                        paddingRight: "0.22em",
-                        paddingTop: "0.18em",
+                        paddingLeft: "0.16em",
+                        paddingRight: "0.16em",
+                        paddingTop: "0.08em",
                         paddingBottom: "0.18em",
                       }}
                     >
@@ -246,9 +246,9 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                       className="absolute top-0 left-0 text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden whitespace-nowrap transition-opacity duration-200 ease-linear"
                       style={{
                         opacity: visible ? 1 : 0,
-                        paddingLeft: "0.22em",
-                        paddingRight: "0.22em",
-                        paddingTop: "0.18em",
+                        paddingLeft: "0.16em",
+                        paddingRight: "0.16em",
+                        paddingTop: "0.08em",
                         paddingBottom: "0.18em",
                       }}
                     >
@@ -259,9 +259,9 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                   <span
                     className="italic text-gray-1 bg-brand-9 rounded-md inline-block overflow-hidden align-baseline whitespace-nowrap"
                     style={{
-                      paddingLeft: "0.18em",
-                      paddingRight: "0.3em",
-                      paddingTop: "0.18em",
+                      paddingLeft: "0.16em",
+                      paddingRight: "0.22em",
+                      paddingTop: "0.08em",
                       paddingBottom: "0.18em",
                       marginBottom: "-0.08em",
                     }}
@@ -275,46 +275,56 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
 
           {/* Subheading + CTA — directly under H1 */}
           <Reveal delay={1.4} className="mt-6 md:mt-8">
-            <div className="flex flex-col gap-5 md:gap-6 max-w-[44ch]">
+            <div className="flex flex-col gap-5 md:gap-6 max-w-[44ch] lg:max-w-[78ch]">
               <p
-                className="text-base md:text-lg lg:text-xl text-gray-1/90 font-medium leading-relaxed"
+                className="text-base md:text-lg lg:text-xl text-gray-1/90 font-medium leading-relaxed text-balance"
                 style={{ letterSpacing: "-0.005em" }}
               >
                 {isHome ? t("hero.subheading") : staticSubcopy}
               </p>
-              <ArrowButton as="button" onClick={openModal} tone="light" size="lg" fullWidthMobile>
-                {isHome || !staticCtaLabel ? t("cta.getFreeQuote") : staticCtaLabel}
-              </ArrowButton>
+              <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-0.5">
+                <ArrowButton
+                  as="button"
+                  onClick={() => openModal()}
+                  tone="light"
+                  size="lg"
+                  fullWidthMobile
+                >
+                  {isHome || !staticCtaLabel
+                    ? t("cta.getFreeQuote")
+                    : staticCtaLabel}
+                </ArrowButton>
+                <a
+                  href="https://maps.google.com/?q=220+W+Campus+Dr+Unit+D+Arlington+Heights+IL"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open AK Sign office in Google Maps"
+                  data-cursor="link"
+                  className="group flex lg:inline-flex w-full lg:w-auto items-center justify-between lg:justify-start gap-2 pl-6 pr-1 h-14 rounded-full bg-gray-1/10 backdrop-blur-md border border-gray-1/15 text-[13px] lg:text-sm uppercase tracking-[0.06em] text-gray-1 font-semibold hover:bg-gray-1/20 hover:border-gray-1/40 transition-colors"
+                >
+                  <span>{t("areas.mapCta")}</span>
+                  <span
+                    aria-hidden
+                    className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-9 text-gray-1"
+                  >
+                    <Icon name="MapPin" size={16} stroke={2} />
+                  </span>
+                </a>
+              </div>
             </div>
-          </Reveal>
-
-          {/* Mobile address chip — shown between CTA and stats */}
-          <Reveal delay={1.5} className="lg:hidden mt-6">
-            <a
-              href="https://maps.google.com/?q=220+W+Campus+Dr+Unit+D+Arlington+Heights+IL"
-              target="_blank"
-              rel="noreferrer"
-              data-cursor="link"
-              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gray-1/10 backdrop-blur-md text-[11px] uppercase tracking-[0.14em] text-gray-1 font-semibold hover:bg-gray-1/20 transition-colors"
-            >
-              <span aria-hidden className="relative inline-flex w-2 h-2">
-                <span className="absolute inset-0 rounded-full bg-brand-9 animate-ping opacity-70" />
-                <span className="relative inline-flex w-2 h-2 rounded-full bg-brand-9" />
-              </span>
-              {t("areas.addressChip")}
-            </a>
           </Reveal>
 
           {/* Mobile/tablet stats rail — in-flow below the CTA */}
           <Reveal delay={1.55} className="lg:hidden mt-10">
             <ul className="flex gap-5 sm:gap-8 text-left text-gray-1">
               {heroStats.map((s) => (
-                <li key={s.labelKey} className="flex flex-col gap-1">
+                <li key={s.labelKey} className="flex flex-col gap-0.5">
                   <span
-                    className="font-semibold tracking-[-0.03em] tabular-nums"
+                    className="font-semibold tabular-nums"
                     style={{
                       fontSize: "clamp(1.75rem, 1rem + 2vw, 2.5rem)",
                       lineHeight: 1,
+                      letterSpacing: "-0.055em",
                     }}
                   >
                     {s.value}
@@ -328,39 +338,20 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
           </Reveal>
         </div>
 
-        {/* Desktop address — bottom-left, same baseline as stats rail */}
-        <Reveal delay={1.5}>
-          <a
-            href="https://maps.google.com/?q=220+W+Campus+Dr+Unit+D+Arlington+Heights+IL"
-            target="_blank"
-            rel="noreferrer"
-            data-cursor="link"
-            className="hidden lg:inline-flex absolute left-6 md:left-10 lg:left-16 bottom-10 md:bottom-14 items-center gap-3 px-5 py-3 rounded-full bg-gray-1/10 backdrop-blur-md text-sm uppercase tracking-[0.14em] text-gray-1 font-semibold hover:bg-gray-1/20 transition-colors"
-          >
-            <span
-              aria-hidden
-              className="relative inline-flex w-2 h-2"
-            >
-              <span className="absolute inset-0 rounded-full bg-brand-9 animate-ping opacity-70" />
-              <span className="relative inline-flex w-2 h-2 rounded-full bg-brand-9" />
-            </span>
-            {t("areas.addressChip")}
-          </a>
-        </Reveal>
-
-        {/* Desktop stats rail — absolute bottom-right */}
+        {/* Desktop stats rail — pinned to bottom-left, under the CTA column */}
         <Reveal delay={1.6}>
-          <ul className="hidden lg:flex absolute right-6 md:right-10 lg:right-16 bottom-10 md:bottom-14 items-start gap-10 xl:gap-14 text-left text-gray-1">
+          <ul className="hidden lg:flex absolute left-6 md:left-10 lg:left-16 bottom-10 md:bottom-14 items-start gap-10 xl:gap-14 text-left text-gray-1">
             {heroStats.map((s) => (
               <li
                 key={s.labelKey}
-                className="flex flex-col gap-1.5 w-[140px] shrink-0"
+                className="flex flex-col gap-1 w-[140px] shrink-0"
               >
                 <span
-                  className="font-semibold tracking-[-0.03em] tabular-nums"
+                  className="font-semibold tabular-nums"
                   style={{
                     fontSize: "clamp(2.5rem, 1.25rem + 2.5vw, 3.5rem)",
                     lineHeight: 1,
+                    letterSpacing: "-0.055em",
                   }}
                 >
                   {s.value}

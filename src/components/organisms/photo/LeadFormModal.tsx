@@ -27,7 +27,7 @@ const pill =
  * inside. Close via ESC, backdrop click, or the X-button.
  */
 export function LeadFormModal() {
-  const { open, closeModal } = useLeadForm();
+  const { open, closeModal, prefill } = useLeadForm();
   const { t } = useLocale();
   const router = useRouter();
   const [topic, setTopic] = useState("");
@@ -50,6 +50,14 @@ export function LeadFormModal() {
       document.removeEventListener("keydown", onKey);
     };
   }, [open, closeModal]);
+
+  // Apply prefill when the dialog opens — only overrides the two
+  // fields the caller supplied, so already-entered data is preserved.
+  useEffect(() => {
+    if (!open) return;
+    if (prefill.topic !== undefined) setTopic(prefill.topic);
+    if (prefill.message !== undefined) setQuestion(prefill.message);
+  }, [open, prefill]);
 
   // Reset transient state whenever the dialog closes so the next open
   // starts clean.

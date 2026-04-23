@@ -52,10 +52,9 @@ export function FeaturedWorkSliderStudio({
             as="h2"
             id="work-heading"
             text={t("section.work.heading")}
-            className="font-semibold tracking-[-0.04em] block text-balance max-w-4xl"
+            className="font-semibold tracking-[-0.04em] block text-balance max-w-4xl leading-[1.1] md:leading-[0.92]"
             style={{
               fontSize: "clamp(2.25rem, 0.875rem + 3.5vw, 4.5rem)",
-              lineHeight: 0.92,
             }}
             stagger={0.04}
           />
@@ -71,7 +70,7 @@ export function FeaturedWorkSliderStudio({
           dragMomentum
           data-cursor="drag"
           data-cursor-label="Drag"
-          className="flex gap-6 md:gap-8 pl-[max(24px,calc((100vw-1600px)/2+64px))] pr-6 md:pr-10 lg:pr-16 cursor-grab active:cursor-grabbing select-none"
+          className="flex gap-6 md:gap-8 pl-[max(24px,calc((100vw-1600px)/2+64px))] cursor-grab active:cursor-grabbing select-none"
           whileTap={{ cursor: "grabbing" }}
         >
           {portfolio.placeholders.map((p, i) => (
@@ -108,6 +107,14 @@ export function FeaturedWorkSliderStudio({
               </figure>
             </li>
           ))}
+          {/* Right-edge spacer — flex-children ignore a UL's padding-right
+              in some WebKit layouts, so a real child reliably preserves
+              the gap between the last image and the viewport edge at
+              full drag. */}
+          <li
+            aria-hidden
+            className="flex-shrink-0 w-10 md:w-16 lg:w-24 xl:w-32"
+          />
         </motion.ul>
       </div>
     </section>

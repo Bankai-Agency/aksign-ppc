@@ -1,6 +1,7 @@
 "use client";
 
-import type { LPVariant } from "@/types/lp";
+import type { LPSlug, LPVariant } from "@/types/lp";
+import { Icon } from "@/components/atoms/Icon";
 import { LetterReveal } from "@/components/atoms/LetterReveal";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/atoms/Reveal";
 import { formatMoneyRange } from "@/lib/format-money";
@@ -9,14 +10,32 @@ import { useLocale } from "@/lib/i18n";
 
 type PricingStudioProps = {
   pricing: LPVariant["pricing"];
+  /** Drives form prefill topic when a tile is clicked. */
+  lpSlug?: LPSlug;
 };
+
+/** Picks the matching <select> option label for a tier given its
+ *  parent LP slug (LPs always map to one service) plus the tier
+ *  name as a fallback (home's tiles each represent a different
+ *  service). */
+function pickTopic(lpSlug: LPSlug | undefined, tierName: string): string {
+  if (lpSlug === "channel-letter-signs") return "Channel letters";
+  if (lpSlug === "illuminated-signs") return "Lightboxes";
+  if (lpSlug === "vehicle-wraps") return "Vehicle wraps";
+  const n = tierName.toLowerCase();
+  if (n.includes("channel")) return "Channel letters";
+  if (n.includes("light") || n.includes("cabinet")) return "Lightboxes";
+  if (n.includes("wrap") || n.includes("fleet") || n.includes("vehicle"))
+    return "Vehicle wraps";
+  return "Other";
+}
 
 /**
  * Pricing in studio-size design language — warm off-white bg, tight
  * editorial bands, giant tier numerals in brand-red, LetterReveal
  * heading.
  */
-export function PricingStudio({ pricing }: PricingStudioProps) {
+export function PricingStudio({ pricing, lpSlug }: PricingStudioProps) {
   const { openModal } = useLeadForm();
   const { t, locale } = useLocale();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -41,10 +60,9 @@ export function PricingStudio({ pricing }: PricingStudioProps) {
 
         <h2
           id="pricing-heading"
-          className="font-semibold tracking-[-0.04em] text-balance"
+          className="font-semibold tracking-[-0.04em] text-balance leading-[1.1] md:leading-[0.95]"
           style={{
             fontSize: "clamp(2.25rem, 0.875rem + 3.5vw, 4.5rem)",
-            lineHeight: 0.95,
           }}
         >
           <LetterReveal as="span" text={headingMain} className="block" stagger={0.04} />
@@ -83,11 +101,23 @@ export function PricingStudio({ pricing }: PricingStudioProps) {
               tier.rangeHigh,
               tier.rangeHighIsMin,
             );
+            const prefillTopic = pickTopic(lpSlug, name);
+            const prefillMessage = [
+              `I'd like a quote for the "${name}" tier (${range}).`,
+              scope ? scope : null,
+            ]
+              .filter(Boolean)
+              .join(" ");
             return (
               <StaggerItem key={tier.name} y={40}>
                 <button
                   type="button"
-                  onClick={openModal}
+                  onClick={() =>
+                    openModal({
+                      topic: prefillTopic,
+                      message: prefillMessage,
+                    })
+                  }
                   aria-labelledby={`pricing-tier-${i}`}
                   className="group h-full w-full text-left flex flex-col gap-6 rounded-2xl bg-gray-2 p-7 md:p-8 cursor-pointer transition-colors duration-300 ease-out hover:bg-brand-9 hover:text-gray-1"
                 >
@@ -107,7 +137,7 @@ export function PricingStudio({ pricing }: PricingStudioProps) {
                   </h3>
 
                   <p
-                    className="font-semibold tabular-nums tracking-[-0.035em] text-brand-9 group-hover:text-gray-1 transition-colors"
+                    className="font-extrabold tabular-nums tracking-[-0.045em] text-brand-9 group-hover:text-gray-1 transition-colors"
                     style={{
                       fontSize: "clamp(2rem, 1rem + 2.25vw, 3.25rem)",
                       lineHeight: 1.05,
@@ -129,7 +159,7 @@ export function PricingStudio({ pricing }: PricingStudioProps) {
                     {scope}
                   </p>
 
-                  <ul className="flex flex-col gap-2 text-sm md:text-base text-gray-12 group-hover:text-gray-1 transition-colors mt-auto">
+                  <ul className="flex flex-col gap-2 text-sm md:text-base text-gray-12 group-hover:text-gray-1 transition-colors">
                     {bullets.map((b) => (
                       <li key={b} className="flex items-start gap-3">
                         <span
@@ -140,6 +170,17 @@ export function PricingStudio({ pricing }: PricingStudioProps) {
                       </li>
                     ))}
                   </ul>
+
+                  {/* CTA pill — flat inline style. Visual affordance
+                      only; the whole card is already a <button>.
+                      Full-width on mobile, intrinsic from md+. */}
+                  <span
+                    aria-hidden
+                    className="mt-auto flex items-center justify-between md:inline-flex md:justify-start md:self-start gap-2 w-full md:w-auto px-5 py-3 rounded-full bg-gray-12 text-gray-1 text-[13px] uppercase tracking-[-0.01em] font-semibold transition-colors duration-300 group-hover:bg-gray-1 group-hover:text-gray-12"
+                  >
+                    {t("cta.requestThisQuote")}
+                    <Icon name="ArrowUpRight" size={14} stroke={2} />
+                  </span>
                 </button>
               </StaggerItem>
             );
