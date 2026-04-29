@@ -12,7 +12,7 @@ const services = [
   "Monument signs",
   "Window graphics",
   "Vehicle wraps",
-  "Permits + install",
+  "Install + permit coordination",
   "Fabrication",
 ] as const;
 
@@ -34,7 +34,7 @@ const serviceImages: Record<string, string> = {
   "Monument signs": "/images/services/monument-signs.webp",
   "Window graphics": "/images/services/window-graphics.webp",
   "Vehicle wraps": "/images/services/vehicle-wraps.webp",
-  "Permits + install": "/images/services/permits-install.webp",
+  "Install + permit coordination": "/images/services/permits-install.webp",
   Fabrication: "/images/services/fabrication.webp",
 };
 

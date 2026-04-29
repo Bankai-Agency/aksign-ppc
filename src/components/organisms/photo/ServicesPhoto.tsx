@@ -39,10 +39,10 @@ export function ServicesPhoto({ accent, lp }: ServicesPhotoProps) {
       description: s.description,
     })),
     {
-      title: "Permit handling",
+      title: "Permit coordination",
       tag: "permits",
       description:
-        "We file sign and electrical permits with the Village ourselves. Typical turnaround 2 to 4 weeks — in parallel with fabrication.",
+        "We coordinate with trusted licensed sign-permit partners. They file sign and electrical permits — billed directly by the partner, separate from our quote. Typical turnaround 2 to 4 weeks, in parallel with fabrication.",
     },
     {
       title: "Installation",

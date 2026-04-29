@@ -27,7 +27,7 @@ export function localBusinessSchema() {
     name: nap.name,
     alternateName: "AK Sign Commercial Signs",
     description:
-      "Full-service commercial signage shop serving Chicago and NW suburbs — channel letters, lightboxes, vehicle wraps, and window graphics. Design, UL-listed fabrication, permit filing, and professional install, all in-house.",
+      "Full-service commercial signage shop serving Chicago and NW suburbs — channel letters, lightboxes, vehicle wraps, and window graphics. Design, UL-listed fabrication, and professional install all in-house. Permits via trusted licensed partners (separate cost).",
     url: `${SITE_URL}/`,
     telephone: nap.phone,
     email: nap.email,
@@ -77,7 +77,7 @@ export function localBusinessSchema() {
             "@type": "Service",
             name: "Channel Letter Signs",
             description:
-              "Custom illuminated 3D channel letter signs with UL-listed LEDs — front-lit or halo-lit, Pantone-match faces, structural and electrical permits handled.",
+              "Custom illuminated 3D channel letter signs with UL-listed LEDs — front-lit or halo-lit, Pantone-match faces. Permits coordinated via trusted licensed partners.",
           },
         },
         {

@@ -5,7 +5,7 @@
   "serviceTag": "lightboxes",
   "meta": {
     "title": "Illuminated Signs & Lightboxes Chicago — Cabinet Signs | AK Sign",
-    "description": "Backlit lightbox and cabinet signs for Chicago businesses. Custom faces, energy-efficient LEDs, full install and permit handling. Free design, 3–7 day turnaround.",
+    "description": "Backlit lightbox and cabinet signs for Chicago businesses. Custom faces, energy-efficient LEDs, and full install. Free design, 3–7 day turnaround. Permits via trusted partners (separate).",
     "ogTitle": "Illuminated Lightbox Signs Chicago — AK Sign",
     "ogDescription": "Backlit lightbox signs that make your business visible day and night. Custom faces, LED illumination, full-service install."
   },
@@ -128,13 +128,13 @@
           "Custom shaped cabinet",
           "Pylon / monument mount",
           "Replaceable tenant panels",
-          "Full structural + electrical permit"
+          "Permit + zoning coordination via partner"
         ],
         "bullets_es": [
           "Gabinete con forma a medida",
           "Montaje en pilón / monumental",
           "Paneles reemplazables por inquilino",
-          "Permisos estructurales y eléctricos completos"
+          "Permisos y zonificación vía socio"
         ]
       }
     ],
@@ -202,8 +202,8 @@
       {
         "q": "Do you handle permits for illuminated signs?",
         "q_es": "¿Gestionan los permisos para letreros iluminados?",
-        "a": "Yes. We file both sign and electrical permits with the Village. Typical turnaround is 2 to 4 weeks, running in parallel with fabrication.",
-        "a_es": "Sí. Tramitamos permisos de letrero y eléctricos con el municipio. Tiempo típico: 2–4 semanas, en paralelo con la fabricación."
+        "a": "We do not file permits ourselves — we coordinate with trusted licensed sign-permit partners who handle filing. Their fee is separate from our quote. Typical turnaround is 2 to 4 weeks, running in parallel with fabrication.",
+        "a_es": "No tramitamos los permisos nosotros mismos — coordinamos con socios licenciados que se encargan del trámite. Su tarifa es aparte de nuestra cotización. Tiempo típico: 2–4 semanas, en paralelo con la fabricación."
       },
       {
         "q": "What sizes can you produce?",

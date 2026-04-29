@@ -6,13 +6,13 @@
   "serviceTag": "other",
   "meta": {
     "title": "AK Sign — Commercial Signs, Wraps & Installation in Arlington Heights, IL",
-    "description": "Full-service sign shop in Arlington Heights. Channel letters, lightboxes, vehicle wraps, and window graphics. Design, UL-listed LED fabrication, permit filing, and install — by one in-house team. 3–7 day turnaround.",
-    "ogTitle": "AK Sign — Commercial Signs Built, Permitted, Installed",
-    "ogDescription": "One team for design, fabrication, permits, and install. Serving Chicago + NW suburbs. Free quote in one business day.",
+    "description": "Full-service sign shop in Arlington Heights. Channel letters, lightboxes, vehicle wraps, and window graphics. Design, UL-listed LED fabrication, and install — by one in-house team. 3–7 day turnaround. Permits via trusted partners.",
+    "ogTitle": "AK Sign — Commercial Signs Built and Installed",
+    "ogDescription": "One team for design, fabrication, and install — permits coordinated via partners. Serving Chicago + NW suburbs. Free quote in one business day.",
     "title_es": "AK Sign — Letreros comerciales, rotulación e instalación en Arlington Heights, IL",
-    "description_es": "Taller de letreros de servicio completo en Arlington Heights. Letras canal, cajas de luz, rotulación vehicular y gráficos para ventanas. Diseño, fabricación LED con certificación UL, permisos e instalación — todo por un solo equipo interno. Entrega en 3–7 días.",
-    "ogTitle_es": "AK Sign — Letreros comerciales fabricados, permitidos e instalados",
-    "ogDescription_es": "Un solo equipo para diseño, fabricación, permisos e instalación. Servicio en Chicago y suburbios del noroeste. Cotización gratis en un día hábil."
+    "description_es": "Taller de letreros de servicio completo en Arlington Heights. Letras canal, cajas de luz, rotulación vehicular y gráficos para ventanas. Diseño, fabricación LED con certificación UL e instalación — todo por un solo equipo interno. Entrega en 3–7 días. Permisos vía socios de confianza.",
+    "ogTitle_es": "AK Sign — Letreros comerciales fabricados e instalados",
+    "ogDescription_es": "Un solo equipo para diseño, fabricación e instalación — permisos coordinados con socios. Servicio en Chicago y suburbios del noroeste. Cotización gratis en un día hábil."
   },
   "hero": {
     "eyebrow": "Serving Chicago + NW Suburbs",
@@ -21,8 +21,8 @@
     "h1_es": "Letreros comerciales, fabricados e instalados por ",
     "h1Accent": "One Team.",
     "h1Accent_es": "un solo equipo.",
-    "subcopy": "Full-service sign shop for Chicago storefronts, showrooms and\u00A0fleets — channel letters, lightboxes, vehicle wraps, and window\u00A0graphics. Design, UL-listed fabrication, Village permit filing and install handled\u00A0in-house.",
-    "subcopy_es": "Taller de letreros de servicio completo para locales, showrooms y flotas en\u00A0Chicago — letras canal, cajas de luz, rotulación vehicular y gráficos para\u00A0ventanas. Diseño, fabricación con certificación\u00A0UL, trámite de permisos municipales e instalación\u00A0interna.",
+    "subcopy": "Full-service sign shop for Chicago storefronts, showrooms and\u00A0fleets — channel letters, lightboxes, vehicle wraps, and window\u00A0graphics. Design, UL-listed fabrication and install handled\u00A0in-house. Permits via trusted partners (separate cost).",
+    "subcopy_es": "Taller de letreros de servicio completo para locales, showrooms y flotas en\u00A0Chicago — letras canal, cajas de luz, rotulación vehicular y gráficos para\u00A0ventanas. Diseño, fabricación con certificación\u00A0UL e instalación\u00A0interna. Permisos vía socios de confianza (costo aparte).",
     "trustItems": [
       "Free custom design included",
       "3 to 7 day turnaround",
@@ -41,7 +41,7 @@
         "Aluminum returns + acrylic faces",
         "Front-lit or halo-lit LED",
         "Pantone-match colors",
-        "Structural + electrical permit handled"
+        "Permit + zoning coordination via partner"
       ],
       "tag": "channel-letters"
     },
@@ -86,13 +86,13 @@
           "UL-listed LED modules",
           "Aluminum returns + acrylic faces",
           "Pantone-match brand colors",
-          "Structural + electrical permit"
+          "Permit + zoning coordination via partner"
         ],
         "bullets_es": [
           "Módulos LED con certificación UL",
           "Retornos de aluminio y caras acrílicas",
           "Colores de marca según Pantone",
-          "Permiso estructural y eléctrico"
+          "Permiso y zonificación vía socio"
         ]
       },
       {
@@ -107,13 +107,13 @@
           "Printed vinyl or acrylic faces",
           "Energy-efficient LED backlighting",
           "Single or double-sided",
-          "Village permit filing included"
+          "Permit filing via partner (separate)"
         ],
         "bullets_es": [
           "Caras en vinilo impreso o acrílico",
           "Retroiluminación LED de bajo consumo",
           "Una o dos caras",
-          "Trámite de permiso municipal incluido"
+          "Permiso vía socio (por separado)"
         ]
       },
       {
@@ -149,8 +149,8 @@
       {
         "q": "What services does AK Sign offer?",
         "q_es": "¿Qué servicios ofrece AK Sign?",
-        "a": "We handle four main sign types end-to-end: channel letter signs, lightboxes and cabinet signs, vehicle wraps and fleet graphics, and window graphics. Design, fabrication, permits, and installation are all done in-house — no subcontractors.",
-        "a_es": "Cubrimos cuatro tipos principales de letreros de principio a fin: letras canal, cajas de luz y cabinetes, rotulación vehicular y gráficos para flotas, y gráficos para ventanas. Diseño, fabricación, permisos e instalación — todo en interno, sin subcontratistas."
+        "a": "We handle four main sign types end-to-end: channel letter signs, lightboxes and cabinet signs, vehicle wraps and fleet graphics, and window graphics. Design, fabrication, and installation are all done in-house — no subcontractors. Sign permits are filed by our trusted licensed partners (billed separately).",
+        "a_es": "Cubrimos cuatro tipos principales de letreros de principio a fin: letras canal, cajas de luz y cabinetes, rotulación vehicular y gráficos para flotas, y gráficos para ventanas. Diseño, fabricación e instalación — todo en interno, sin subcontratistas. Los permisos los tramitan socios licenciados de confianza (costo aparte)."
       },
       {
         "q": "How does the quote process work?",
@@ -167,8 +167,8 @@
       {
         "q": "Do you handle permits for Chicago and the suburbs?",
         "q_es": "¿Gestionan los permisos para Chicago y los suburbios?",
-        "a": "Yes. We file sign and electrical permits with the Village ourselves and hold a Sign Contractor License for Chicago. Typical permit turnaround is 2 to 4 weeks, running in parallel with fabrication.",
-        "a_es": "Sí. Tramitamos los permisos de letreros y eléctricos con el municipio y contamos con licencia de Sign Contractor para Chicago. El tiempo típico es de 2–4 semanas, en paralelo con la fabricación."
+        "a": "We do not file permits ourselves. We work with trusted licensed sign-permit partners who handle filing — billed directly by the partner, separate from our quote. Typical turnaround is 2 to 4 weeks, running in parallel with fabrication.",
+        "a_es": "No tramitamos los permisos nosotros mismos. Trabajamos con socios licenciados de confianza que se encargan del trámite — facturados directamente por el socio, aparte de nuestra cotización. El tiempo típico es de 2–4 semanas, en paralelo con la fabricación."
       },
       {
         "q": "What's your service area?",
@@ -197,8 +197,8 @@
       {
         "q": "Do you work with multi-location brands and franchises?",
         "q_es": "¿Trabajan con marcas multi-local y franquicias?",
-        "a": "Yes. We handle multi-location rollouts with consistent brand specs across sites — centralized project management, batch scheduling, and per-location permit filing. Request a fleet or franchise quote and we'll scope the full rollout.",
-        "a_es": "Sí. Gestionamos despliegues multi-local manteniendo consistencia de marca entre sedes — gestión de proyectos centralizada, programación por lotes y trámite de permisos por ubicación. Solicita cotización de flota o franquicia y armamos el despliegue completo."
+        "a": "Yes. We handle multi-location rollouts with consistent brand specs across sites — centralized project management and batch scheduling. Per-location permits are filed by our partners (separate cost). Request a fleet or franchise quote and we'll scope the full rollout.",
+        "a_es": "Sí. Gestionamos despliegues multi-local manteniendo consistencia de marca entre sedes — gestión de proyectos centralizada y programación por lotes. Los permisos por ubicación los tramitan nuestros socios (costo aparte). Solicita cotización de flota o franquicia y armamos el despliegue completo."
       },
       {
         "q": "What are your payment terms?",

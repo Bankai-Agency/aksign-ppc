@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "AK Sign — Commercial Signage, Arlington Heights IL",
   description:
-    "Custom illuminated signs, lightboxes, and vehicle wraps for Chicago-area businesses. Design, UL-listed LED fabrication, permit handling, and install.",
+    "Custom illuminated signs, lightboxes, and vehicle wraps for Chicago-area businesses. Design, UL-listed LED fabrication, and install. Permits via trusted partners (separate).",
   applicationName: "AK Sign",
   authors: [{ name: "AK Sign" }],
   creator: "AK Sign",

@@ -29,7 +29,7 @@ export function PhilosophyStudio() {
                   lineHeight: 0.9,
                 }}
               >
-                When craft and permits meet{" "}
+                When craft and clean install meet{" "}
                 <span className="text-brand-5">a sign that actually sells.</span>
               </h2>
             </Reveal>
@@ -38,9 +38,11 @@ export function PhilosophyStudio() {
           <div className="md:col-span-4 lg:col-span-3 md:pt-4 flex flex-col gap-6">
             <Reveal delay={0.2}>
               <p className="text-base md:text-lg text-gray-3 leading-relaxed">
-                One in-house team handles design, UL-listed fabrication, Village
-                permits, and install. No subs, no finger-pointing, no surprise
-                line items — just a sign your storefront keeps earning from.
+                One in-house team handles design, UL-listed fabrication, and
+                install. Permits go through our trusted licensed partners
+                (billed separately). No subs on the build, no finger-pointing,
+                no surprise line items — just a sign your storefront keeps
+                earning from.
               </p>
             </Reveal>
             <Reveal delay={0.28}>

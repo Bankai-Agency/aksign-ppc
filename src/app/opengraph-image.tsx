@@ -137,7 +137,7 @@ export default function OGImage() {
               maxWidth: 960,
             }}
           >
-            Channel letters · Lightboxes · Vehicle wraps · Window graphics — design, UL-listed fabrication, permits and install, by one in-house team. 3–7 day turnaround.
+            Channel letters · Lightboxes · Vehicle wraps · Window graphics — design, UL-listed fabrication, and install by one in-house team. Permits via trusted partners. 3–7 day turnaround.
           </div>
         </div>
 

@@ -6,13 +6,13 @@
   "serviceTag": "channel-letters",
   "meta": {
     "title": "Channel Letter Signs Chicago — Custom Installed in 3–7 Days | AK Sign",
-    "description": "Custom illuminated channel letter signs for Chicago businesses. Design, UL-listed LED fabrication, permit handling, and professional install. Free design, 3–7 day turnaround.",
+    "description": "Custom illuminated channel letter signs for Chicago businesses. Design, UL-listed LED fabrication, and professional install. Free design, 3–7 day turnaround. Permits via trusted partners (separate).",
     "ogTitle": "Channel Letter Signs Chicago — AK Sign",
-    "ogDescription": "Make your storefront unmistakable day and night. Channel letter signs with UL-listed LEDs, permit handling, and 3–7 day turnaround.",
+    "ogDescription": "Make your storefront unmistakable day and night. Channel letter signs with UL-listed LEDs and 3–7 day turnaround. Permits coordinated via partners.",
     "title_es": "Letras Canal en Chicago — Instalación en 3–7 Días | AK Sign",
-    "description_es": "Letras canal iluminadas a medida para negocios de Chicago. Diseño, fabricación LED con certificación UL, gestión de permisos e instalación profesional. Diseño gratis, entrega en 3–7 días.",
+    "description_es": "Letras canal iluminadas a medida para negocios de Chicago. Diseño, fabricación LED con certificación UL e instalación profesional. Diseño gratis, entrega en 3–7 días. Permisos vía socios de confianza (por separado).",
     "ogTitle_es": "Letras Canal en Chicago — AK Sign",
-    "ogDescription_es": "Destaca tu local día y noche. Letras canal con LEDs certificados UL, gestión de permisos y entrega en 3–7 días."
+    "ogDescription_es": "Destaca tu local día y noche. Letras canal con LEDs certificados UL y entrega en 3–7 días. Permisos coordinados con socios."
   },
   "hero": {
     "eyebrow": "Serving Chicago + NW Suburbs",
@@ -28,8 +28,8 @@
       { "en": "Recognition.", "es": "reconocimiento." },
       { "en": "Growth.", "es": "crecimiento." }
     ],
-    "subcopy": "Custom illuminated channel letters for Chicago\u00A0businesses. UL-listed\u00A0LEDs, permit handling, and professional install by our in-house\u00A0team — from brief to mounted sign in 3\u00A0to\u00A07\u00A0days.",
-    "subcopy_es": "Letras canal iluminadas a medida para negocios de\u00A0Chicago. LEDs con certificación\u00A0UL, gestión de permisos e instalación profesional por nuestro equipo\u00A0interno — del brief al letrero instalado en 3–7\u00A0días.",
+    "subcopy": "Custom illuminated channel letters for Chicago\u00A0businesses. UL-listed\u00A0LEDs and professional install by our in-house\u00A0team — from brief to mounted sign in 3\u00A0to\u00A07\u00A0days. Permits handled by trusted partners (separate cost).",
+    "subcopy_es": "Letras canal iluminadas a medida para negocios de\u00A0Chicago. LEDs con certificación\u00A0UL e instalación profesional por nuestro equipo\u00A0interno — del brief al letrero instalado en 3–7\u00A0días. Permisos gestionados por socios de confianza (costo aparte).",
     "trustItems": [
       "Free custom design included",
       "3 to 7 day turnaround",
@@ -48,7 +48,7 @@
         "Aluminum returns + trim cap",
         "Front-lit or halo-lit LED",
         "Pantone-match faces",
-        "Structural + electrical permit handled"
+        "Permit + zoning coordination via partner"
       ],
       "tag": "channel-letters"
     },
@@ -92,13 +92,13 @@
           "Aluminum returns and trim cap",
           "Front-lit or halo-lit LED illumination",
           "Single-row installation",
-          "Village permit filing included"
+          "Permit filing via partner (separate)"
         ],
         "bullets_es": [
           "Retornos de aluminio y trim cap",
           "Iluminación LED frontal o halo",
           "Instalación en una fila",
-          "Permiso municipal incluido"
+          "Permiso vía socio (por separado)"
         ]
       },
       {
@@ -112,13 +112,13 @@
           "Larger letters with brand logo",
           "UL-listed LED modules",
           "Custom face colors (to Pantone)",
-          "Electrical permit coordination"
+          "Permit coordination via partner"
         ],
         "bullets_es": [
           "Letras más grandes con logo de marca",
           "Módulos LED con certificación UL",
           "Colores de cara a medida (según Pantone)",
-          "Coordinación de permiso eléctrico"
+          "Coordinación de permiso vía socio"
         ]
       },
       {
@@ -133,13 +133,13 @@
           "Custom fabrication to your specs",
           "Structural engineering if required",
           "Lift-truck installation",
-          "Full permit + zoning support"
+          "Permit + zoning support via partner"
         ],
         "bullets_es": [
           "Fabricación a medida según tus especificaciones",
           "Ingeniería estructural si es necesario",
           "Instalación con grúa",
-          "Permisos y zonificación completos"
+          "Permisos y zonificación vía socio"
         ]
       }
     ],
@@ -171,8 +171,8 @@
       {
         "q": "Do you handle sign permits for Chicago and the suburbs?",
         "q_es": "¿Gestionan los permisos de letreros en Chicago y los suburbios?",
-        "a": "Yes. We file sign and electrical permits with the municipality ourselves. Typical permit turnaround is 2 to 4 weeks, running in parallel with fabrication.",
-        "a_es": "Sí. Tramitamos los permisos de letreros y eléctricos con el municipio por cuenta propia. El tiempo típico es de 2 a 4 semanas, en paralelo con la fabricación."
+        "a": "We do not file permits ourselves. We work with trusted licensed sign-permit partners who handle filing — billed directly by the partner, separate from our quote. Typical turnaround is 2 to 4 weeks, running in parallel with fabrication.",
+        "a_es": "No tramitamos los permisos nosotros mismos. Trabajamos con socios de confianza con licencia para tramitar permisos — facturados directamente por el socio, aparte de nuestra cotización. El tiempo típico es de 2 a 4 semanas, en paralelo con la fabricación."
       },
       {
         "q": "Front-lit vs halo-lit channel letters?",
@@ -248,10 +248,10 @@
     },
     {
       "icon": "FileCheck",
-      "title": "Permits Filed for You",
-      "title_es": "Permisos gestionados por nosotros",
-      "subcopy": "Sign + electrical with the Village",
-      "subcopy_es": "Letrero y eléctrico ante el municipio"
+      "title": "Permit Partners On Call",
+      "title_es": "Socios de permisos a la mano",
+      "subcopy": "Licensed sign-permit partners file for you, billed separately",
+      "subcopy_es": "Socios licenciados tramitan los permisos, costo aparte"
     },
     {
       "icon": "Layers",

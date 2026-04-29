@@ -50,7 +50,7 @@
     {
       "icon": "MapPin",
       "title": "Local Arlington Heights",
-      "subcopy": "We know Village permit filing inside out."
+      "subcopy": "Local team — we know the area and the right permit partners."
     },
     {
       "icon": "Calculator",
@@ -88,8 +88,8 @@
       },
       {
         "number": 5,
-        "title": "Permit",
-        "description": "We file with the Village ourselves. Typical turnaround: 2–4 weeks, in parallel with fabrication."
+        "title": "Permit (via partner)",
+        "description": "Filed by our trusted permit partners — separate cost, billed direct. Typical turnaround: 2–4 weeks, in parallel with fabrication."
       },
       {
         "number": 6,

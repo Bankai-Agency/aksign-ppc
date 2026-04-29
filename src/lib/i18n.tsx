@@ -41,8 +41,8 @@ const dict: Dict = {
   "section.trustBar.heading": { en: "Why AK\u00A0Sign", es: "Por qué AK\u00A0Sign" },
   "section.work.heading": { en: "Recent projects", es: "Proyectos recientes" },
   "section.statement.heading": {
-    en: "When craft and permits collide, a storefront stops being a wall and starts being a magnet.",
-    es: "Cuando el oficio y los permisos se unen, una fachada deja de ser un muro y se vuelve un imán.",
+    en: "When craft and clean install meet, a storefront stops being a wall and starts being a magnet.",
+    es: "Cuando el oficio y la instalación limpia se unen, una fachada deja de ser un muro y se vuelve un imán.",
   },
   "section.contact.heading": {
     en: "Customer care department",
@@ -53,8 +53,8 @@ const dict: Dict = {
   "hero.line1": { en: "Commercial Signage", es: "Señalización comercial" },
   "hero.line2Prefix": { en: "for", es: "para" },
   "hero.subheading": {
-    en: "Commercial-grade signage for Chicago-area storefronts — fabricated, permitted and installed in-house by one\u00A0team.",
-    es: "Señalización de nivel comercial para locales del área de Chicago — fabricada, permitida e instalada internamente por un solo\u00A0equipo.",
+    en: "Commercial-grade signage for Chicago-area storefronts — fabricated and installed in-house by one\u00A0team. Permits via trusted partners.",
+    es: "Señalización de nivel comercial para locales del área de Chicago — fabricada e instalada internamente por un solo\u00A0equipo. Permisos vía socios de confianza.",
   },
   "hero.flip.storefronts": { en: "storefronts", es: "fachadas" },
   "hero.flip.cafes": { en: "cafés", es: "cafeterías" },
@@ -67,8 +67,8 @@ const dict: Dict = {
 
   // Statement body
   "statement.body": {
-    en: "We are a small Arlington\u00A0Heights sign shop working end-to-end for Chicago businesses — design, UL-listed fabrication, Village permits, and install. No subs, no finger-pointing, no surprise line\u00A0items.",
-    es: "Somos un taller pequeño en Arlington\u00A0Heights que trabaja de principio a fin para empresas de Chicago — diseño, fabricación con certificación\u00A0UL, permisos municipales e instalación. Sin subcontratistas, sin evasiones, sin cargos\u00A0sorpresa.",
+    en: "We are a small Arlington\u00A0Heights sign shop working end-to-end for Chicago businesses — design, UL-listed fabrication, and install. Permits go through our trusted licensed partners (billed separately). No subs on the build, no finger-pointing, no surprise line\u00A0items.",
+    es: "Somos un taller pequeño en Arlington\u00A0Heights que trabaja de principio a fin para empresas de Chicago — diseño, fabricación con certificación\u00A0UL e instalación. Los permisos los gestionan nuestros socios licenciados de confianza (costo aparte). Sin subcontratistas en la fabricación, sin evasiones, sin cargos\u00A0sorpresa.",
   },
 
   // Process (HowItWorks)
@@ -93,10 +93,10 @@ const dict: Dict = {
     en: "In-house production: UL-listed LEDs, premium vinyl, aluminum. Typically 3–7 days.",
     es: "Producción interna: LEDs con certificación UL, vinilo premium, aluminio. Habitualmente 3–7 días.",
   },
-  "process.step5.title": { en: "Permit", es: "Permiso" },
+  "process.step5.title": { en: "Permit (via partner)", es: "Permiso (vía socio)" },
   "process.step5.desc": {
-    en: "We file with the Village ourselves. Typical turnaround: 2–4 weeks, in parallel with fabrication.",
-    es: "Tramitamos los permisos con el municipio. Tiempo típico: 2–4 semanas, en paralelo a la fabricación.",
+    en: "Filed by our trusted permit partners — separate cost, billed direct. Typical turnaround: 2–4 weeks, in parallel with fabrication.",
+    es: "Tramitados por nuestros socios de confianza — costo aparte, facturado directo. Tiempo típico: 2–4 semanas, en paralelo a la fabricación.",
   },
   "process.step6.title": { en: "Install", es: "Instalación" },
   "process.step6.desc": {
@@ -128,8 +128,8 @@ const dict: Dict = {
     es: "Local en Arlington\u00A0Heights",
   },
   "benefits.3.subcopy": {
-    en: "We know Village permit filing inside\u00A0out.",
-    es: "Conocemos a fondo los permisos municipales del\u00A0Village.",
+    en: "Local team — we know the area and the right permit\u00A0partners.",
+    es: "Equipo local — conocemos la zona y los socios de permisos\u00A0correctos.",
   },
   "benefits.4.title": {
     en: "1-minute online\u00A0quote",
@@ -151,8 +151,8 @@ const dict: Dict = {
   // Service Area
   "areas.heading": { en: "Service area", es: "Zona de servicio" },
   "areas.intro": {
-    en: "Primary coverage across Chicago and the NW\u00A0suburbs — signage fabricated, permitted and installed by one in-house\u00A0team.",
-    es: "Cobertura principal en Chicago y los suburbios del\u00A0noroeste — señalización fabricada, permitida e instalada por un único equipo\u00A0interno.",
+    en: "Primary coverage across Chicago and the NW\u00A0suburbs — signage fabricated and installed by one in-house\u00A0team. Permits via trusted partners.",
+    es: "Cobertura principal en Chicago y los suburbios del\u00A0noroeste — señalización fabricada e instalada por un único equipo\u00A0interno. Permisos vía socios de confianza.",
   },
   "areas.addressChip": {
     en: "220\u00A0W\u00A0Campus\u00A0Dr · Arlington\u00A0Heights",
@@ -254,7 +254,7 @@ const dict: Dict = {
   "services.monument": { en: "Monument signs", es: "Letreros monumentales" },
   "services.window": { en: "Window graphics", es: "Gráficos para ventanas" },
   "services.vehicle": { en: "Vehicle wraps", es: "Rotulación vehicular" },
-  "services.permits": { en: "Permits + install", es: "Permisos + instalación" },
+  "services.permits": { en: "Install + permit coordination", es: "Instalación + coordinación de permisos" },
   "services.fabrication": { en: "Fabrication", es: "Fabricación" },
 
   // Reel / Showreel

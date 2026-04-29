@@ -65,7 +65,7 @@ export function ServiceCard({
         </ul>
         <div className="flex flex-wrap gap-2 pt-2">
           <Badge intent="accent">Free design included</Badge>
-          <Badge intent="neutral">Permit handled</Badge>
+          <Badge intent="neutral">Permit via partner</Badge>
         </div>
       </article>
     );
