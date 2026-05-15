@@ -25,7 +25,13 @@ export const viewport: Viewport = {
   colorScheme: "dark light",
 };
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+// Fallback to the production AK Sign container ID if env var is not set.
+// This Vercel project (`aksign-ppc`) lives on a separate account where the
+// agency cannot set env vars via CLI — without this fallback the GTM script
+// silently does not render and every conversion is lost. GTM container IDs
+// are public (they ship in every page's HTML), so hard-coding the fallback
+// is safe. Env var still wins when present.
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-T7QS4KD6";
 
 export default function RootLayout({
   children,
