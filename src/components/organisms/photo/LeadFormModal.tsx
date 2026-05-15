@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import { useEffect, useState, type FormEvent } from "react";
 import { Icon } from "@/components/atoms/Icon";
 import { ArrowButton } from "@/components/atoms/ArrowButton";
@@ -29,7 +28,6 @@ const pill =
 export function LeadFormModal() {
   const { open, closeModal, prefill } = useLeadForm();
   const { t } = useLocale();
-  const router = useRouter();
   const [topic, setTopic] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -83,13 +81,20 @@ export function LeadFormModal() {
     setSending(false);
     if (result.ok) {
       // Reset fields, close the dialog, route to /thank-you.
+      // Full-page navigation (not router.push) so GTM Page View triggers
+      // re-initialize on /thank-you — required for Ads conversion + GA4
+      // generate_lead events to fire. Preserves gclid + utm_* via existing
+      // query string. Do NOT switch back to router.push without rewiring
+      // GTM Tag 4 trigger to a History Change or Custom Event source.
       setTopic("");
       setName("");
       setEmail("");
       setPhone("");
       setQuestion("");
       closeModal();
-      router.push("/thank-you?form_id=hero-modal");
+      const params = new URLSearchParams(window.location.search);
+      params.set("form_id", "hero-modal");
+      window.location.href = `/thank-you?${params.toString()}`;
       return;
     }
     if (result.error === "rate_limit") {

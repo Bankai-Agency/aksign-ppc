@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { LetterReveal } from "@/components/atoms/LetterReveal";
 import { Icon } from "@/components/atoms/Icon";
@@ -27,7 +26,6 @@ const pill =
  */
 export function CustomerCareCTA() {
   const { t, locale } = useLocale();
-  const router = useRouter();
   const [topic, setTopic] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -51,12 +49,18 @@ export function CustomerCareCTA() {
     });
     setSending(false);
     if (result.ok) {
+      // Full-page navigation (not router.push) so GTM Page View triggers
+      // re-initialize on /thank-you — required for Ads conversion + GA4
+      // generate_lead events to fire. Preserves gclid + utm_* via existing
+      // query string.
       setTopic("");
       setName("");
       setEmail("");
       setPhone("");
       setQuestion("");
-      router.push("/thank-you?form_id=contact-cta");
+      const params = new URLSearchParams(window.location.search);
+      params.set("form_id", "contact-cta");
+      window.location.href = `/thank-you?${params.toString()}`;
       return;
     }
     if (result.error === "rate_limit") setErrorKey("form.error.rateLimit");
