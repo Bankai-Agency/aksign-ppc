@@ -32,6 +32,9 @@ export const viewport: Viewport = {
 // are public (they ship in every page's HTML), so hard-coding the fallback
 // is safe. Env var still wins when present.
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-T7QS4KD6";
+// Microsoft Clarity — session recordings + heatmaps + rage/dead-click metrics.
+// Project ID is public (ships in HTML), safe to hardcode as fallback.
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? "wv3k0jmhgo";
 
 export default function RootLayout({
   children,
@@ -42,6 +45,11 @@ export default function RootLayout({
         {GTM_ID && (
           <Script id="gtm-init" strategy="afterInteractive">
             {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
+          </Script>
+        )}
+        {CLARITY_ID && (
+          <Script id="clarity-init" strategy="afterInteractive">
+            {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "${CLARITY_ID}");`}
           </Script>
         )}
       </head>
