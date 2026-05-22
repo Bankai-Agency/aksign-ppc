@@ -8,14 +8,6 @@ import { formatPhoneMask } from "@/lib/format-phone";
 import { useLocale } from "@/lib/i18n";
 import { submitLead } from "@/lib/submit-lead";
 
-const topics = [
-  "Channel letters",
-  "Illuminated signs",
-  "Lightboxes",
-  "Vehicle wraps",
-  "Other",
-];
-
 const pill =
   "cta-input w-full rounded-2xl bg-gray-1/10 hover:bg-gray-1/15 focus:bg-gray-1/20 px-5 py-4 text-base md:text-lg text-gray-1 placeholder:text-gray-1/45 transition-colors duration-200";
 
@@ -26,7 +18,6 @@ const pill =
  */
 export function CustomerCareCTA() {
   const { t, locale } = useLocale();
-  const [topic, setTopic] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -40,7 +31,6 @@ export function CustomerCareCTA() {
     setSending(true);
     setErrorKey(null);
     const result = await submitLead({
-      topic,
       name,
       email,
       phone,
@@ -53,7 +43,6 @@ export function CustomerCareCTA() {
       // re-initialize on /thank-you — required for Ads conversion + GA4
       // generate_lead events to fire. Preserves gclid + utm_* via existing
       // query string.
-      setTopic("");
       setName("");
       setEmail("");
       setPhone("");
@@ -121,38 +110,6 @@ export function CustomerCareCTA() {
             onSubmit={onSubmit}
             className="lg:col-span-6 flex flex-col gap-3"
           >
-            <div className="relative">
-              <select
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                className={`${pill} appearance-none pr-11 ${topic ? "" : "text-gray-1/45"}`}
-                aria-label="Topic"
-                required
-                style={{ letterSpacing: "-0.01em" }}
-              >
-                <option value="" disabled className="bg-gray-12 text-gray-1">
-                  {t("form.selectTopic")}
-                </option>
-                {topics.map((topicValue, ti) => {
-                  const keys = [
-                    "form.topic.channel",
-                    "form.topic.illuminated",
-                    "form.topic.lightboxes",
-                    "form.topic.vehicle",
-                    "form.topic.other",
-                  ] as const;
-                  return (
-                    <option key={topicValue} value={topicValue} className="bg-gray-12 text-gray-1">
-                      {t(keys[ti])}
-                    </option>
-                  );
-                })}
-              </select>
-              <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-gray-1/60">
-                <Icon name="ChevronDown" size={18} stroke={1.75} />
-              </span>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <input
                 type="text"

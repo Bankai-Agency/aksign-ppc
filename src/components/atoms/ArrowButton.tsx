@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
  * (header, sections, forms). The inner circle slides slightly right
  * on hover; pill flips to brand red.
  */
-type Tone = "solid" | "ghost" | "light";
+type Tone = "solid" | "ghost" | "light" | "brand";
 type Size = "sm" | "md" | "lg";
 type IconKind = "ArrowRight" | "ArrowUpRight";
 
@@ -39,15 +39,15 @@ type ButtonOnly = {
 export type ArrowButtonProps = CommonProps & (AnchorOnly | ButtonOnly);
 
 const pad: Record<Size, string> = {
-  sm: "h-10 pl-4 pr-1 text-[12px]",
-  md: "h-12 pl-5 pr-1 text-[13px]",
-  lg: "h-14 pl-6 pr-1 text-sm",
+  sm: "h-12 md:h-10 pl-4 pr-1 text-[12px]",
+  md: "h-14 md:h-12 pl-5 pr-1 text-[13px]",
+  lg: "h-16 md:h-14 pl-6 pr-1 text-sm",
 };
 
 const square: Record<Size, string> = {
-  sm: "w-8 h-8",
-  md: "w-10 h-10",
-  lg: "w-12 h-12",
+  sm: "w-10 h-10 md:w-8 md:h-8",
+  md: "w-12 h-12 md:w-10 md:h-10",
+  lg: "w-14 h-14 md:w-12 md:h-12",
 };
 
 const squareIcon: Record<Size, 14 | 16> = { sm: 14, md: 14, lg: 16 };
@@ -59,6 +59,8 @@ const toneClass: Record<Tone, string> = {
     "border border-gray-12/25 text-gray-12 hover:bg-gray-12 hover:text-gray-1 [&_.ab-sq]:bg-gray-12 [&_.ab-sq]:text-gray-1 hover:[&_.ab-sq]:bg-gray-1 hover:[&_.ab-sq]:text-gray-12",
   light:
     "bg-gray-1 text-gray-12 hover:bg-brand-9 hover:text-gray-1 [&_.ab-sq]:bg-gray-12 [&_.ab-sq]:text-gray-1 hover:[&_.ab-sq]:bg-gray-1 hover:[&_.ab-sq]:text-brand-9",
+  brand:
+    "bg-brand-9 text-gray-1 hover:bg-gray-1 hover:text-gray-12 [&_.ab-sq]:bg-gray-1 [&_.ab-sq]:text-brand-9 hover:[&_.ab-sq]:bg-gray-12 hover:[&_.ab-sq]:text-gray-1",
 };
 
 function Inner({

@@ -4,6 +4,7 @@ import { LocaleProvider } from "@/lib/i18n";
 import { LeadFormProvider } from "@/lib/lead-form";
 import {
   HeroPhoto,
+  MobileBottomCTA,
   MouseFollower,
   StudioHeader,
 } from "@/components/organisms/photo";
@@ -14,6 +15,11 @@ import {
 // the barrel re-export inside every dynamic() which duplicated work
 // and tanked mobile LCP on Slow-4G. Keeping ssr on (default) so HTML
 // still renders server-side; only the client JS chunks split.
+const IntroVideoSection = dynamic(() =>
+  import("@/components/organisms/photo/IntroVideoSection").then(
+    (m) => m.IntroVideoSection,
+  ),
+);
 const TrustBarStudio = dynamic(() =>
   import("@/components/organisms/photo/TrustBarStudio").then((m) => m.TrustBarStudio),
 );
@@ -87,6 +93,7 @@ export default function PPCLandingPhoto({ lp, shared }: Props) {
         <MouseFollower />
         <StudioHeader nap={shared.nap} />
         <HeroPhoto slug={lp.slug} lp={lp} />
+        <IntroVideoSection />
         <TrustBarStudio items={lp.trustBar ?? shared.trustBar} />
         <FeaturedWorkSliderStudio portfolio={shared.portfolio} />
         <SimpleTextStatement />
@@ -99,6 +106,7 @@ export default function PPCLandingPhoto({ lp, shared }: Props) {
         <CustomerCareCTA />
         <StudioFooter shared={shared} />
         <LeadFormModal />
+        <MobileBottomCTA phone={shared.nap?.phone} phoneDisplay={shared.nap?.phoneDisplay} />
       </LeadFormProvider>
     </LocaleProvider>
   );

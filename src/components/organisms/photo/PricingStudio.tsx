@@ -173,10 +173,10 @@ export function PricingStudio({ pricing, lpSlug }: PricingStudioProps) {
 
                   {/* CTA pill — flat inline style. Visual affordance
                       only; the whole card is already a <button>.
-                      Full-width on mobile, intrinsic from md+. */}
+                      Full-width on every breakpoint, Figma auto-layout style. */}
                   <span
                     aria-hidden
-                    className="mt-auto flex items-center justify-between md:inline-flex md:justify-start md:self-start gap-2 w-full md:w-auto px-5 py-3 rounded-full bg-gray-12 text-gray-1 text-[13px] uppercase tracking-[-0.01em] font-semibold transition-colors duration-300 group-hover:bg-gray-1 group-hover:text-gray-12"
+                    className="mt-auto flex w-full items-center justify-between gap-2 px-6 h-14 md:h-12 rounded-full bg-gray-12 text-gray-1 text-[13px] uppercase tracking-[-0.01em] font-semibold transition-colors duration-300 group-hover:bg-gray-1 group-hover:text-gray-12"
                   >
                     {t("cta.requestThisQuote")}
                     <Icon name="ArrowUpRight" size={14} stroke={2} />

@@ -28,24 +28,11 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
   const { locale, setLocale, t } = useLocale();
   const { openModal } = useLeadForm();
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    let lastY = 0;
     const onScroll = () => {
-      const y = window.scrollY;
-      const delta = y - lastY;
-      setScrolled(y > 8);
-      // Past ~50% of hero → hide on scroll-down, reveal on scroll-up
-      const threshold = window.innerHeight * 0.5;
-      if (y > threshold) {
-        if (delta > 6) setHidden(true);
-        else if (delta < -6) setHidden(false);
-      } else {
-        setHidden(false);
-      }
-      lastY = y;
+      setScrolled(window.scrollY > 8);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -81,10 +68,7 @@ export function StudioHeader({ nap }: StudioHeaderProps) {
     <>
       <header
         id="page-header"
-        className={cn(
-          "fixed inset-x-0 top-0 z-50 px-6 md:px-10 lg:px-16 pt-4 md:pt-5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
-          hidden && !open ? "-translate-y-[120%]" : "translate-y-0",
-        )}
+        className="fixed inset-x-0 top-0 z-50 px-6 md:px-10 lg:px-16 pt-4 md:pt-5"
       >
         <div
           className={cn(

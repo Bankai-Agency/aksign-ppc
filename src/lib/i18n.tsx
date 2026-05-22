@@ -36,6 +36,7 @@ const dict: Dict = {
   "eyebrow.faq": { en: "(FAQ)", es: "(Preguntas)" },
   "eyebrow.areas": { en: "(Areas)", es: "(Zonas)" },
   "eyebrow.contact": { en: "(Contact)", es: "(Contacto)" },
+  "eyebrow.intro": { en: "(Meet AK Sign)", es: "(Conoce AK Sign)" },
 
   // Section H2s — static
   "section.trustBar.heading": { en: "Why AK\u00A0Sign", es: "Por qué AK\u00A0Sign" },
@@ -48,6 +49,15 @@ const dict: Dict = {
     en: "Customer care department",
     es: "Atención al cliente",
   },
+  "section.intro.heading": {
+    en: "Meet the team behind every AK Sign",
+    es: "Conoce al equipo detrás de cada AK Sign",
+  },
+  "section.intro.body": {
+    en: "Real shop in Arlington Heights, IL — design, UL-listed LED fabrication, and install handled in-house. Watch a short walkthrough of what we do and how we do it.",
+    es: "Taller real en Arlington Heights, IL — diseño, fabricación con LEDs certificados UL e instalación, todo internamente. Mira un breve recorrido de lo que hacemos y cómo lo hacemos.",
+  },
+  "intro.unmuteHint": { en: "Tap for sound", es: "Toca para sonido" },
 
   // Hero
   "hero.line1": { en: "Commercial Signage", es: "Señalización comercial" },

@@ -9,14 +9,6 @@ import { formatPhoneMask } from "@/lib/format-phone";
 import { useLocale } from "@/lib/i18n";
 import { submitLead } from "@/lib/submit-lead";
 
-const topics = [
-  "Channel letters",
-  "Illuminated signs",
-  "Lightboxes",
-  "Vehicle wraps",
-  "Other",
-];
-
 const pill =
   "cta-input w-full rounded-2xl bg-gray-1/10 hover:bg-gray-1/15 focus:bg-gray-1/20 px-5 py-4 text-base md:text-lg text-gray-1 placeholder:text-gray-1/45 transition-colors duration-200";
 
@@ -28,7 +20,6 @@ const pill =
 export function LeadFormModal() {
   const { open, closeModal, prefill } = useLeadForm();
   const { t } = useLocale();
-  const [topic, setTopic] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -49,11 +40,10 @@ export function LeadFormModal() {
     };
   }, [open, closeModal]);
 
-  // Apply prefill when the dialog opens — only overrides the two
-  // fields the caller supplied, so already-entered data is preserved.
+  // Apply prefill when the dialog opens — only overrides the field the
+  // caller supplied, so already-entered data is preserved.
   useEffect(() => {
     if (!open) return;
-    if (prefill.topic !== undefined) setTopic(prefill.topic);
     if (prefill.message !== undefined) setQuestion(prefill.message);
   }, [open, prefill]);
 
@@ -71,7 +61,6 @@ export function LeadFormModal() {
     setSending(true);
     setErrorKey(null);
     const result = await submitLead({
-      topic,
       name,
       email,
       phone,
@@ -86,7 +75,6 @@ export function LeadFormModal() {
       // generate_lead events to fire. Preserves gclid + utm_* via existing
       // query string. Do NOT switch back to router.push without rewiring
       // GTM Tag 4 trigger to a History Change or Custom Event source.
-      setTopic("");
       setName("");
       setEmail("");
       setPhone("");
@@ -154,38 +142,6 @@ export function LeadFormModal() {
               <p className="mt-3 text-sm md:text-base text-gray-1/70 leading-relaxed">
                 {t("modal.body")}
               </p>
-            </div>
-
-            <div className="relative">
-              <select
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                className={`${pill} appearance-none pr-11 ${topic ? "" : "text-gray-1/45"}`}
-                aria-label="Topic"
-                required
-                style={{ letterSpacing: "-0.01em" }}
-              >
-                <option value="" disabled className="bg-gray-12 text-gray-1">
-                  {t("form.selectTopic")}
-                </option>
-                {topics.map((topicValue, ti) => {
-                  const keys = [
-                    "form.topic.channel",
-                    "form.topic.illuminated",
-                    "form.topic.lightboxes",
-                    "form.topic.vehicle",
-                    "form.topic.other",
-                  ] as const;
-                  return (
-                    <option key={topicValue} value={topicValue} className="bg-gray-12 text-gray-1">
-                      {t(keys[ti])}
-                    </option>
-                  );
-                })}
-              </select>
-              <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-gray-1/60">
-                <Icon name="ChevronDown" size={18} stroke={1.75} />
-              </span>
             </div>
 
             <input

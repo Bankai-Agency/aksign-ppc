@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { ArrowButton } from "@/components/atoms/ArrowButton";
-import { Icon } from "@/components/atoms/Icon";
 import { ImagePlaceholder } from "@/components/atoms/ImagePlaceholder";
 import { LetterReveal } from "@/components/atoms/LetterReveal";
 import { useLeadForm } from "@/lib/lead-form";
@@ -285,30 +284,15 @@ export function HeroPhoto({ slug = "channel-letter-signs", lp }: HeroPhotoProps)
                 <ArrowButton
                   as="button"
                   onClick={() => openModal()}
-                  tone="light"
+                  tone="brand"
                   size="lg"
                   fullWidthMobile
+                  className="lg:min-w-[320px] lg:justify-between"
                 >
                   {isHome || !staticCtaLabel
                     ? t("cta.getFreeQuote")
                     : staticCtaLabel}
                 </ArrowButton>
-                <a
-                  href="https://maps.google.com/?q=220+W+Campus+Dr+Unit+D+Arlington+Heights+IL"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Open AK Sign office in Google Maps"
-                  data-cursor="link"
-                  className="group flex lg:inline-flex w-full lg:w-auto items-center justify-between lg:justify-start gap-2 pl-6 pr-1 h-14 rounded-full bg-gray-1/10 backdrop-blur-md border border-gray-1/15 text-[13px] lg:text-sm uppercase tracking-[0.06em] text-gray-1 font-semibold hover:bg-gray-1/20 hover:border-gray-1/40 transition-colors"
-                >
-                  <span>{t("areas.mapCta")}</span>
-                  <span
-                    aria-hidden
-                    className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-9 text-gray-1"
-                  >
-                    <Icon name="MapPin" size={16} stroke={2} />
-                  </span>
-                </a>
               </div>
             </div>
           </div>

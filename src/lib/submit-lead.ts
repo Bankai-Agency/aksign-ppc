@@ -25,9 +25,19 @@ export const TOPIC_TO_SERVICE: Record<string, LeadService> = {
   Other: "other",
 };
 
+// Auto-derive service from the LP slug when the form has no topic field.
+// Keeps every lead tagged with the right service in Telegram/email without
+// asking the user to re-classify themselves on a service-specific landing.
+const SLUG_TO_SERVICE: Record<string, LeadService> = {
+  "channel-letter-signs": "channel-letters",
+  "illuminated-signs": "lightboxes",
+  "vehicle-wraps": "vehicle-wraps",
+  "window-graphics": "window-graphics",
+};
+
 export type LeadSubmitInput = {
-  /** UI topic label — from the <select>. Required. */
-  topic: string;
+  /** Optional UI topic label — if the form has no select, leave undefined. */
+  topic?: string;
   name: string;
   email: string;
   phone: string;
@@ -60,7 +70,11 @@ function currentLpSlug(): string {
 }
 
 export async function submitLead(input: LeadSubmitInput): Promise<LeadSubmitResult> {
-  const service = TOPIC_TO_SERVICE[input.topic] ?? "other";
+  const slug = currentLpSlug();
+  const service: LeadService =
+    (input.topic ? TOPIC_TO_SERVICE[input.topic] : undefined) ??
+    SLUG_TO_SERVICE[slug] ??
+    "other";
   const attrib = readParams();
   const payload = {
     name: input.name.trim(),
@@ -69,7 +83,7 @@ export async function submitLead(input: LeadSubmitInput): Promise<LeadSubmitResu
     service,
     message: (input.message ?? "").trim(),
     formId: input.formId,
-    lpSlug: currentLpSlug(),
+    lpSlug: slug,
     ...attrib,
     website: "", // honeypot — always empty
   };
