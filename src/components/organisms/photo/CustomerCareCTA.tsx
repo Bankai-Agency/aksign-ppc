@@ -113,6 +113,8 @@ export function CustomerCareCTA() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <input
                 type="text"
+                name="name"
+                autoComplete="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className={pill}
@@ -124,6 +126,8 @@ export function CustomerCareCTA() {
               />
               <input
                 type="email"
+                name="email"
+                autoComplete="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className={pill}
@@ -138,6 +142,8 @@ export function CustomerCareCTA() {
 
             <input
               type="tel"
+              name="phone"
+              autoComplete="tel"
               value={phone}
               onChange={(e) => setPhone(formatPhoneMask(e.target.value))}
               className={pill}
@@ -151,6 +157,7 @@ export function CustomerCareCTA() {
             />
 
             <textarea
+              name="message"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               rows={5}

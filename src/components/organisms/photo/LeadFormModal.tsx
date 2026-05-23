@@ -146,6 +146,8 @@ export function LeadFormModal() {
 
             <input
               type="text"
+              name="name"
+              autoComplete="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className={pill}
@@ -157,6 +159,8 @@ export function LeadFormModal() {
             />
             <input
               type="email"
+              name="email"
+              autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={pill}
@@ -169,6 +173,8 @@ export function LeadFormModal() {
             />
             <input
               type="tel"
+              name="phone"
+              autoComplete="tel"
               value={phone}
               onChange={(e) => setPhone(formatPhoneMask(e.target.value))}
               className={pill}
@@ -181,6 +187,7 @@ export function LeadFormModal() {
               style={{ letterSpacing: "-0.01em" }}
             />
             <textarea
+              name="message"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               rows={4}
