@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { LeadSchema } from "@/lib/validators/lead";
 import { sendLeadEmail } from "@/lib/lead-email";
 import { sendToTelegram } from "@/lib/lead-routing";
+import { sendToSheet } from "@/lib/lead-sheet";
 
 export const runtime = "nodejs";
 
@@ -57,6 +58,7 @@ export async function POST(req: NextRequest) {
   const results = await Promise.allSettled([
     sendToTelegram(lead),
     sendLeadEmail(lead),
+    sendToSheet(lead, ip),
   ]);
 
   // Log the lead even if dispatch failed — never lose a lead
@@ -76,6 +78,7 @@ export async function POST(req: NextRequest) {
     },
     telegramStatus: results[0].status,
     emailStatus: results[1].status,
+    sheetStatus: results[2].status,
   });
 
   return NextResponse.json({ ok: true });
