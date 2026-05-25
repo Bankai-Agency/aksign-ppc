@@ -77,8 +77,11 @@ export async function POST(req: NextRequest) {
       campaign: lead.utm_campaign,
     },
     telegramStatus: results[0].status,
+    telegramError: results[0].status === "rejected" ? String(results[0].reason) : undefined,
     emailStatus: results[1].status,
+    emailError: results[1].status === "rejected" ? String(results[1].reason) : undefined,
     sheetStatus: results[2].status,
+    sheetError: results[2].status === "rejected" ? String(results[2].reason) : undefined,
   });
 
   return NextResponse.json({ ok: true });
